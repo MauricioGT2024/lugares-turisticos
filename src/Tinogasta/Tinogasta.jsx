@@ -1,4 +1,4 @@
-import Iframe from "../Iframe";
+import Iframe from "../pages/Catamarca/Iframe";
 export function Tinogasta(){
     return(
     <>
