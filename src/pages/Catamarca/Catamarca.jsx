@@ -1,4 +1,3 @@
-import Iframe from "../Card/Iframe";
 import "./Catamarca.css";
 
 export function Catamarca() {
@@ -13,11 +12,10 @@ export function Catamarca() {
           <h2 className="card-title">Gruta de la Virgen del Valle</h2>
           <p className="card-description">
             El Complejo Gruta Virgen del Valle es un centro religioso y
-            turístico ubicado en San Fernando del Valle de Catamarca, Argentina.
-            Incluye una gruta dedicada a la Virgen del Valle, patrona de la
-            provincia, y un conjunto de instalaciones que comprenden capillas,
-            áreas de oración, y espacios para la peregrinación. Es un importante
-            sitio de devoción y atracción para visitantes y fieles.
+            turístico Incluye una gruta dedicada a la Virgen del Valle, patrona
+            de la provincia, y un conjunto de instalaciones que comprenden
+            capillas, áreas de oración, y espacios para la peregrinación. Es un
+            importante sitio de devoción y atracción para visitantes y fieles.
           </p>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224679.84862245177!2d-65.944013521875!3d-28.370256435358243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9424264fb5a448e3%3A0xae112f88ce456aa9!2sGruta%20de%20la%20Virgen%20del%20Valle!5e0!3m2!1ses-419!2sar!4v1725200621926!5m2!1ses-419!2sar"></iframe>
         </div>
@@ -33,11 +31,10 @@ export function Catamarca() {
             Catedral Basílica de Nuestra Señora del Valle
           </h2>
           <p className="card-description">
-            La **Catedral Basílica de Nuestra Señora del Valle** es una iglesia
-            en San Fernando del Valle de Catamarca, Argentina. Es conocida por
-            su arquitectura neoclásica y barroca y es un importante centro de
-            culto, destacada por ser el lugar de veneración de la Virgen del
-            Valle, patrona de la provincia.
+            La Catedral Basílica de Nuestra Señora del Valle es una iglesia Es
+            conocida por su arquitectura neoclásica y barroca y es un importante
+            centro de culto, destacada por ser el lugar de veneración de la
+            Virgen del Valle, patrona de la provincia.
           </p>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224679.84862245177!2d-65.944013521875!3d-28.370256435358243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942428c0a154ce0d%3A0xd345b1b18b6bb281!2sCatedral%20Bas%C3%ADlica%20de%20Nuestra%20Se%C3%B1ora%20del%20Valle!5e0!3m2!1ses-419!2sar!4v1725200667289!5m2!1ses-419!2sar"></iframe>
         </div>
@@ -54,10 +51,9 @@ export function Catamarca() {
           </h2>
           <p className="card-description">
             La Fiesta Nacional e Internacional del Poncho es un festival
-            celebrado en San Fernando del Valle de Catamarca, Argentina, cada
-            julio. Celebra la cultura y las tradiciones locales con exposiciones
-            de artesanía, música folklórica, danzas y gastronomía, destacando el
-            poncho como símbolo de la región.
+            celebrado cada julio. Celebra la cultura y las tradiciones locales
+            con exposiciones de artesanía, música folklórica, danzas y
+            gastronomía, destacando el poncho como símbolo de la región.
           </p>
 
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224679.84862245177!2d-65.944013521875!3d-28.370256435358243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94242fea64817755%3A0x12a068eda95f2dce!2sFiesta%20Nacional%20e%20Internacional%20Del%20Poncho!5e0!3m2!1ses-419!2sar!4v1725200736641!5m2!1ses-419!2sar"></iframe>
@@ -81,7 +77,11 @@ export function Catamarca() {
         </div>
       </div>
       <div className="card" id="card">
-        <img src="https://lh5.googleusercontent.com/p/AF1QipNLlLQBmT5PH7sfdGpYwxiWdBaWoHtUkYoCTxqR=w408-h306-k-no" alt="Parque Adán Quiroga" className="card-img" />
+        <img
+          src="https://lh5.googleusercontent.com/p/AF1QipNLlLQBmT5PH7sfdGpYwxiWdBaWoHtUkYoCTxqR=w408-h306-k-no"
+          alt="Parque Adán Quiroga"
+          className="card-img"
+        />
         <div className="card-content">
           <h2 className="card-title">Parque Adán Quiroga</h2>
           <p className="card-description">
@@ -94,7 +94,11 @@ export function Catamarca() {
         </div>
       </div>
       <div className="card" id="card">
-        <img src="https://lh5.googleusercontent.com/p/AF1QipObHYq9uZ0Oyh_HQVL8gYXuERFIEWR3yeqF-Poj=w426-h240-k-no" alt="Parque de los Vientos" className="card-img" />
+        <img
+          src="https://lh5.googleusercontent.com/p/AF1QipObHYq9uZ0Oyh_HQVL8gYXuERFIEWR3yeqF-Poj=w426-h240-k-no"
+          alt="Parque de los Vientos"
+          className="card-img"
+        />
         <div className="card-content">
           <h2 className="card-title">Parque de los Vientos</h2>
           <p className="card-description">
@@ -107,7 +111,11 @@ export function Catamarca() {
         </div>
       </div>
       <div className="card" id="card">
-        <img src="https://lh5.googleusercontent.com/p/AF1QipOpvAOdSgMwHeZrpjHLagSlaQbYVexfOshAztSO=w408-h272-k-no" alt="Dique Las Pirquitas" className="card-img" />
+        <img
+          src="https://lh5.googleusercontent.com/p/AF1QipOpvAOdSgMwHeZrpjHLagSlaQbYVexfOshAztSO=w408-h272-k-no"
+          alt="Dique Las Pirquitas"
+          className="card-img"
+        />
         <div className="card-content">
           <h2 className="card-title">Dique Las Pirquitas</h2>
           <p className="card-description">
