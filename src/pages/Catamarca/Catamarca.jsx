@@ -127,6 +127,23 @@ export function Catamarca() {
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d224679.84869732868!2d-65.9440135!3d-28.3702564!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942418a6fab81873%3A0x8f5d82be3622a341!2sDique%20Las%20Pirquitas.!5e0!3m2!1ses-419!2sar!4v1725201057665!5m2!1ses-419!2sar"></iframe>
         </div>
       </div>
+      <div className="card" id="card">
+        <img
+          src="https://lh5.googleusercontent.com/p/AF1QipOmfIcnnUiF6d-6AlaA1xHAyOlHLBxKQs0uzJVJ=w203-h149-k-no"
+          alt="El Rodeo"
+          className="card-img"
+        />
+        <div className="card-content">
+          <h2 className="card-title">El Rodeo</h2>
+          <p className="card-description">
+            El Rodeo es una importante villa turística de la provincia de
+            Catamarca, Argentina. Está situada en el Departamento Ambato, al pie
+            de la sierra de Ambato, a 1.250 m s. n. m. y a solo 39 km de la
+            capital provincial.
+          </p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14063.2499710228!2d-65.87580297189504!3d-28.213008923482572!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9426a0a3432880cf%3A0xa6e667a7b0e9bb24!2sEl%20Rodeo%2C%20Catamarca!5e0!3m2!1ses-419!2sar!4v1725211988093!5m2!1ses-419!2sar"></iframe>
+        </div>
+      </div>
     </>
   );
 }

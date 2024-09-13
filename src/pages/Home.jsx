@@ -12,7 +12,7 @@ function Home() {
         visites la provincia de Catamarca
       </h2>
       
-      <div className="" id="card">
+      <div className="card" id="card">
         <div className="card-content">
           <h2 className="card-title">San Fernando Del Valle De Catamarca</h2>
           <p className="card-description">
@@ -21,7 +21,8 @@ function Home() {
           argentina de Catamarca y la ciudad cabecera de su departamento
           Capital. Se trata de un centro comercial y turístico
           </p>
-          <li className="card-link"><a href="Card">ver mas</a></li>
+          
+          <button><a href="Card">ver mas</a></button>
           
           
         </div>
