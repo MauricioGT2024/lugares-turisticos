@@ -1,10 +1,9 @@
-import { Card } from "./Card/Card";
-import { BrowserRouter, Router, Routes, Route, Link } from "react-router-dom";
-
+import "../pages/Home.css"
 
 function Home() {
   return (
     <>
+    
    
       <h1 id="#Home">Un paseo por Catamarca</h1>
       <h2>
@@ -12,7 +11,7 @@ function Home() {
         visites la provincia de Catamarca
       </h2>
       
-      <div className="card" id="card">
+      <div className="" id="card">
         <div className="card-content">
           <h2 className="card-title">San Fernando Del Valle De Catamarca</h2>
           <p className="card-description">
@@ -22,7 +21,7 @@ function Home() {
           Capital. Se trata de un centro comercial y turístico
           </p>
           
-          <button><a href="Card">ver mas</a></button>
+          <a className="boton" href="Card">ver mas</a>
           
           
         </div>

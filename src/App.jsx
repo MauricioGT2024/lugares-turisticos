@@ -10,7 +10,6 @@ import { NavBar } from "./NavBar/NavBar";
 import { Error404 } from "./pages/Error404/Error404";
 import { Catamarca } from "./pages/Catamarca/Catamarca";
 import { Fiambala } from "./pages/Fiambala/Fiambala";
-import "./App.css";
 import { Tinogasta } from "./pages/Tinogasta/Tinogasta";
 import { AntofagastaDeLaSierra } from "./pages/Antofagasta-De-La-Sierra/Antofagasta-De-La-Sierra";
 

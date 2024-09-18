@@ -1,42 +1,102 @@
+.logo {
+    display: flex; /* Asegúrate de que el contenedor esté usando flexbox */
+    
 
+
+    justify-content: center;
+}
+
+.logo img {
+    display: flex;
+    height: 72px; /* Ajusta la altura del logo */
+    /* Elimina margin-right aquí si no es necesario */
+}
 
 .navbar{
     display: flex;
     color: white;
+    background-color: rgba(121, 119, 224, 0.76);
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px;
     text-decoration: none;
     font-size: 17px;
     justify-content: center;
-    align-items: center;
     list-style-type: none;
+
     
 }
 
 .navbar li{
     float: left;
     list-style: none;
-    color: blue;
+    color: white;
 }
-
-.navbar a{
+ul{
+    width: 80%;
+    justify-content: right;
+    display: flex;
+}
+.inicio{
     text-decoration: none;
     padding: 5px;
+    border: 1px solid black;
+    margin-left: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    color: white;
 }
 
-.navbar a:hover{
-    color: black;
+.inicio:hover{
+    color: lightblue;
     transition-duration: 0.2s;
-    
+    background-color: black;
+    border-radius: 15%;
 }
 
-.navbar a:active{
-    color: red;
+.inicio:active{
+    color: white;
     transition-duration: 0.2s;
     padding: -3px;
+    background-color: red;
 }
 
-.navbar:visited{
+.inicio:visited{
+    color:white;
+
+}
+.Navbar-cs{
+    background-color: lightblue;
+    margin: 0;
+}
+
+
+.redirect{
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid black;
+    margin-left: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    color: black;
+}
+
+.redirect:hover{
+    color: lightblue;
+    transition-duration: 0.2s;
+    background-color: black;
+    border-radius: 15%;    
+}
+
+.redirect:active{
+    color: white;
+    transition-duration: 0.2s;
+    padding: -3px;
+    background-color: red;
+}
+
+.redirect:visited{
     color:white;
 
 }
