@@ -34,9 +34,10 @@ function App() {
         </Routes>
       </BrowserRouter>
       ;
-      <footer>
+      <footer className="footer">
         <p>&copy; 2024 - Todos los derechos reservados</p>
         <p>San Fernando Del Valle de Catamarca</p>
+        
       </footer>
     </>
   );

@@ -1,6 +1,20 @@
 #root {
- 
   text-align: center;
 }
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+.footer{ 
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(250, 251, 253);
+}
 
+p{
+  margin-left: 50px;
+}
