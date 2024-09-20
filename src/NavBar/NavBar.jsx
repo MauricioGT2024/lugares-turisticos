@@ -1,5 +1,5 @@
 import "./NavBar.css";
-import imagesrc from "./img/navbar.png";
+
 
 export function NavBar() {
   return (
