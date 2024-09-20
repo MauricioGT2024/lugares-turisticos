@@ -2,17 +2,19 @@
   text-align: center;
 }
 body{
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+  
 }
 
 .footer{ 
-  width: 100%;
   display: flex;
   text-align: center;
   justify-content: center;
   background-color: rgb(250, 251, 253);
+  margin-top: 20%;
+  grid-template-rows: auto 1fr auto;
 }
 
 p{
