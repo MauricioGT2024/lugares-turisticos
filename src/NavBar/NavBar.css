@@ -1,13 +1,10 @@
 .logo {
     display: flex; /* Asegúrate de que el contenedor esté usando flexbox */
-    
-
-
     justify-content: center;
 }
 
 .logo img {
-    display: flex;
+    display: block;
     height: 72px; /* Ajusta la altura del logo */
     /* Elimina margin-right aquí si no es necesario */
 }
