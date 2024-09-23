@@ -48,7 +48,7 @@ ul{
     color: lightblue;
     transition-duration: 0.2s;
     background-color: black;
-    border-radius: 15%;
+    border-radius: 15px;
 }
 
 .inicio:active{
@@ -83,13 +83,14 @@ ul{
     color: lightblue;
     transition-duration: 0.2s;
     background-color: black;
-    border-radius: 15%;    
+    border-radius: 15px;    
 }
 
 .redirect:active{
     color: white;
     transition-duration: 0.2s;
     padding: -3px;
+    border-radius: 20px;
     background-color: red;
 }
 
