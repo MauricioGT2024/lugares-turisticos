@@ -5,7 +5,7 @@ export function Fiambala() {
     <>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipP0ZJsvZatU8HEADfqlbCxzdLgNTg5EQ4gybazA=w426-h240-k-no"
+          src="img/Fiambala/Duna Mágica de Fiambalá.jpg"
           alt="Duna Mágica de Fiambalá "
         />
         <div className="card-content">
@@ -22,7 +22,7 @@ export function Fiambala() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipPzvX1I1Di6ZP7CnqVyr5pKzh4DdLeUasK8vmrJ=w408-h306-k-no"
+          src="img/Fiambala/Museo del Hombre.jpg"
           alt="Museo del Hombre "
         />
         <div className="card-content">
@@ -40,7 +40,7 @@ export function Fiambala() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipO14HnCEl53YJQBFKtqe2gFFQLQ_gjXEpyU908C=w408-h544-k-no"
+          src="img/Fiambala/Dunas de Fiambala.jpg"
           alt="Dunitas "
         />
         <div className="card-content">
@@ -58,7 +58,7 @@ export function Fiambala() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipOokRDfkNjLlKKrvDaA6qIkX19UoLaTCA8sJgMf=w408-h544-k-no"
+          src="img/Fiambala/Piedras talladas de Fiambala.jpg"
           alt="Piedras talladas"
         />
         <div className="card-content">
@@ -75,7 +75,7 @@ export function Fiambala() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipNv9CmUbAKqh8Ii0f3qqGWgLou8Yl9x0TVV8HyH=w408-h544-k-no"
+          src="img/Fiambala/Termas de Fiambalá.jpg"
           alt="Termas de Fiambalá "
         />
         <div className="card-content">

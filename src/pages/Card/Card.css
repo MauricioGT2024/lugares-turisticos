@@ -3,7 +3,6 @@ body {
   font-family: Arial, sans-serif;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: 0;
 }
 
@@ -11,7 +10,7 @@ body {
 .card {
   display: inline-table;
   margin: 15px;
-  background: #646cff;
+  background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 300px;
@@ -43,7 +42,7 @@ body {
 }
 
 .card-description {
- 
+
   color: #666;
 }
 
@@ -61,7 +60,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: white;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -73,3 +72,13 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+button:active {
+  border-color: red;
+  color: white;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+

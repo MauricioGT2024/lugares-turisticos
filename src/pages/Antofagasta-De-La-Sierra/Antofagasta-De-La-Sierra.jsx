@@ -5,7 +5,7 @@ export function AntofagastaDeLaSierra() {
     <>
       <div className="card" id="card">
         <img
-          src="https://lh3.googleusercontent.com/p/AF1QipNuIEgxXdYKqd-L-m39WozmXXUs5YC7SN8gpYAO=s294-w294-h220-k-no"
+          src="img/Antofagasta-de-la-Sierra/Campo de Piedra Pómez.jpg"
           alt="Campo de Piedra Pómez"
         />
         <div className="card-content">
@@ -20,7 +20,7 @@ export function AntofagastaDeLaSierra() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipNejGrXMoM2XkGJ0t_led_DJxKO2asOJvC3QiY5=w426-h240-k-no"
+          src="img/Antofagasta-de-la-Sierra/Cerro Galán.jpg"
           alt="Cerro Galán"
         />
         <div className="card-content">
@@ -36,7 +36,7 @@ export function AntofagastaDeLaSierra() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipPAxjhY0vMzPuJ1ByBPFzX4xcG7nZvzhGBJRgwq=w408-h272-k-no"
+          src="img/Antofagasta-de-la-Sierra/Volcan Antofagasta.jpg"
           alt="Vocan Antofagasta"
         />
         <div className="card-content">
@@ -51,7 +51,7 @@ export function AntofagastaDeLaSierra() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipMOMGJejjfNyJPG3rZesWglCKNUuI2sVs8CdhyB=w408-h306-k-no"
+          src="img/Antofagasta-de-la-Sierra/Salar de Antofalla.jpg"
           alt="salar de Antofalla"
         />
         <div className="card-content">
@@ -66,7 +66,7 @@ export function AntofagastaDeLaSierra() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipOKPSSFvTtLVh4p5GLtzdQAqjpu1uq5IIFchdgF=w480-h240-k-no"
+          src="img/Antofagasta-de-la-Sierra/Museo del Hombre.jpg"
           alt="Museo del Hombre"
         />
         <div className="card-content">
@@ -81,7 +81,7 @@ export function AntofagastaDeLaSierra() {
         </div>
       </div>
       <div className="card" id="card">
-        <img src="https://lh5.googleusercontent.com/p/AF1QipPIYCHUDpZKUBYVegabtbg_Ot7aOKbAz4cHUzXd=w408-h306-k-no" alt="salar del Hombre Muerto" />
+        <img src="img/Antofagasta-de-la-Sierra/salar del Hombre Muerto.jpg" alt="salar del Hombre Muerto" />
         <div className="card-content">
           <h2 className="card-title">salar del Hombre Muerto</h2>
           <p className="card-description">

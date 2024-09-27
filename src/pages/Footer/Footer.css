@@ -1,0 +1,21 @@
+footer{
+    background-color: rgb(131, 211, 238);
+   color: white;
+   bottom: 0;
+   width: 100%;
+   display: flex;
+   position: relative;
+   flex-direction: column;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    display: contents;
+    letter-spacing: 2px;
+}
+li a{
+    padding: 10px;
+}

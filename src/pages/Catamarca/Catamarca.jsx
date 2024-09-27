@@ -5,7 +5,7 @@ export function Catamarca() {
     <>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipNrvWgjvwIxXQv6J2p1TtsNRSaqlun9MLfwzHT4=w408-h306-k-no"
+          src="img/San Fernando Del Valle De Catamarca/Gruta de la Virgen del Valle.jpg"
           alt="Gruta de la Virgen del Valle"
         />
         <div className="card-content">
@@ -22,7 +22,7 @@ export function Catamarca() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipMPTQ-dnnWllAyvqbd4ETOi1Ik2CA9TcHmfmBip=w408-h247-k-no"
+          src="img/San Fernando Del Valle De Catamarca/Catedral Basílica de Nuestra Señora del Valle.jpg"
           alt="Catedral Basílica de Nuestra Señora del Valle"
           className="card-img"
         />
@@ -41,7 +41,7 @@ export function Catamarca() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipPYX4CuuqjXyNRL66WBrW6gKiuyIcPmkOhjocXM=w408-h306-k-no"
+          src="img/San Fernando Del Valle De Catamarca/La Fiesta Nacional e Internacional del Poncho.jpg"
           alt="La Fiesta Nacional e Internacional del Poncho"
           className="card-img"
         />
@@ -61,7 +61,7 @@ export function Catamarca() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipOuNFbf_Wlm-iFs-bvTfMYcpe5z6VjvY4ITSbjh=w408-h271-k-no"
+          src="img/San Fernando Del Valle De Catamarca/Dique El Jumeal.jpg"
           alt="Dique El Jumeal"
           className="card-img"
         />
@@ -78,7 +78,7 @@ export function Catamarca() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipNLlLQBmT5PH7sfdGpYwxiWdBaWoHtUkYoCTxqR=w408-h306-k-no"
+          src="img/San Fernando Del Valle De Catamarca/Parque Adam Quiroga.jpg"
           alt="Parque Adán Quiroga"
           className="card-img"
         />
@@ -95,7 +95,7 @@ export function Catamarca() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipObHYq9uZ0Oyh_HQVL8gYXuERFIEWR3yeqF-Poj=w426-h240-k-no"
+          src="img/San Fernando Del Valle De Catamarca/Parque de Los Vientos.jpg"
           alt="Parque de los Vientos"
           className="card-img"
         />
@@ -112,7 +112,7 @@ export function Catamarca() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipOpvAOdSgMwHeZrpjHLagSlaQbYVexfOshAztSO=w408-h272-k-no"
+          src="img/San Fernando Del Valle De Catamarca/Dique Las Pirquitas.jpg"
           alt="Dique Las Pirquitas"
           className="card-img"
         />
@@ -129,7 +129,7 @@ export function Catamarca() {
       </div>
       <div className="card" id="card">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipOmfIcnnUiF6d-6AlaA1xHAyOlHLBxKQs0uzJVJ=w203-h149-k-no"
+          src="img/San Fernando Del Valle De Catamarca/El Rodeo.jpg"
           alt="El Rodeo"
           className="card-img"
         />

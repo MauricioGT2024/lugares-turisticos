@@ -1,3 +1,11 @@
+main{
+  margin:0;
+  padding: 0;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .card-container {
   padding: 20px;
   text-align: center;
@@ -59,4 +67,13 @@
 .boton:active{
   background-color: red;
   color: lightblue;
+}
+
+.footer{
+    display: flex;
+    text-align: center;
+    margin-top: 25em;
+    margin-bottom: 1em;
+    justify-content: center;
+
 }
