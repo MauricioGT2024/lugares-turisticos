@@ -9,7 +9,7 @@ function Home() {
           podras ver las cosas increibles que puedes hacer cuando visites la
           provincia de Catamarca
         </h2>
-
+          // Era necesario no se como poner separar esta parte
         <div className="home" id="home">
           <div className="home-container">
             <h2 className="home-title">San Fernando Del Valle De Catamarca</h2>
