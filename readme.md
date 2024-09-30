@@ -17,12 +17,12 @@ cd lugares-turisticos
 git checkout --track origin/17/4/24
 
 ```
-3. Instale lo necesario para pode iniciar la pagina
+3. Instale lo necesario para pode iniciar la pagina:
 
 ```bash
 npm install
 ```
-4. Ya puede iniciar la pagina
+4. Ya puede iniciar la pagina:
 
 ```bash
 npm run dev
