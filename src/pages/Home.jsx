@@ -10,19 +10,23 @@ function Home() {
           provincia de Catamarca
         </h2>
 
-        <div className="" id="card">
-          <div className="card-content">
-            <h2 className="card-title">San Fernando Del Valle De Catamarca</h2>
-            <p className="card-description">
-              San Fernando del Valle de Catamarca, oficialmente Ciudad de San
-              Fernando del Valle de Catamarca, es la capital de la provincia
-              argentina de Catamarca y la ciudad cabecera de su departamento
-              Capital. Se trata de un centro comercial y turístico
+        <div className="home" id="home">
+          <div className="home-container">
+            <h2 className="home-title">San Fernando Del Valle De Catamarca</h2>
+            <p className="home-description">
+              San Fernando del Valle de Catamarca es la capital de la provincia
+              de Catamarca, Argentina. <br /> Es un centro administrativo, cultural y
+              económico, con una rica historia y tradiciones, así como un
+              entorno natural atractivo.
             </p>
-
-            <a className="boton" href="Card">
-              ver mas
-            </a>
+            <button className="boton">
+              <span>
+                {" "}
+                <a className="link" href="Card">
+                  ver mas
+                </a>{" "}
+              </span>
+            </button>
           </div>
         </div>
       </main>

@@ -1,74 +1,52 @@
-.card {
+.tinogasta {
     display: inline-table;
     margin: 15px;
-    background: #646cff;
+    background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     overflow: hidden;
-    transition: transform 0.2s;
+    transition: .2s ease-in-out
+
   }
   
   
-  .card:hover {
-    transform: scale(1.05);
+  .tinogasta:hover {
+    -webkit-box-shadow: -1px -4px 16px 5px rgb(255, 255, 255);
+    -moz-box-shadow: -1px -4px 16px 5px rgb(156, 174, 79);
+    box-shadow: -1px -4px 16px 5px rgb(80, 172, 89);
   }
   
   /* Estilos para la imagen de la tarjeta */
-  .card-img {
+  .tinogasta-img {
     width: 100%;
     height: auto;
     display: block;
   }
   
   /* Estilos para el contenido de la tarjeta */
-  .card-content {
+  .tinogasta-content {
     padding: 16px;
   }
   
-  .card-title {
+  .tinogasta-title {
     margin: 0;
     font-size: 1.5em;
     color: #333;
   }
   
-  .card-description {
+  .tinogasta-description {
   
     color: #666;
   }
   
   
   
-  .card-link{
+  .tinogasta-link{
     list-style-type: none;
   }
   
   
-  button {
-    border-radius: 8px;
-    border: 1px solid ;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: white;
-    cursor: pointer;
-    transition: border-color 0.25s;
-  }
-  button:hover {
-    border-color: #646cff;
-    color: #646cff;
-  }
-  button:focus,
-  button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
-  button:active {
-    border-color: red;
-    color: white;
-  }
   
-  a{
-    text-decoration: none;
-    color: black;
-  }
+  
+  

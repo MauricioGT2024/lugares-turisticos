@@ -12,15 +12,15 @@ body {
   margin: 15px;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+
   max-width: 300px;
   overflow: hidden;
-  transition: transform 0.2s;
+  
 }
 
-
 .card:hover {
-  transform: scale(1.05);
+  
 }
 
 /* Estilos para la imagen de la tarjeta */
@@ -42,43 +42,41 @@ body {
 }
 
 .card-description {
-
   color: #666;
 }
 
+button {
+  border: 0;
+  background-image: linear-gradient(120deg, #719eab, #09f, #00ddff);
+  border-radius: 8px;
+  font-size: 18px;
+  display: flex;
+  padding: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: auto;
+  
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+button span {
+  background-color: #111;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: 0.3s;
+  text-align: center;
+}
 
+button:hover span {
+  background: none;
+}
 
-.card-link{
+button:active {
+  transform: scale(0.9);
+}
+
+.card-link {
   list-style-type: none;
 }
-
-
-button {
-  border-radius: 8px;
-  border: 1px solid ;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: white;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-  color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-button:active {
-  border-color: red;
-  color: white;
-}
-
-a{
-  text-decoration: none;
-  color: black;
-}
-

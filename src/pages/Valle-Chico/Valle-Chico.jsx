@@ -3,15 +3,15 @@ import "./Valle-Chico.css"
 export function ValleChico() {
   return (
     <>
-      <div className="card" id="card">
+      <div className="vallechico" id="vallechico">
         <img
           src="img/Valle-Chico/Primera Plaza Valle Chico.jpg"
           alt="Primera Plaza Valle Chico"
-          className="card-img"
+          className="vallechico-img"
         />
-        <div className="card-content">
-          <h2 className="card-title">Primera Plaza Valle Chico</h2>
-          <p className="card-description">
+        <div className="vallechico-content">
+          <h2 className="vallechico-title">Primera Plaza Valle Chico</h2>
+          <p className="vallechico-description">
             Primera Plaza Valle Chico es un centro comercial en Catamarca,
             Argentina, que ofrece una variedad de tiendas, restaurantes y
             servicios, convirtiéndose en un punto de encuentro y entretenimiento
