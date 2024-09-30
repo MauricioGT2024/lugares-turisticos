@@ -1,6 +1,6 @@
-## bienvenido Este es mi proyecto final
+## Bienvenido al proyecto final
 
-# Aca podras ver los mejores atraccion que hay en los diferentes departamentos que hay en la provincia de catamarca
+# Aca podras ver las mejores atracciones que hay en los diferentes departamentos que hay en la provincia de Catamarca
 
 ## Instalacion
 
