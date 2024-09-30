@@ -17,7 +17,7 @@ cd lugares-turisticos
 git checkout --track origin/17/4/24
 
 ```
-3. Instale lo necesario para pode iniciar la pagina:
+3. Instale lo necesario para poder iniciar la pagina:
 
 ```bash
 npm install
