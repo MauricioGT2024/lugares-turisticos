@@ -1,51 +1,56 @@
-body{
-    font-family: sans-serif;
-    margin: 0;
-}
-
-nav a{
-    text-decoration: none;
-    color: lightblue;
-    border: 1px solid black;
-    padding: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-
-}
-
-nav a:hover{
-    color: #7d83eb;
-    border-radius: 10px; 
-    transition-duration: 0.2s; 
-    background-color: rgb(59, 80, 136);  
-}
-
-
-header{
+.navbar {
+    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    background-color: #747bff;
-    align-items: center;
-    padding: 10px;
-    height: 100px;
-
-}
-.logo{
-    
-    max-height: 200px;
-    display: flex;
-    align-items: center;
+    background: #fff;
+    padding: 15px 7%;
 }
 
-.logo img{
-    height: 1px;
-    min-height: 70px;
-    margin-right: 10px;
-    margin-bottom: 1px;
+.logo {
+    width: 160px;
+    cursor: pointer;
 }
 
-@media (max-width:700px){
-    header{
-        flex-direction: column;
-    }
+ul {
+    flex: 1;
+    list-style: none;
+    text-align: center;
+    padding: 0; /* Added to remove default padding */
 }
+
+ul li {
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 18px;
+}
+
+ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Use the current text color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+ul li a:hover {
+    color: #007BFF; /* Change to your desired hover color */
+}
+
+.toggle-icon {
+    width: 50px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.dark .navbar {
+    background: #000;
+    color: #fff;
+}
+
+.dark ul li a {
+    color: #fff; /* Links in dark mode */
+}
+
+.dark ul li a:hover {
+    color: #007BFF; /* Change hover color for dark mode */
+}
+

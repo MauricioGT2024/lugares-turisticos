@@ -1,10 +1,4 @@
 /* Estilos básicos para el cuerpo del documento */
-body {
-  font-family: Arial, sans-serif;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
 
 /* Estilos para la tarjeta */
 .card {

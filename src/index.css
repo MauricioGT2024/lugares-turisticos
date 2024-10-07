@@ -3,13 +3,49 @@
 
 
 
-body{
-  background-color: lightblue;
-  margin: 0;
-  padding: 0;
-  min-height: 50vh;
-  flex-direction: column;
-  text-align: center;
+@keyframes blureado {
+  from{
+    filter: blur(5px);
+    background-color: #6cb7d0;
+  }
+  to {
+    filter: blur(2px);
+   background-color: F#71c54f;
+    
+  }
 }
 
+#root {
+  --s: 200px; /* control the size */
+  --c1: #fafafa;
+  --c2: #6cb7d0;
+  
+  position: relative; /* Necessary for the ::before to be positioned relative to this element */
 
+}
+
+#root::before {
+  --_g: #0000 8%, var(--c1) 0 17%, #0000 0 58%;
+
+  content: ''; /* Required for pseudo-element to display */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure the background is behind other content */
+
+  background: 
+    linear-gradient(135deg,#0000 20.5%,var(--c1) 0 29.5%,#0000 0) 0 calc(var(--s)/4),
+    linear-gradient(45deg,var(--_g)) calc(var(--s)/2) 0,
+    linear-gradient(135deg,var(--_g),var(--c1) 0 67%,#0000 0),        
+    linear-gradient(45deg,var(--_g),var(--c1) 0 67%,#0000 0 83%,var(--c1) 0 92%,#0000 0),
+    var(--c2);
+
+  background-size: var(--s) var(--s);
+
+  animation-name: blureado;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
