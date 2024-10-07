@@ -11,11 +11,12 @@ git clone "https://github.com/MauricioGT2024/lugares-turisticos.git"
 cd lugares-turisticos
 ```
 
-2. Cambiese de rama:
+2. Cambiese de rama y haga un pull:
 
 ```bash
 git checkout --track origin/17/4/24
 
+git pull
 ```
 3. Instale lo necesario para poder iniciar la pagina:
 
