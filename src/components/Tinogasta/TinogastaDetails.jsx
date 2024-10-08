@@ -1,26 +1,10 @@
-import "./Tinogasta.css";
+import './Tinogasta.css' // O ajusta la ruta según tu estructura
 
-export function Tinogasta() {
+function TinogastaDetails() {
   return (
     <>
-      <div className="tinogasta" id="tinogasta">
-        <img
-          src="img/Tinogasta/Complejo Termal La Aguadita.jpg"
-          alt="Complejo Termal La Aguadita"
-          className="tinogasta-img"
-        />
-        <div className="tinogasta-content">
-          <h2 className="tinogasta-title">Complejo Termal La Aguadita</h2>
-          <p className="tinogasta-description">
-            es un centro de relajación y bienestar en Catamarca, Argentina, que
-            ofrece aguas termales, spa y diversas instalaciones recreativas. Es
-            un destino popular para quienes buscan tratamientos terapéuticos y
-            una experiencia de descanso en un entorno natural.
-          </p>
-        </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d16752.710023847474!2d-67.66723668203443!3d-28.0298713999726!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969e117e2197b615%3A0xd0ba5c17a34028f7!2sComplejo%20Termal%20La%20Aguadita!5e0!3m2!1ses-419!2sar!4v1727445521377!5m2!1ses-419!2sar"></iframe>
-      </div>
-      <div className="tinogasta" id="tinogasta">
+    
+    <div className="tinogasta" id="tinogasta">
         <img
           src="img/Tinogasta/Mirador Del Abaucan.jpg"
           alt="Mirador Del Abaucan"
@@ -128,6 +112,8 @@ export function Tinogasta() {
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.649942074083!2d-67.56786872502897!3d-28.06571124236247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969e055473f5c7ef%3A0x3f17c6c76d3b1cfb!2sParroquia%20San%20Juan%20Bautista!5e0!3m2!1ses-419!2sar!4v1727451137108!5m2!1ses-419!2sar"></iframe>
       </div>
-    </>
+      </>
   );
 }
+
+export default TinogastaDetails;

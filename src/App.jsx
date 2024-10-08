@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import { Card } from "./pages/Card/Card";
-import { Error404 } from "./pages/Error404/Error404";
-import { Catamarca } from "./pages/Catamarca/Catamarca";
-import { Fiambala } from "./pages/Fiambala/Fiambala";
-import { Tinogasta } from "./pages/Tinogasta/Tinogasta";
-import { AntofagastaDeLaSierra } from "./pages/Antofagasta-De-La-Sierra/Antofagasta-De-La-Sierra";
-import { ValleChico } from "./pages/Valle-Chico/Valle-Chico";
+import   Home  from "./pages/Home";
+import { Provincia } from "./pages/Provincia";
+import { Error404 } from "./components/Error404/Error404";
+import { Catamarca } from "./pages/Catamarca";
+import { Fiambala } from "./pages/Fiambala";
+import { Tinogasta } from "./pages/Tinogasta";
+import { AntofagastaDeLaSierra } from "./pages/Antofagasta-De-La-Sierra";
+import { ValleChico } from "./pages/Valle-Chico";
 import "./App.css";
-import { Footer } from "./pages/Footer/Footer";
-import NavBar from "./pages/NavBar/NavBar";
+import NavBar from "./components/NavBar/NavBar";
+import { Footer } from "./components/Footer/Footer";
+
 
 const App = () => {
 
@@ -30,7 +31,7 @@ const App = () => {
 
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/Card/" element={<Card />}></Route>
+            <Route path="/Provincia/" element={<Provincia />}></Route>
             <Route path="/Catamarca/" element={<Catamarca />}></Route>
             <Route path="/Fiambala/" element={<Fiambala />}></Route>
             <Route path="/Tinogasta/" element={<Tinogasta />}></Route>

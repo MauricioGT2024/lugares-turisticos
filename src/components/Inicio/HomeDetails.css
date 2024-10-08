@@ -53,15 +53,3 @@ main{
 .boton:active {
   transform: scale(0.9);
 }
-
-
-
-
-.footer{
-    display: flex;
-    text-align: center;
-    margin-top: 25em;
-    margin-bottom: 1em;
-    justify-content: center;
-
-}

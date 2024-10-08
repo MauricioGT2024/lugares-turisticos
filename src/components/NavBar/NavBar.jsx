@@ -15,7 +15,7 @@ const NavBar = ({ theme, setTheme }) => {
             <a href="/"><img src={theme === 'light' ? logo : logo_negro} alt="Logo" className='logo' /></a>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/Card">Departamentos</a></li>
+                <li><a href="/Provincia">Departamentos</a></li>
                 <li><a href="/hospedaje">Hospedaje</a></li>
             </ul>
             <img onClick={toggle_mode} src={theme === 'light' ? logo_claro : logo_oscuro} alt="Toggle theme" className='toggle-icon' />
