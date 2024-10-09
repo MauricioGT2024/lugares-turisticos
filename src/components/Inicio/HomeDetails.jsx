@@ -15,7 +15,7 @@ function HomeDetails() {
           <button className="boton">
             <span>
               {" "}
-              <a className="link" href="Card">
+              <a className="link" href="Provincia">
                 ver mas
               </a>{" "}
             </span>

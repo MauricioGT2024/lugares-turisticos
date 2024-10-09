@@ -127,6 +127,41 @@ function CatamarcaDetails() {
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14063.2499710228!2d-65.87580297189504!3d-28.213008923482572!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9426a0a3432880cf%3A0xa6e667a7b0e9bb24!2sEl%20Rodeo%2C%20Catamarca!5e0!3m2!1ses-419!2sar!4v1725211988093!5m2!1ses-419!2sar"></iframe>
         </div>
       </div>
+      <div className="catamarca" id="catamarca">
+    <img
+      src="img/Valle-Chico/Capital.jpg"
+      alt="Antofagasta de la Sierra"
+      className="catamarca-img"
+    />
+    <div className="catamarca-content">
+      <h2 className="catamarca-title">Valle Chico</h2>
+      <p className="catamarca-description">
+        es un desarrollo urbanístico en Catamarca, Argentina, que combina
+        áreas residenciales, comerciales y recreativas. Este proyecto busca
+        ofrecer una calidad de vida integral a sus habitantes, promoviendo
+        espacios verdes y servicios modernos, lo que lo convierte en un
+        lugar atractivo para vivir y visitar.
+      </p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28050.509401957726!2d-65.8401143117459!3d-28.500208897152085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942429b27148f9a9%3A0x22202ae96e088a77!2sValle%20Chico%2C%20K4700%2C%20Catamarca!5e0!3m2!1ses-419!2sar!4v1727449819166!5m2!1ses-419!2sar"></iframe>
+    </div>
+  </div>
+      <div className="catamarca" id="catamarca">
+    <img
+      src="img/Valle-Chico/Primera Plaza Valle Chico.jpg"
+      alt="Primera Plaza Valle Chico"
+      className="catamarca-img"
+    />
+    <div className="catamarca-content">
+      <h2 className="catamarca-title">Primera Plaza Valle Chico</h2>
+      <p className="catamarca-description">
+        Primera Plaza Valle Chico es un centro comercial en Catamarca,
+        Argentina, que ofrece una variedad de tiendas, restaurantes y
+        servicios, convirtiéndose en un punto de encuentro y entretenimiento
+        para la comunidad local.
+      </p>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112237.01694606073!2d-65.97710995664063!3d-28.4672938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942429d4ec06d145%3A0x49b74ceb484ce973!2sPrimera%20Plaza%20Valle%20Chico!5e0!3m2!1ses-419!2sar!4v1727446018206!5m2!1ses-419!2sar"></iframe>
+  </div>
       </>
   );
 }

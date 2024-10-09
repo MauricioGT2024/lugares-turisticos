@@ -1,6 +1,5 @@
 export { default as TinogastaDetails } from "./Tinogasta/TinogastaDetails"
 export { default as FiambalaDetails } from  "./Fimbala/Fiambala"
 export { default as AntofagastaDeLaSierraDetails } from "./Antofagasta-De-La-Sierra/AntofagastaDeLaSierraDetails"
-export { default as ValleChicoDetails } from "./Valle-Chico/ValleChicoDetails"
 export { default as CatamarcaDetails } from "./Catamarca/CatamarcaDetails"
 export { default as Departamentos } from "./Departamentos/Departamentos"

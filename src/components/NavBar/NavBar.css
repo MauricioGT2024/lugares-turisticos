@@ -39,6 +39,7 @@ ul li a:hover {
     width: 50px;
     cursor: pointer;
     margin-left: 40px;
+   
 }
 
 .dark .navbar {
@@ -47,6 +48,7 @@ ul li a:hover {
 }
 
 .dark ul li a {
+    background: #000;
     color: #fff; /* Links in dark mode */
 }
 

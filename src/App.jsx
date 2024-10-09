@@ -7,7 +7,6 @@ import { Catamarca } from "./pages/Catamarca";
 import { Fiambala } from "./pages/Fiambala";
 import { Tinogasta } from "./pages/Tinogasta";
 import { AntofagastaDeLaSierra } from "./pages/Antofagasta-De-La-Sierra";
-import { ValleChico } from "./pages/Valle-Chico";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import { Footer } from "./components/Footer/Footer";
@@ -38,10 +37,6 @@ const App = () => {
             <Route
               path="/Antofagasta-De-La-Sierra/"
               element={<AntofagastaDeLaSierra />}
-            ></Route>
-            <Route
-              path="/Valle-Chico/"
-              element={<ValleChico />}
             ></Route>
             <Route path="*" element={<Error404 />}></Route>
           </Routes>

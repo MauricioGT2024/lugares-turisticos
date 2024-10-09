@@ -97,30 +97,7 @@ function Departamentos() {
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7168.333242857714!2d-67.41152290916331!3d-26.060810470610253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96a080132e06d10b%3A0x3c02f3fa338632ac!2sAntofagasta%20de%20la%20Sierra%2C%20Catamarca!5e0!3m2!1ses-419!2sar!4v1725204163946!5m2!1ses-419!2sar"></iframe>
     </div>
   </div>
-  <div className="vallechico" id="vallechico">
-    <img
-      src="img/Valle-Chico/Capital.jpg"
-      alt="Antofagasta de la Sierra"
-      className="vallechico-img"
-    />
-    <div className="vallechico-content">
-      <h2 className="vallechico-title">Valle Chico</h2>
-      <p className="vallechico-description">
-        es un desarrollo urbanístico en Catamarca, Argentina, que combina
-        áreas residenciales, comerciales y recreativas. Este proyecto busca
-        ofrecer una calidad de vida integral a sus habitantes, promoviendo
-        espacios verdes y servicios modernos, lo que lo convierte en un
-        lugar atractivo para vivir y visitar.
-      </p>
-      <button>
-        <span>
-          {" "}
-          <a href="Valle-Chico">ver mas</a>{" "}
-        </span>
-      </button>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28050.509401957726!2d-65.8401143117459!3d-28.500208897152085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942429b27148f9a9%3A0x22202ae96e088a77!2sValle%20Chico%2C%20K4700%2C%20Catamarca!5e0!3m2!1ses-419!2sar!4v1727449819166!5m2!1ses-419!2sar"></iframe>
-    </div>
-  </div>
+  
   </>
   );
 }
