@@ -14,7 +14,7 @@ cd lugares-turisticos
 2. Cambiese de rama y haga un pull:
 
 ```bash
-git checkout --track origin/17/4/24
+git checkout --track origin/11/10/24
 
 git pull
 ```
