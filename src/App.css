@@ -1,17 +1,16 @@
-#root {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+  justify-content: center;
   text-align: center;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-body{
-  display: grid;
-  
-  min-height: 100vh;
-  
 }
 
-
-
-p{
-  margin-left: 50px;
+.container{
+  width: 100%; 
+  transition: 0.5s;
+}
+.container.dark{
+  background: #222;
 }

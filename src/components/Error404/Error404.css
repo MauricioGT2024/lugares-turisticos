@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+.error{
+    min-height: 73vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.error404{
+    font-family: "New Amsterdam", sans-serif;
+    color: red;
+    font-size: 15px;
+    
+}
+
+.tagA{
+    text-decoration: none;
+    color: blue;
+    padding: 3px;
+}
+
+.tagA:hover{
+    color: black;
+    transition-duration: 0.2s;
+    
+}
+
+.tagA:active{
+    color: white;
+    transition-duration: 0.2s;
+    padding: -3px;
+}

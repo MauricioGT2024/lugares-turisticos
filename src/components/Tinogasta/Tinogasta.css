@@ -1,0 +1,52 @@
+.tinogasta {
+    display: inline-table;
+    margin: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    overflow: hidden;
+    transition: .2s ease-in-out
+
+  }
+  
+  
+  .tinogasta:hover {
+    -webkit-box-shadow: -1px -4px 16px 5px rgb(255, 255, 255);
+    -moz-box-shadow: -1px -4px 16px 5px rgb(156, 174, 79);
+    box-shadow: -1px -4px 16px 5px rgb(80, 172, 89);
+  }
+  
+  /* Estilos para la imagen de la tarjeta */
+  .tinogasta-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Estilos para el contenido de la tarjeta */
+  .tinogasta-content {
+    padding: 16px;
+  }
+  
+  .tinogasta-title {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .tinogasta-description {
+  
+    color: #666;
+  }
+  
+  
+  
+  .tinogasta-link{
+    list-style-type: none;
+  }
+  
+  
+  
+  
+  

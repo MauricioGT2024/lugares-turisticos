@@ -1,0 +1,51 @@
+
+  
+  /* Estilos para la tarjeta */
+  .catamarca {
+    display: inline-table;
+    margin: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    overflow: hidden;
+    transition: .2s ease-in-out
+  }
+  
+  .catamarca:hover {
+    -webkit-box-shadow: -1px -4px 16px 5px rgb(255, 8, 8);
+    -moz-box-shadow: -1px -4px 16px 5px rgb(101, 213, 238);
+    box-shadow: -1px -4px 16px 5px rgb(127, 232, 234);
+  }
+  
+  /* Estilos para la imagen de la tarjeta */
+  .catamarca-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Estilos para el contenido de la tarjeta */
+  .catamarca-content {
+    padding: 16px;
+  }
+  
+  .catamarca-title {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .catamarca-description {
+    margin: 8px 0;
+    color: #666;
+  }
+  
+  
+  .catamarca-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .catamarca-link{
+    list-style-type: none;
+  }

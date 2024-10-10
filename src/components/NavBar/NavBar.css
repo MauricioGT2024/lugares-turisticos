@@ -1,0 +1,58 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px 7%;
+}
+
+.logo {
+    width: 160px;
+    cursor: pointer;
+}
+
+ul {
+    flex: 1;
+    list-style: none;
+    text-align: center;
+    padding: 0; /* Added to remove default padding */
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 18px;
+}
+
+ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Use the current text color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+ul li a:hover {
+    color: #007BFF; /* Change to your desired hover color */
+}
+
+.toggle-icon {
+    width: 50px;
+    cursor: pointer;
+    margin-left: 40px;
+   
+}
+
+.dark .navbar {
+    background: #000;
+    color: #fff;
+}
+
+.dark ul li a {
+    background: #000;
+    color: #fff; /* Links in dark mode */
+}
+
+.dark ul li a:hover {
+    color: #007BFF; /* Change hover color for dark mode */
+}
+

@@ -1,0 +1,73 @@
+/* Estilos básicos para el cuerpo del documento */
+
+/* Estilos para la tarjeta */
+.card {
+  display: inline-table;
+  margin: 15px;
+  background: #fff;
+  border-radius: 8px;
+  max-width: 300px;
+  overflow: hidden;
+  
+}
+
+
+/* Estilos para la imagen de la tarjeta */
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16/9;
+}
+
+/* Estilos para el contenido de la tarjeta */
+.card-content {
+  padding: 16px;
+  aspect-ratio: 16/9;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.card-description {
+  color: #666;
+}
+
+button {
+  border: 0;
+  background-image: linear-gradient(120deg, #719eab, #09f, #00ddff);
+  border-radius: 8px;
+  font-size: 18px;
+  display: flex;
+  padding: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: auto;
+  
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+button span {
+  background-color: #111;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+button:hover span {
+  background: none;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.card-link {
+  list-style-type: none;
+}
