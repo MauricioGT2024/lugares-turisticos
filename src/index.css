@@ -1,5 +1,9 @@
 
-
+body{
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+}
 
 
 
@@ -10,7 +14,7 @@
   }
   to {
     filter: blur(2px);
-   background-color: F#71c54f;
+   background-color: #71c54f;
     
   }
 }

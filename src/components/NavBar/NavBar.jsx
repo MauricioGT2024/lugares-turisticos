@@ -6,6 +6,7 @@ import logo from '../../../public/navbar.png';
 import logo_negro from '../../assets/logo_negro.jpg';
 
 const NavBar = ({ theme, setTheme }) => {
+    
     const toggle_mode = () => {
         theme === 'light' ? setTheme('dark') : setTheme('light');
     };
@@ -25,3 +26,4 @@ const NavBar = ({ theme, setTheme }) => {
 };
 
 export default NavBar;
+

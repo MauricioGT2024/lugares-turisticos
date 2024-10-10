@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import   Home  from "./pages/Home";
+import Home from "./pages/Home";
 import { Provincia } from "./pages/Provincia";
 import { Error404 } from "./components/Error404/Error404";
 import { Catamarca } from "./pages/Catamarca";
@@ -10,17 +10,18 @@ import { AntofagastaDeLaSierra } from "./pages/Antofagasta-De-La-Sierra";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import { Footer } from "./components/Footer/Footer";
+import { Hospedaje } from "./pages/Hospedaje";
 
 
 const App = () => {
 
   const current_theme = localStorage.getItem('current_theme')
-  const [theme, setTheme] = useState(current_theme?
-  current_theme : 'light');
+  const [theme, setTheme] = useState(current_theme ?
+    current_theme : 'light');
 
-  useEffect(() =>{
+  useEffect(() => {
     localStorage.setItem('current_time', theme);
-  },[theme])
+  }, [theme])
 
   return (
     <>
@@ -38,6 +39,8 @@ const App = () => {
               path="/Antofagasta-De-La-Sierra/"
               element={<AntofagastaDeLaSierra />}
             ></Route>
+            <Route path="/Hospedaje/" element={<Hospedaje />}></Route>
+            
             <Route path="*" element={<Error404 />}></Route>
           </Routes>
         </div >

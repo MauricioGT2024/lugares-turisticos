@@ -6,27 +6,24 @@
   margin: 15px;
   background: #fff;
   border-radius: 8px;
- 
-
   max-width: 300px;
   overflow: hidden;
   
 }
 
-.card:hover {
-  
-}
 
 /* Estilos para la imagen de la tarjeta */
 .card-img {
   width: 100%;
   height: auto;
   display: block;
+  aspect-ratio: 16/9;
 }
 
 /* Estilos para el contenido de la tarjeta */
 .card-content {
   padding: 16px;
+  aspect-ratio: 16/9;
 }
 
 .card-title {
