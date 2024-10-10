@@ -24,9 +24,9 @@ const Card = ({ title, description, location, image, iframe }) => (
 const hospedajes = [
   {
     title: "Apart Hotel Salvador",
-    description: "Apartamentos equipados con cocina, ideal para familias.",
+    description: "",
     location: "Catamarca",
-    image: "../../../public/img/Hospedaje/Apart Hotel Salvador.jpg",
+    image: "/img/Hospedaje/Apart Hotel Salvador.jpg",
     iframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.670844416298!2d-65.7836073250111!3d-28.459337159594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94242996f2625703%3A0xd4a9e207a566b2eb!2sApart%20Hotel%20Salvador!5e0!3m2!1ses-419!2sar!4v1728574367634!5m2!1ses-419!2sar"
   },
   {
@@ -47,7 +47,7 @@ const hospedajes = [
     title: "El Zorro Gris Hotel",
     description: "Hotel rústico con comodidades modernas.",
     location: "Tinogasta",
-    image: "../../../public/img/Hospedaje/El Zorro Gris Hotel.jpg",
+    image: "../../../publiimg/",
     iframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3522.048934772148!2d-67.60029222503097!3d-28.022980140505496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32951a0389295%3A0xd82f57e34fc47d93!2sEl%20Zorro%20Gris!5e0!3m2!1ses-419!2sar!4v1728574509814!5m2!1ses-419!2sar"
   },
   {
