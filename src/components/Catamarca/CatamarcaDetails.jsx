@@ -55,15 +55,7 @@ function CatamarcaDetails() {
       mapSrc:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224679.84862245177!2d-65.944013521875!3d-28.370256435358243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94242fea64817755%3A0x12a068eda95f2dce!2sFiesta%20Nacional%20e%20Internacional%20Del%20Poncho!5e0!3m2!1ses-419!2sar!4v1725200736641!5m2!1ses-419!2sar",
     },
-    {
-      imgSrc:
-        "img/San Fernando Del Valle De Catamarca/Catedral Basílica de Nuestra Señora del Valle.jpg",
-      title: "Parroquia San Juan Bautista",
-      description:
-        "es una iglesia ubicada en Catamarca, Argentina. Este templo es un importante centro religioso y cultural para la comunidad, donde se celebran misas, eventos y actividades comunitarias. Su arquitectura y ambiente acogedor la convierten en un lugar significativo para los fieles de la zona.",
-      mapSrc:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.649942074083!2d-67.56786872502897!3d-28.06571124236247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969e055473f5c7ef%3A0x3f17c6c76d3b1cfb!2sParroquia%20San%20Juan%20Bautista!5e0!3m2!1ses-419!2sar!4v1727451137108!5m2!1ses-419!2sar",
-    },
+    
     {
       imgSrc: "img/Valle-Chico/Capital.jpg",
       title: "Valle-Chico",
