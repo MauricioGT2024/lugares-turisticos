@@ -12,16 +12,13 @@ import NavBar from "./components/NavBar/NavBar";
 import { Footer } from "./components/Footer/Footer";
 import { Hospedaje } from "./pages/Hospedaje";
 
-
 const App = () => {
-
-  const current_theme = localStorage.getItem('current_theme')
-  const [theme, setTheme] = useState(current_theme ?
-    current_theme : 'light');
+  const current_theme = localStorage.getItem('current_theme') || 'light'; // Default to 'light' if not found
+  const [theme, setTheme] = useState(current_theme);
 
   useEffect(() => {
-    localStorage.setItem('current_time', theme);
-  }, [theme])
+    localStorage.setItem('current_theme', theme); // Ensure you're saving the right key
+  }, [theme]);
 
   return (
     <>
@@ -35,19 +32,13 @@ const App = () => {
             <Route path="/Catamarca/" element={<Catamarca />}></Route>
             <Route path="/Fiambala/" element={<Fiambala />}></Route>
             <Route path="/Tinogasta/" element={<Tinogasta />}></Route>
-            <Route
-              path="/Antofagasta-De-La-Sierra/"
-              element={<AntofagastaDeLaSierra />}
-            ></Route>
+            <Route path="/Antofagasta-De-La-Sierra/" element={<AntofagastaDeLaSierra />}></Route>
             <Route path="/Hospedaje/" element={<Hospedaje />}></Route>
-            
             <Route path="*" element={<Error404 />}></Route>
           </Routes>
-        </div >
+        </div>
       </BrowserRouter>
       <Footer />
-
-
     </>
   );
 }
