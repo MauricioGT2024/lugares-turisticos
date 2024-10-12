@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Hospedaje.css'
 // Componente Card
 const Card = ({ title, description, location, image, iframe }) => (
   <div className="card">
