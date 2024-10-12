@@ -3,12 +3,14 @@
 /* Estilos para la tarjeta */
 .card {
   display: inline-table;
+  height: 150px;
   margin: 15px;
   background: #fff;
   border-radius: 8px;
   max-width: 300px;
   overflow: hidden;
-  
+  min-height: 128px;
+  padding-bottom: 20px
 }
 
 

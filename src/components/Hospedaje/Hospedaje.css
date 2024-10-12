@@ -1,53 +1,62 @@
 /* Estilos generales */
 
-  
-  /* Estilo de la lista de hospedajes */
-  .hospedajes-list {
-    min-height: 74.3vh;
-    
-    justify-content: center;
-  }
-  
-  /* Estilo de la card */
-  .card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    transition: transform 0.2s;
-  }
-  
-  /* Efecto hover en la card */
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* Estilo de la imagen de la card */
-  .card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    aspect-ratio: 16/9;
-  }
-  
-  /* Estilo del título */
-  .card-title {
-    font-size: 1.5em;
-    margin: 10px;
-  }
-  
-  /* Estilo de la descripción */
-  .card-description {
-    font-size: 1em;
-    color: #555;
-    margin: 10px;
-  }
-  
-  /* Estilo de la ubicación */
-  .card-location {
-    font-size: 0.9em;
-    color: #888;
-    margin: 10px;
-  }
-  
+.hospedajes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espaciado entre las tarjetas */
+  min-height: 74.3vh;
+}
+
+/* Estilo de la card */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Efecto hover en la card */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de la imagen de la card */
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  aspect-ratio: 1;
+  border-bottom: 2px solid #eee; /* Separador */
+}
+
+/* Estilo del título */
+.card-title {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+/* Estilo de la descripción */
+.card-description {
+  font-size: 1em;
+  color: #555;
+  margin: 10px;
+}
+
+/* Estilo de la ubicación */
+.card-location {
+  font-size: 0.9em;
+  color: #888;
+  margin: 10px;
+}
+
+/* Estilo del iframe */
+.card-iframe {
+  width: 100%;
+  height: 150px; /* Ajuste del tamaño del mapa */
+  border: 0; /* Sin borde */
+  margin-top: 10px; /* Espaciado superior */
+}

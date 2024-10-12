@@ -1,51 +1,92 @@
+.catamarca {
+  height: auto;
+  display: inline-block;
+  margin: 20px; /* Mayor margen para espaciar mejor las tarjetas */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra más suave y pronunciada */
+  max-width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  
-  /* Estilos para la tarjeta */
-  .catamarca {
-    display: inline-table;
-    margin: 15px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    overflow: hidden;
-    transition: .2s ease-in-out
-  }
-  
-  .catamarca:hover {
-    -webkit-box-shadow: -1px -4px 16px 5px rgb(255, 8, 8);
-    -moz-box-shadow: -1px -4px 16px 5px rgb(101, 213, 238);
-    box-shadow: -1px -4px 16px 5px rgb(127, 232, 234);
-  }
-  
-  /* Estilos para la imagen de la tarjeta */
-  .catamarca-img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  /* Estilos para el contenido de la tarjeta */
-  .catamarca-content {
-    padding: 16px;
-  }
-  
-  .catamarca-title {
-    margin: 0;
-    font-size: 1.5em;
-    color: #333;
-  }
-  
-  .catamarca-description {
-    margin: 8px 0;
-    color: #666;
-  }
-  
-  
-  .catamarca-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .catamarca-link{
-    list-style-type: none;
-  }
+.catamarca:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); /* Sombra más intensa */
+}
+
+/* Estilos para la imagen de la tarjeta */
+.catamarca-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.catamarca:hover .catamarca-img {
+  transform: scale(1.05); /* Zoom en la imagen al hacer hover */
+}
+
+/* Estilos para el contenido de la tarjeta */
+.catamarca-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.catamarca-title {
+  margin: 0 0 10px; /* Espacio inferior */
+  font-size: 1.7em; /* Aumento del tamaño de fuente */
+  color: #333;
+  font-weight: 600;
+}
+
+.catamarca-description {
+  margin: 10px 0;
+  color: #555;
+  line-height: 1.6; /* Mejora la legibilidad */
+}
+
+/* Estilos para el mapa */
+.catamarca-map {
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.catamarca-map-iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.catamarca:hover .catamarca-map-iframe {
+  transform: scale(1.01); /* Ligero zoom en el mapa al hacer hover */
+}
+
+/* Estilo para enlaces (opcional, si los usas) */
+.catamarca-link {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0; /* Espacio para separar el enlace */
+}
+
+.catamarca-button {
+  display: inline-block; /* Asegura que el botón sea un bloque */
+  padding: 10px 15px;
+  background-color: #007bff; /* Color atractivo */
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none; /* Sin subrayado */
+  transition: background-color 0.3s ease; /* Transición de color */
+}
+
+.catamarca-button:hover {
+  background-color: #0056b3; /* Color de fondo en hover */
+}
+
+
+
+
+
+

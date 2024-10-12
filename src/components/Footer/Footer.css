@@ -1,49 +1,40 @@
 :root {
-    --footer-bg-light: #f9f9f9;
-    --footer-text-light: #000;
-    --footer-bg-dark: #000;
-    --footer-text-dark: #f9f9f9;
-  }
-  
-  .footer {
-    padding: 1em 0;
-    text-align: center;
-    background-color: var(--footer-bg-dark);
-    color: var(--footer-text-dark);
-    transition: background-color 0.3s, color 0.3s;
-    bottom: 0;
-    
-   margin-top: auto;
-
+  --footer-bg: #f9f9f9;
+  --footer-text: #000;
 }
-  
-  .footer.light {
-    background-color: #f9f9f9;
-    color:#f9f9f9;
-  }
-  
-  .footer.dark {
-    background-color:#222;
-    color: #222;
-  }
-  
-  .social-links {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-  }
-  
-  .social-links li {
-    display: inline;
-    margin: 0 10px;
-  }
-  
-  .social-links a {
-    text-decoration: none;
-    color: inherit; /* Hereda el color del texto */
-  }
-  
-  .social-links a:hover {
-    text-decoration: underline; /* Efecto hover */
-  }
+
+.footer {
+  padding: 2em 0; /* Espaciado más amplio */
+  text-align: center;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  transition: background-color 0.3s, color 0.3s;
+   /* Asegura que esté en el pie de página */
+  position: relative; /* Asegura que el footer se mantenga en su lugar */
+  bottom: 0;
+  bottom: auto;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.social-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: inherit; /* Hereda el color del texto */
+}
+
+.social-links a:hover {
+  text-decoration: underline; /* Efecto hover */
+}
+
   

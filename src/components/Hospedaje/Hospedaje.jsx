@@ -14,13 +14,13 @@ const Card = ({ title, description, location, image, iframe }) => (
         className="card-iframe"
         frameBorder="0"
         allowFullScreen
-        style={{ width: '100%', height: '200px' }}
       ></iframe>
     )}
   </div>
 );
 
 // Datos de hospedaje
+
 const hospedajes = [
   {
     title: "Apart Hotel Salvador",

@@ -1,45 +1,59 @@
 .fiambala {
-    display: inline-table;
-    margin: 15px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    overflow: hidden;
-    transition: .2s ease-in-out
+  display: inline-block; /* Cambiado a inline-block para mejor alineación */
+  margin: 20px;
+  background: #fff;
+  border-radius: 12px; /* Bordes más redondeados para un look moderno */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más suave */
+  max-width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición más suave */
+}
 
-  }
-  
-  
-  .fiambala:hover {
-    -webkit-box-shadow: -1px -4px 16px 5px #a3e384;
-    -moz-box-shadow: -1px -4px 16px 5px #10ed10;
-    box-shadow: -1px -4px 16px 5px #9ac653;
-  }
-  
-  /* Estilos para la imagen de la tarjeta */
-  .fiambala-img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  /* Estilos para el contenido de la tarjeta */
-  .fiambala-content {
-    padding: 16px;
-  }
-  
-  .fiambala-title {
-    margin: 0;
-    font-size: 1.5em;
-    color: #333;
-  }
-  
-  .fiambala-description {
-    margin: 8px 0;
-    color: #666;
-  }
-  
-  .fiambala-link{
-    list-style-type: none;
-  }
+.fiambala:hover {
+  transform: translateY(-5px) scale(1.02); /* Efecto de elevación y escala */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más intensa en hover */
+}
+
+.fiambala-img {
+  width: 100%;
+  height: 180px; /* Altura fija para la imagen, mantener proporciones */
+  object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+}
+
+.fiambala-content {
+  padding: 20px; /* Mayor espacio interior para un mejor look */
+  text-align: left; /* Alineación de texto a la izquierda */
+}
+
+.fiambala-title {
+  margin: 0 0 10px; /* Espacio abajo del título */
+  font-size: 1.6em; /* Tamaño de fuente más grande */
+  color: #2c3e50; /* Color de texto más oscuro para mejor legibilidad */
+  font-weight: 600; /* Negrita para mayor énfasis */
+}
+
+.fiambala-description {
+  margin: 0; /* Sin margen para la descripción */
+  color: #7f8c8d; /* Color más suave para la descripción */
+  line-height: 1.6; /* Mejora la legibilidad */
+}
+
+.fiambala-link {
+  list-style-type: none;
+  padding: 0; /* Sin padding */
+  margin-top: 15px; /* Espacio superior para el enlace */
+}
+
+.fiambala-link a {
+  display: inline-block; /* Enlace como bloque */
+  padding: 10px 15px; /* Espacio interior */
+  background-color: #3498db; /* Color de fondo atractivo */
+  color: #fff; /* Texto blanco */
+  border-radius: 6px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+  transition: background-color 0.3s ease; /* Transición para el fondo */
+}
+
+.fiambala-link a:hover {
+  background-color: #2980b9; /* Color de fondo en hover */
+}
