@@ -2,13 +2,15 @@ import React from 'react';
 import './NavBar.css';
 import logo_claro from '../../assets/day.png';
 import logo_oscuro from '../../assets/night.png';
-import logo from '../../../public/navbar.png'
 import logo_negro from '../../assets/logo_negro.jpg';
+import logo from '../../../public/navbar.png'
 
 const NavBar = ({ theme, setTheme }) => {
     
     const toggle_mode = () => {
-        theme === 'light' ? setTheme('dark') : setTheme('light');
+        const newTheme = theme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
+        document.body.className = newTheme === 'light' ? 'light-mode' : 'dark-mode'; // Cambia la clase del body
     };
 
     return (
@@ -16,7 +18,6 @@ const NavBar = ({ theme, setTheme }) => {
             <a href="/"><img src={theme === 'light' ? logo : logo_negro} alt="Logo" className='logo' /></a>
             <ul>
                 <li><a href="/">Home</a></li>
-                
                 <li><a href="/Provincia">Departamentos</a></li>
                 <li><a href="/hospedaje">Hospedaje</a></li>
             </ul>
@@ -26,4 +27,5 @@ const NavBar = ({ theme, setTheme }) => {
 };
 
 export default NavBar;
+
 
