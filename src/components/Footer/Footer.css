@@ -1,15 +1,19 @@
 .footer {
-  padding: 40px 20px;
+  padding: 15em 0; /* Espaciado más amplio */
   text-align: center;
   background-color: var(--footer-bg);
   color: var(--footer-text);
   transition: background-color 0.3s, color 0.3s;
-  position: relative;
+   /* Asegura que esté en el pie de página */
+  position: absolute; /* Asegura que el footer se mantenga en su lugar */
+  bottom: 0;
+  bottom: auto;
   width: 100%;
+  margin-top: 0px;
+  height: auto;
 }
 
 .social-links {
-  list-style: none;
   padding: 0;
   margin: 10px 0;
 }
@@ -27,21 +31,25 @@
 }
 
 .social-links a:hover {
-  color: #007bff;
-  text-decoration: underline;
+  text-decoration: underline; /* Efecto hover */
+}
+.footer {
+  background-color: var(--footer-background, #fff);
+  color: var(--footer-color, #000);
+  padding: 66px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-
-/* Estilos para modo oscuro */
-.dark-mode .footer {
-  background-color: #333;
-  color: #fff;
+/* Modo oscuro */
+body.dark-mode .footer {
+  --footer-background: #000;
+  --footer-color: #fff;
 }
 
-.dark-mode .social-links a {
-  color: #fff; /* Color blanco para enlaces en modo oscuro */
+body.light-mode .footer {
+  --footer-background: #fff;
+  --footer-color: #000;
 }
 
-.dark-mode .social-links a:hover {
-  color: #79b8ff; /* Azul claro para hover en modo oscuro */
-}
+  
