@@ -74,6 +74,11 @@ button:active {
   list-style-type: none;
 }
 
-h2{
-  color:aqua ;
+.h2{
+  color: darkgreen;
+  text-align: center;
+  font-size: revert;
+
 }
+
+ ;

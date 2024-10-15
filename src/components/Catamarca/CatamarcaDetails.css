@@ -9,7 +9,9 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.catamarca-details h2{
+  color: #0d7b2c;
+}
 .catamarca:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); /* Sombra más intensa */
@@ -84,7 +86,6 @@
 .catamarca-button:hover {
   background-color: #0056b3; /* Color de fondo en hover */
 }
-
 
 
 

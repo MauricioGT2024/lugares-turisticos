@@ -5,7 +5,9 @@
   padding: 40px;
   color: white; /* Cambia el color del texto para mejor contraste */
 }
-
+.home h2{
+  color: #46e5f3;
+}
 .home-description {
   padding: 5px;
   letter-spacing: 1px;

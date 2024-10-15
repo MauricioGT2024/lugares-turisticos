@@ -3,9 +3,14 @@ body{
   margin: 0;
   position: relative;
   min-height: 100vh;
+  font-family: 'DM Serif Display', serif;
+  
+  
 }
-h2{
+body h2{
   margin-top: 35px;
+  font-size: revert;
+  color: #6cb7d0;
 }
 
 
@@ -27,7 +32,6 @@ h2{
   --c2: #6cb7d0;
   
   position: relative; /* Necessary for the ::before to be positioned relative to this element */
-
 }
 
 #root::before {

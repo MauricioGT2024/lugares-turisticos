@@ -11,6 +11,7 @@ import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import { Footer } from "./components/Footer/Footer";
 import { Hospedaje } from "./pages/Hospedaje";
+import '@fontsource-variable/onest';
 
 const App = () => {
   const current_theme = localStorage.getItem('current_theme') || 'light'; // Default to 'light' if not found

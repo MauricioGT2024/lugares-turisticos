@@ -41,4 +41,6 @@
   height: 200px; /* Ajusta según lo necesites */
   border: none;
 }
-
+.antofagastadelasierra-details h2 {
+  color: gold;
+}

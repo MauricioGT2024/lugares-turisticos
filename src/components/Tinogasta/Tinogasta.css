@@ -54,3 +54,6 @@
 .tinogasta-link a:hover {
   color: #0056b3; /* Cambio de color al hacer hover sobre el enlace */
 }
+.tinogasta-details h2 {
+  color: rgb(56, 117, 138);
+}
