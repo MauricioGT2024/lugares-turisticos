@@ -1,4 +1,5 @@
 import './HomeDetails.css';
+import { Link } from 'react-router-dom'; // Si usas React Router
 
 function HomeDetails() {
   return (
@@ -14,18 +15,18 @@ function HomeDetails() {
         </p>
         <div className="attractions">
           <h3>Puntos de Interés:</h3>
-          <div className="attractions-list">
-            <div className="attraction-item">🏞️ Parque Adán Quiroga</div>
-            <div className="attraction-item">⛪ La Catedral Basílica</div>
-            <div className="attraction-item">🏛️ Casa de la Cultura</div>
-            <div className="attraction-item">🎉 Fiesta Nacional e Internacional del Poncho</div>
-          </div>
+          <ul className="attractions-list">
+            <li className="attraction-item">🏞️ Parque Adán Quiroga</li>
+            <li className="attraction-item">⛪ La Catedral Basílica</li>
+            <li className="attraction-item">🏛️ Casa de la Cultura</li>
+            <li className="attraction-item">🎉 Fiesta Nacional e Internacional del Poncho</li>
+          </ul>
         </div>
         <button className="boton">
           <span>
-            <a className="link" href="Provincia">
+            <Link className="link" to="/Provincia"> 
               Ver más
-            </a>
+            </Link>
           </span>
         </button>
       </div>
