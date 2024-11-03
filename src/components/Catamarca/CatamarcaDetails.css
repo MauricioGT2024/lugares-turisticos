@@ -9,12 +9,17 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.catamarca-details h2{
+.catamarca-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.catamarca-details h2 {
   color: #0d7b2c;
 }
 .catamarca:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); /* Sombra más intensa */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra más difusa */
 }
 
 /* Estilos para la imagen de la tarjeta */
@@ -56,9 +61,7 @@
 }
 
 .catamarca-map-iframe {
-  width: 100%;
   height: 200px;
-  border: none;
   transition: transform 0.3s ease;
 }
 
@@ -74,20 +77,16 @@
 }
 
 .catamarca-button {
-  display: inline-block; /* Asegura que el botón sea un bloque */
-  padding: 10px 15px;
-  background-color: #007bff; /* Color atractivo */
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none; /* Sin subrayado */
-  transition: background-color 0.3s ease; /* Transición de color */
+  margin-top: 10px; /* Espaciado superior */
+  background-color: #28a745; /* Color verde */
 }
 
 .catamarca-button:hover {
-  background-color: #0056b3; /* Color de fondo en hover */
+  background-color: #218838; /* Un verde más oscuro */
 }
 
-
-
-
-
+@media (max-width: 600px) {
+  .catamarca {
+    max-width: 90%; /* Ocupa más espacio en pantallas pequeñas */
+  }
+}

@@ -1,61 +1,75 @@
-.fiambala {
-  display: inline-block; /* Cambiado a inline-block para mejor alineación */
+.fiambala-details {
+  padding: 20px; /* Color de fondo claro */
+}
+
+.fiambala-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Espacio alrededor de los elementos */
+}
+
+.fiambala-card {
+  display: flex;
+  flex-direction: column;
   margin: 20px;
   background: #fff;
-  border-radius: 12px; /* Bordes más redondeados para un look moderno */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más suave */
-  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición más suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 320px;
 }
-.fiambala-details h2 {
-  color: darkgoldenrod;
+
+.fiambala-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
-.fiambala:hover {
-  transform: translateY(-5px) scale(1.02); /* Efecto de elevación y escala */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más intensa en hover */
+
+.fiambala-image-container {
+  position: relative;
 }
 
 .fiambala-img {
   width: 100%;
-  height: 180px; /* Altura fija para la imagen, mantener proporciones */
-  object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+  height: 180px;
+  object-fit: cover;
+}
+
+.fiambala-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fiambala-image-container:hover .fiambala-overlay {
+  opacity: 1;
 }
 
 .fiambala-content {
-  padding: 20px; /* Mayor espacio interior para un mejor look */
-  text-align: left; /* Alineación de texto a la izquierda */
-}
-
-.fiambala-title {
-  margin: 0 0 10px; /* Espacio abajo del título */
-  font-size: 1.6em; /* Tamaño de fuente más grande */
-  color: #2c3e50; /* Color de texto más oscuro para mejor legibilidad */
-  font-weight: 600; /* Negrita para mayor énfasis */
+  padding: 20px;
 }
 
 .fiambala-description {
-  margin: 0; /* Sin margen para la descripción */
-  color: #7f8c8d; /* Color más suave para la descripción */
-  line-height: 1.6; /* Mejora la legibilidad */
+  margin: 0 0 10px;
+  color: #555;
+  line-height: 1.6;
 }
 
-.fiambala-link {
-  list-style-type: none;
-  padding: 0; /* Sin padding */
-  margin-top: 15px; /* Espacio superior para el enlace */
+.map-iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 8px;
 }
 
-.fiambala-link a {
-  display: inline-block; /* Enlace como bloque */
-  padding: 10px 15px; /* Espacio interior */
-  background-color: #3498db; /* Color de fondo atractivo */
-  color: #fff; /* Texto blanco */
-  border-radius: 6px; /* Bordes redondeados */
-  text-decoration: none; /* Sin subrayado */
-  transition: background-color 0.3s ease; /* Transición para el fondo */
-}
 
-.fiambala-link a:hover {
-  background-color: #2980b9; /* Color de fondo en hover */
-}

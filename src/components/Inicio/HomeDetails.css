@@ -1,78 +1,91 @@
+/* Estilo general para la sección */
 .home {
   background-image: url('ruta-a-tu-imagen.jpg'); /* Cambia esta URL por tu imagen */
   background-size: cover;
   background-position: center;
+  min-height: 100vh; /* Asegura que la sección ocupe toda la altura de la ventana */
   padding: 40px;
-  color: white; /* Cambia el color del texto para mejor contraste */
-}
-.home h2{
-  color: #46e5f3;
-}
-.home-description {
-  padding: 5px;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-}
-
-.home-container {
+  color: white;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
-  padding: 20px;
+}
+
+/* Contenedor principal */
+.home-container {
+  background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
   border-radius: 10px;
+  padding: 30px;
+  max-width: 600px; /* Limita el ancho para mantener la legibilidad */
+  text-align: center; /* Centra el texto */
 }
 
+/* Estilo del título */
+.home-title {
+  font-size: 2em;
+  color: #46e5f3; /* Color del título */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilo de la descripción */
+.home-description {
+  font-size: 1.1em; /* Tamaño de fuente adecuado */
+  line-height: 1.5; /* Mejora la legibilidad */
+  margin-bottom: 20px; /* Espaciado inferior */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Sombra para mejorar el contraste */
+}
+
+/* Estilos para la sección de atracciones */
 .attractions {
-  margin-top: 20px;
+  margin-top: 20px; /* Margen superior para separación */
 }
 
+/* Lista de atracciones */
 .attractions-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  list-style-type: none; /* Elimina viñetas */
+  padding: 0; /* Elimina padding */
 }
 
+/* Estilo de cada atracción */
 .attraction-item {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  padding: 15px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  margin: 10px 0; /* Espaciado vertical entre items */
+  transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
 }
 
+/* Efecto hover en atracciones */
 .attraction-item:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3); /* Cambia el color al pasar el mouse */
+  transform: scale(1.02); /* Efecto de crecimiento */
 }
 
+/* Estilos para el botón */
 .boton {
-  border: 0;
+  border: none; /* Sin bordes */
   background-image: linear-gradient(150deg, #719eab, #09f, #00ddff);
   border-radius: 8px;
   font-size: 18px;
-  padding: 4px;
+  padding: 10px 20px; /* Padding más amplio */
   cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s; /* Transiciones suaves */
 }
 
+/* Estilo del enlace dentro del botón */
 .link {
-  color: #fff;
-  text-decoration: none;
+  color: white; /* Color del texto del enlace */
+  text-decoration: none; /* Sin subrayado */
 }
 
-.boton span {
-  background-color: #111;
-  padding: 10px 15px;
-  border-radius: 6px;
-  transition: 0.3s;
-  text-align: center;
+/* Efecto hover en el botón */
+.boton:hover {
+  transform: translateY(-3px); /* Levanta el botón al pasar el mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
 }
 
-.boton:hover span {
-  background: none;
-}
-
+/* Efecto activo en el botón */
 .boton:active {
-  transform: scale(0.9);
+  transform: scale(0.95); /* Escala hacia abajo al hacer clic */
 }
 

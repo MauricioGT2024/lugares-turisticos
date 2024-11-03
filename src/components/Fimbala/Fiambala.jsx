@@ -1,14 +1,14 @@
-import React from 'react';
-import './FiambalaDetails.css'; // Asegúrate de tener los estilos correctos
+import "./FiambalaDetails.css"; // Asegúrate de crear este archivo CSS
 
-function FiambalaDetails() {
+const FiambalaDetails = () => {
   const locations = [
     {
       imgSrc: "img/Fiambala/Duna Mágica de Fiambalá.jpg",
       title: "Duna Magica De Fiambala",
-      description: "La Duna Mágica de Fiambalá es una extensa duna de arena ubicada en el desierto de Fiambalá, en la provincia de Catamarca, Argentina. Es conocida por sus impresionantes formaciones de arena que crean un paisaje casi surrealista, además de su relevancia como destino turístico y lugar de eventos como el Dakar Rally.",
-      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1810873.832820964!2d-69.91602560625!3d-27.566763399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969e32e507f9d14b%3A0x1c0a5f6153489121!2sDuna%20M%C3%A1gica!5e0!3m2!1ses-419!2sar!4v1725204852483!5m2!1ses-419!2sar"
-
+      description:
+        "La Duna Mágica de Fiambalá es una extensa duna de arena ubicada en el desierto de Fiambalá, en la provincia de Catamarca, Argentina. Es conocida por sus impresionantes formaciones de arena que crean un paisaje casi surrealista, además de su relevancia como destino turístico y lugar de eventos como el Dakar Rally.",
+      mapSrc:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1810873.832820964!2d-69.91602560625!3d-27.566763399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969e32e507f9d14b%3A0x1c0a5f6153489121!2sDuna%20M%C3%A1gica!5e0!3m2!1ses-419!2sar!4v1725204852483!5m2!1ses-419!2sar",
     },
     {
       imgSrc: "img/Fiambala/Museo del Hombre.jpg",
@@ -32,9 +32,9 @@ function FiambalaDetails() {
       description:
         "Las piedras talladas de Fiambalá son un conjunto de rocas esculpidas ubicadas en la región de Fiambalá, Argentina. Estas piedras presentan grabados y figuras que se cree que tienen un origen prehispánico, relacionadas con culturas antiguas que habitaron la zona. Las tallas suelen representar motivos zoomorfos, geométricos y antropomórficos, y son consideradas un importante patrimonio arqueológico, ofreciendo información sobre las creencias y la vida cotidiana de las sociedades que las crearon.",
       mapSrc:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56567.25703381668!2d-67.75809627832028!3d-27.610465999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969e3559a28b96ff%3A0x5d6822ee6a832118!2sPiedras%20talladas!5e0!3m2!1ses-419!2sar!4v1725211154987!5m2!1ses-419!2sar"
-      }, 
-      {
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56567.25703381668!2d-67.75809627832028!3d-27.610465999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969e3559a28b96ff%3A0x5d6822ee6a832118!2sPiedras%20talladas!5e0!3m2!1ses-419!2sar!4v1725211154987!5m2!1ses-419!2sar",
+    },
+    {
       imgSrc: "img/Fiambala/Termas de Fiambalá.jpg",
       title: "Termas de Fiambalá",
       description:
@@ -46,13 +46,21 @@ function FiambalaDetails() {
 
   return (
     <div className="fiambala-details">
-      <h2>Descubre Fiambala</h2>
+      <h2>Descubre Fiambalá</h2>
       <div className="fiambala-container">
         {locations.map((location, index) => (
-          <div className="fiambala" key={index}>
-            <img src={location.imgSrc} alt={location.title} className="fiambala-img" />
+          <div className="fiambala-card" key={index}>
+            <div className="fiambala-image-container">
+              <img
+                src={location.imgSrc}
+                alt={location.title}
+                className="fiambala-img"
+              />
+              <div className="fiambala-overlay">
+                <h3 className="fiambala-title">{location.title}</h3>
+              </div>
+            </div>
             <div className="fiambala-content">
-              <h3 className="fiambala-title">{location.title}</h3>
               <p className="fiambala-description">{location.description}</p>
               <iframe
                 className="map-iframe"
@@ -66,6 +74,6 @@ function FiambalaDetails() {
       </div>
     </div>
   );
-}
+};
 
 export default FiambalaDetails;

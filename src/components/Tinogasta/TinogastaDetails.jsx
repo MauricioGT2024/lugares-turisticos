@@ -1,7 +1,7 @@
-import React from 'react';
+
 import './Tinogasta.css'; // Asegúrate de tener los estilos correctos
 
-function TinogastaDetails() {
+const TinogastaDetails = () => {
   const locations = [
     {
       imgSrc: "img/Tinogasta/Complejo Termal La Aguadita.jpg",
@@ -65,7 +65,7 @@ function TinogastaDetails() {
       <h2>Descubre Tinogasta</h2>
       <div className="tinogasta-container">
         {locations.map((location, index) => (
-          <div className="tinogasta" key={index}>
+          <div className="tinogasta-card" key={index}>
             <img src={location.imgSrc} alt={location.title} className="tinogasta-img" />
             <div className="tinogasta-content">
               <h3 className="tinogasta-title">{location.title}</h3>
@@ -82,6 +82,7 @@ function TinogastaDetails() {
       </div>
     </div>
   );
-}
+};
 
 export default TinogastaDetails;
+

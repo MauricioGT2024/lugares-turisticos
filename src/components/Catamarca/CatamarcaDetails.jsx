@@ -1,4 +1,3 @@
-import React from "react";
 import "./CatamarcaDetails.css"; // Asegúrate de tener los estilos correctos
 
 function CatamarcaDetails() {
@@ -55,7 +54,7 @@ function CatamarcaDetails() {
       mapSrc:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224679.84862245177!2d-65.944013521875!3d-28.370256435358243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94242fea64817755%3A0x12a068eda95f2dce!2sFiesta%20Nacional%20e%20Internacional%20Del%20Poncho!5e0!3m2!1ses-419!2sar!4v1725200736641!5m2!1ses-419!2sar",
     },
-    
+
     {
       imgSrc: "img/Valle-Chico/Capital.jpg",
       title: "Valle-Chico",
@@ -85,24 +84,17 @@ function CatamarcaDetails() {
 
   return (
     <div className="catamarca-details">
-        <h2>Descubre Catamarca</h2>
+      <h2>Descubre Catamarca</h2>
       <div className="catamarca-container">
-        {locations.map((location, index) => (
-          <div className="catamarca" key={index}>
-            <img
-              src={location.imgSrc}
-              alt={location.title}
-              className="catamarca-img"
-            />
+        {locations.map((location) => (
+          <div className="catamarca" key={location.title}>
+            <img src={location.imgSrc} alt={location.title} className="catamarca-img" />
             <div className="catamarca-content">
               <h3 className="catamarca-title">{location.title}</h3>
               <p className="catamarca-description">{location.description}</p>
-              <iframe
-                className="map-iframe"
-                src={location.mapSrc}
-                title={location.title}
-                allowFullScreen
-              ></iframe>
+              <a href={location.mapSrc} target="_blank" rel="noopener noreferrer">
+                <iframe className="map-iframe" src={location.mapSrc} title={location.title} allowFullScreen></iframe>
+              </a>
             </div>
           </div>
         ))}

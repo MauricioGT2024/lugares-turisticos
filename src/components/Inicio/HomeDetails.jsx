@@ -1,5 +1,5 @@
 import './HomeDetails.css';
-import { Link } from 'react-router-dom'; // Si usas React Router
+import { Link } from 'react-router-dom';
 
 function HomeDetails() {
   return (
@@ -22,7 +22,7 @@ function HomeDetails() {
             <li className="attraction-item">🎉 Fiesta Nacional e Internacional del Poncho</li>
           </ul>
         </div>
-        <button className="boton">
+        <button className="boton" aria-label="Ver más sobre la provincia">
           <span>
             <Link className="link" to="/Provincia"> 
               Ver más

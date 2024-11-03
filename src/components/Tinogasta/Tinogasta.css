@@ -1,59 +1,59 @@
-.tinogasta {
-  display: inline-block; /* Cambié a inline-block para mejor manejo del espaciado */
-  margin: 15px;
+.tinogasta-details {
+  padding: 40px; /* Fondo claro para contraste */
+  text-align: center;
+}
+
+.tinogasta-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espaciado entre tarjetas */
+}
+
+.tinogasta-card {
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Mejora en la transición */
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tinogasta:hover {
-  transform: translateY(-5px); /* Efecto de elevar la tarjeta al pasar el mouse */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+.tinogasta-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos para la imagen de la tarjeta */
 .tinogasta-img {
   width: 100%;
   height: auto;
-  display: block;
-  border-bottom: 2px solid #ddd; /* Línea divisoria para separar la imagen del contenido */
 }
 
-/* Estilos para el contenido de la tarjeta */
 .tinogasta-content {
-  padding: 16px;
+  padding: 20px;
 }
 
 .tinogasta-title {
-  margin: 0;
-  font-size: 1.5em;
+  margin: 0 0 10px;
+  font-size: 1.6em;
   color: #333;
 }
 
 .tinogasta-description {
-  color: #666;
-  margin-top: 8px; /* Añadir un poco de margen superior */
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 1em;
 }
 
-.tinogasta-link {
-  list-style-type: none;
-  padding: 0;
-  margin: 16px 0 0 0; /* Espaciado para el enlace */
+.map-iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
 }
 
-.tinogasta-link a {
-  text-decoration: none;
-  color: #007BFF; /* Color del enlace */
-  font-weight: bold;
-  transition: color 0.3s; /* Transición suave para el color del enlace */
-}
-
-.tinogasta-link a:hover {
-  color: #0056b3; /* Cambio de color al hacer hover sobre el enlace */
-}
 .tinogasta-details h2 {
-  color: rgb(56, 117, 138);
+  color: #007BFF;
+  margin-bottom: 30px;
+  font-size: 2em;
 }

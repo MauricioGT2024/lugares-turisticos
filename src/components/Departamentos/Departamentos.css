@@ -1,31 +1,33 @@
-/* Estilos básicos para el cuerpo del documento */
+.departamentos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-/* Estilos para la tarjeta */
 .card {
-  display: inline-table;
-  height: 150px;
+  display: flex;
+  flex-direction: column;
   margin: 15px;
   background: #fff;
   border-radius: 8px;
   max-width: 300px;
   overflow: hidden;
-  min-height: 128px;
-  padding-bottom: 20px
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
 
-/* Estilos para la imagen de la tarjeta */
 .card-img {
+  height: 180px; /* Ajustar según necesidad */
   width: 100%;
-  height: auto;
-  display: block;
-  aspect-ratio: 16/9;
+  object-fit: cover; /* Mantiene la proporción de la imagen */
 }
 
-/* Estilos para el contenido de la tarjeta */
 .card-content {
   padding: 16px;
-  aspect-ratio: 16/9;
 }
 
 .card-title {
@@ -38,47 +40,18 @@
   color: #666;
 }
 
-button {
-  border: 0;
-  background-image: linear-gradient(120deg, #719eab, #09f, #00ddff);
-  border-radius: 8px;
-  font-size: 18px;
-  display: flex;
-  padding: 4px;
-  cursor: pointer;
-  transition: 0.3s;
-  margin: auto;
-  
-}
-a {
-  color: #fff;
-  text-decoration: none;
-}
-button span {
-  background-color: #111;
-  padding: 10px 15px;
-  border-radius: 6px;
-  transition: 0.3s;
-  text-align: center;
-}
-
-button:hover span {
-  background: none;
-}
-
-button:active {
-  transform: scale(0.9);
-}
-
 .card-link {
-  list-style-type: none;
+  text-decoration: none;
+  color: #007bff;
+  margin-top: 10px;
 }
 
-.h2{
-  color: darkgreen;
-  text-align: center;
-  font-size: revert;
-
+.card-map {
+  margin-top: 10px;
 }
 
- ;
+.card-map-iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+}

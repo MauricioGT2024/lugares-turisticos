@@ -2,17 +2,44 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  justify-content: center;
   text-align: center;
-  font-size:large;
+  font-size: large;
   font-family: "Onest Variable", sans-serif;
-  
 }
 
 .container {
   width: 100%;
   transition: 0.5s;
 }
+
 .container.dark {
-  background: #222;
+  background: #222; /* Color de fondo para el tema oscuro */
+  color: #fff; /* Color de texto para el tema oscuro */
 }
+
+.container.light { /* Color de fondo para el tema claro */
+  color: #000; /* Color de texto para el tema claro */
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+

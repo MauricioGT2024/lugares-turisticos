@@ -1,61 +1,61 @@
+/* Variables de color */
+:root {
+  --background-light: #fafafa; /* Fondo claro */
+  --background-dark: #1c1c1c;  /* Fondo oscuro */
+  --text-light: #000;          /* Texto en modo claro */
+  --text-dark: #fff;           /* Texto en modo oscuro */
+  --primary-color: #6cb7d0;    /* Color primario */
+  --secondary-color: #71c54f;  /* Color secundario */
+}
 
-body{
+body {
   margin: 0;
   position: relative;
   min-height: 100vh;
   font-family: 'DM Serif Display', serif;
-  
-  
-}
-body h2{
-  margin-top: 35px;
-  font-size: revert;
-  color: #6cb7d0;
+  transition: background-color 0.3s, color 0.3s; /* Transición suave para el cambio de modo */
 }
 
-
-@keyframes blureado {
-  from{
-    filter: blur(5px);
-    background-color: #6cb7d0;
-  }
-  to {
-    filter: blur(2px);
-   background-color: #71c54f;
-    
-  }
+body.light-mode {
+  background-color: var(--background-light);
+  color: var(--text-light);
 }
 
+body.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Estilo para el contenedor principal */
 #root {
-  --s: 200px; /* control the size */
-  --c1: #fafafa;
-  --c2: #6cb7d0;
-  
-  position: relative; /* Necessary for the ::before to be positioned relative to this element */
+  position: relative;
 }
 
+/* Fondo en modo claro */
 #root::before {
-  --_g: #0000 8%, var(--c1) 0 17%, #0000 0 58%;
-
-  content: ''; /* Required for pseudo-element to display */
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Ensure the background is behind other content */
-
-  background: 
-    linear-gradient(135deg,#0000 20.5%,var(--c1) 0 29.5%,#0000 0) 0 calc(var(--s)/4),
-    linear-gradient(45deg,var(--_g)) calc(var(--s)/2) 0,
-    linear-gradient(135deg,var(--_g),var(--c1) 0 67%,#0000 0),        
-    linear-gradient(45deg,var(--_g),var(--c1) 0 67%,#0000 0 83%,var(--c1) 0 92%,#0000 0),
-    var(--c2);
-
-  background-size: var(--s) var(--s);
-
-  animation-name: blureado;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
+  z-index: -1; /* Asegura que el fondo esté detrás del contenido */
+  background: linear-gradient(135deg, var(--primary-color) 30%, transparent 30% 70%, var(--secondary-color) 70%);
+  opacity: 0.5; /* Opacidad para suavizar el fondo */
+  transition: opacity 0.3s; /* Transición suave */
 }
+
+/* Ocultar el fondo en modo oscuro */
+body.dark-mode #root::before {
+  display: none; /* Elimina el fondo animado en modo oscuro */
+}
+
+/* Estilos para los encabezados */
+h2 {
+  margin-top: 35px;
+  font-size: revert;
+  color: var(--primary-color);
+}
+
+
+

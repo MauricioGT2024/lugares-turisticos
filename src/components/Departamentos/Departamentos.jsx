@@ -44,7 +44,7 @@ function Departamentos() {
   return (
     <div className="departamentos-container">
       {departamentos.map(departamento => (
-        <div className={`card ${departamento.id}`} id={departamento.id} key={departamento.id}>
+        <div className={`card ${departamento.id}`} key={departamento.id}>
           <img
             src={departamento.imgSrc}
             alt={departamento.alt}
@@ -53,11 +53,7 @@ function Departamentos() {
           <div className="card-content">
             <h2 className="card-title">{departamento.title}</h2>
             <p className="card-description">{departamento.description}</p>
-            <button>
-              <span>
-                <a href={departamento.link}>ver más</a>
-              </span>
-            </button>
+            <a href={departamento.link} target="_blank" rel="noopener noreferrer" className="card-link">Ver más</a>
             <div className="card-map">
               <iframe
                 src={departamento.mapSrc}
