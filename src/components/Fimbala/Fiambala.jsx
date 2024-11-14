@@ -46,7 +46,6 @@ const FiambalaDetails = () => {
 
   return (
     <div className="fiambala-details">
-      <h2>Descubre Fiambalá</h2>
       <div className="fiambala-container">
         {locations.map((location, index) => (
           <div className="fiambala-card" key={index}>

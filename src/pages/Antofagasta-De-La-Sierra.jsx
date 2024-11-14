@@ -4,7 +4,7 @@ export function AntofagastaDeLaSierra() {
   return (
     <>
       <div className="antofagastadelasierra-details">
-        <h2>Descrubre Antofagasta De La Sierra</h2>
+        <h2 style={{color: "gold", transition: "all 0.5s ease-in-out"}}>Descrubre Antofagasta De La Sierra</h2>
       </div>
       <AntofagastaDeLaSierraDetails />
     </>

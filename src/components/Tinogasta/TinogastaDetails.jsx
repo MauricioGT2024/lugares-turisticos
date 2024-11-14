@@ -62,7 +62,6 @@ const TinogastaDetails = () => {
 
   return (
 		<div className="tinogasta-details">
-			<h2>Descubre Fiambalá</h2>
 			<div className="tinogasta-container">
 				{locations.map((location, index) => (
 					<div className="tinogasta-card" key={index}>

@@ -84,7 +84,6 @@ function AntofagastaDeLaSierraDetails() {
 
 	return (
 		<div className="antofagasta-details">
-			<h2>Descubre Fiambalá</h2>
 			<div className="antofagasta-container">
 				{locations.map((location, index) => (
 					<div className="antofagasta-card" key={index}>

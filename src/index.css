@@ -54,7 +54,7 @@ body.dark-mode #root::before {
 h2 {
   margin-top: 35px;
   font-size: revert;
-  color: var(--primary-color);
+  color: var(--primary-color)
 }
 
 

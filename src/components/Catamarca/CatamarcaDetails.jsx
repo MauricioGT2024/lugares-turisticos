@@ -86,7 +86,6 @@ function CatamarcaDetails() {
 
   return (
 		<div className="catamarca-details">
-			<h2>Descubre Catamarca</h2>
 			<div className="catamarca-container">
 				{locations.map((location, index) => (
 					<div className="catamarca-card" key={index}>
