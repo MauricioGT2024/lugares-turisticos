@@ -1,6 +1,8 @@
-import "./CatamarcaDetails.css"; // Asegúrate de tener los estilos correctos
+import "./CatamarcaDetails.css"; 
+
 
 function CatamarcaDetails() {
+
   const locations = [
     {
       imgSrc:
@@ -83,24 +85,35 @@ function CatamarcaDetails() {
   ];
 
   return (
-    <div className="catamarca-details">
-      <h2>Descubre Catamarca</h2>
-      <div className="catamarca-container">
-        {locations.map((location) => (
-          <div className="catamarca" key={location.title}>
-            <img src={location.imgSrc} alt={location.title} className="catamarca-img" />
-            <div className="catamarca-content">
-              <h3 className="catamarca-title">{location.title}</h3>
-              <p className="catamarca-description">{location.description}</p>
-              <a href={location.mapSrc} target="_blank" rel="noopener noreferrer">
-                <iframe className="map-iframe" src={location.mapSrc} title={location.title} allowFullScreen></iframe>
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+		<div className="catamarca-details">
+			<h2>Descubre Catamarca</h2>
+			<div className="catamarca-container">
+				{locations.map((location, index) => (
+					<div className="catamarca-card" key={index}>
+						<div className="catamarca-image-container">
+							<img
+								src={location.imgSrc}
+								alt={location.title}
+								className="catamarca-img"
+							/>
+							<div className="catamarca-overlay">
+								<h3 className="catamarca-title">{location.title}</h3>
+							</div>
+						</div>
+						<div className="catamarca-content">
+							<p className="catamarca-description">{location.description}</p>
+							<iframe
+								className="map-iframe"
+								src={location.mapSrc}
+								title={location.title}
+								allowFullScreen
+							></iframe>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	);
 }
 
 export default CatamarcaDetails;

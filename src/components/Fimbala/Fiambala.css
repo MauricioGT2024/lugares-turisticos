@@ -1,14 +1,14 @@
-.antofagasta-details {
+.fiambala-details {
   padding: 20px;
 }
 
-.antofagasta-container {
+.fiambala-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.antofagasta-card {
+.fiambala-card {
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -20,33 +20,32 @@
   max-width: 320px;
 }
 
-.dark-mode .antofagasta-card {
+.dark-mode .fiambala-card {
   background-color: #333;
   color: #eee;
   box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
 }
 
-.antofagasta-card:hover {
+.fiambala-card:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.dark-mode .antofagasta-card:hover {
+.dark-mode .fiambala-card:hover {
   box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
 }
 
-
-.antofagasta-image-container {
+.fiambala-image-container {
   position: relative;
 }
 
-.antofagasta-img {
+.fiambala-img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-.antofagasta-overlay {
+.fiambala-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -61,28 +60,16 @@
   transition: opacity 0.3s ease;
 }
 
-.antofagasta-image-container:hover .antofagasta-overlay {
+.fiambala-image-container:hover .fiambala-overlay {
   opacity: 1;
 }
 
-.antofagasta-content {
+.fiambala-content {
   padding: 20px;
 }
 
-.antofagasta-description {
+.fiambala-description {
   margin: 0 0 10px;
   color: #555;
   line-height: 1.6;
-}
-
-.dark-mode .antofagasta-description {
-  color: #aaa;
-}
-
-.map-iframe {
-  width: 100%;
-  height: 200px;
-  border: none;
-  margin-top: 10px;
-  border-radius: 8px;
 }

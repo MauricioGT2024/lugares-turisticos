@@ -1,9 +1,9 @@
 /* Estilo general para la sección */
 .home {
-  background-image: url('ruta-a-tu-imagen.jpg'); /* Cambia esta URL por tu imagen */
+  background-image: url('ruta-a-tu-imagen.jpg'); 
   background-size: cover;
   background-position: center;
-  min-height: 100vh; /* Asegura que la sección ocupe toda la altura de la ventana */
+  min-height: 100vh; 
   padding: 40px;
   color: white;
   display: flex;
@@ -11,81 +11,88 @@
   justify-content: center;
 }
 
+.dark-mode .home {
+  color: #eee;
+}
+
 /* Contenedor principal */
 .home-container {
-  background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  background: rgba(0, 0, 0, 0.7); 
   border-radius: 10px;
   padding: 30px;
-  max-width: 600px; /* Limita el ancho para mantener la legibilidad */
-  text-align: center; /* Centra el texto */
+  max-width: 600px; 
+  text-align: center; 
 }
 
 /* Estilo del título */
 .home-title {
   font-size: 2em;
-  color: #46e5f3; /* Color del título */
-  margin-bottom: 10px; /* Espaciado inferior */
+  color: #46e5f3; 
+  margin-bottom: 10px; 
 }
 
 /* Estilo de la descripción */
 .home-description {
-  font-size: 1.1em; /* Tamaño de fuente adecuado */
-  line-height: 1.5; /* Mejora la legibilidad */
-  margin-bottom: 20px; /* Espaciado inferior */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Sombra para mejorar el contraste */
+  font-size: 1.1em; 
+  line-height: 1.5; 
+  margin-bottom: 20px; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
 }
 
 /* Estilos para la sección de atracciones */
 .attractions {
-  margin-top: 20px; /* Margen superior para separación */
+  margin-top: 20px; 
 }
 
 /* Lista de atracciones */
 .attractions-list {
-  list-style-type: none; /* Elimina viñetas */
-  padding: 0; /* Elimina padding */
+  list-style-type: none; 
+  padding: 0; 
 }
 
 /* Estilo de cada atracción */
 .attraction-item {
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  background-color: rgba(255, 255, 255, 0.1); 
   padding: 15px;
   border-radius: 5px;
-  margin: 10px 0; /* Espaciado vertical entre items */
-  transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+  margin: 10px 0; 
+  transition: background-color 0.3s, transform 0.3s; 
+}
+
+.dark-mode .attraction-item {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Efecto hover en atracciones */
 .attraction-item:hover {
-  background-color: rgba(255, 255, 255, 0.3); /* Cambia el color al pasar el mouse */
-  transform: scale(1.02); /* Efecto de crecimiento */
+  background-color: rgba(255, 255, 255, 0.3); 
+  transform: scale(1.02); 
 }
 
 /* Estilos para el botón */
 .boton {
-  border: none; /* Sin bordes */
+  border: none; 
   background-image: linear-gradient(150deg, #719eab, #09f, #00ddff);
   border-radius: 8px;
   font-size: 18px;
-  padding: 10px 20px; /* Padding más amplio */
+  padding: 10px 20px; 
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s; /* Transiciones suaves */
+  transition: transform 0.2s, box-shadow 0.2s; 
 }
 
 /* Estilo del enlace dentro del botón */
 .link {
-  color: white; /* Color del texto del enlace */
-  text-decoration: none; /* Sin subrayado */
+  color: white; 
+  text-decoration: none; 
 }
 
 /* Efecto hover en el botón */
 .boton:hover {
-  transform: translateY(-3px); /* Levanta el botón al pasar el mouse */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+  transform: translateY(-3px); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
 /* Efecto activo en el botón */
 .boton:active {
-  transform: scale(0.95); /* Escala hacia abajo al hacer clic */
+  transform: scale(0.95); 
 }
-

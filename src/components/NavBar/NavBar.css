@@ -1,58 +1,66 @@
 .navbar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    padding: 15px 7%;
+  background-color: #f0f0f0; 
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.5s ease;
+}
+
+
+.navbar-animation {
+  animation: navbarFadeIn 1s ease-in-out;
+}
+
+@keyframes navbarFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 5px; 
+  padding: 0.5rem; 
+}
+
+.navbar li {
+  margin-right: 1rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333; 
+  font-weight: bold;
+}
+
+.dark-mode .navbar a {
+  color: #eee;
+}
+
+.dark-mode .navbar ul {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .logo {
-    width: 160px;
-    cursor: pointer;
-}
-
-ul {
-    flex: 1;
-    list-style: none;
-    text-align: center;
-    padding: 0; /* Added to remove default padding */
-}
-
-ul li {
-    display: inline-block;
-    margin: 10px 20px;
-    font-size: 18px;
-}
-
-ul li a {
-    text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Use the current text color */
-    transition: color 0.3s; /* Smooth transition for hover effect */
-}
-
-ul li a:hover {
-    color: #007BFF; /* Change to your desired hover color */
+  max-height: 40px;
 }
 
 .toggle-icon {
-    width: 50px;
-    cursor: pointer;
-    margin-left: 40px;
-   
+  cursor: pointer;
+  max-height: 30px;
 }
 
-.dark .navbar {
-    background: #000;
-    color: #fff;
+.dark-mode .navbar {
+  background-color: #333;
+  color: #eee;
 }
-
-.dark ul li a {
-    background: #000;
-    color: #fff; /* Links in dark mode */
-}
-
-.dark ul li a:hover {
-    color: #007BFF; /* Change hover color for dark mode */
-}
-

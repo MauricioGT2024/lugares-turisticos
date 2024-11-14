@@ -1,59 +1,88 @@
 .tinogasta-details {
-  padding: 40px; /* Fondo claro para contraste */
-  text-align: center;
+  padding: 20px;
 }
 
 .tinogasta-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* Espaciado entre tarjetas */
+  justify-content: space-around;
 }
 
 .tinogasta-card {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  max-width: 350px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 320px;
+}
+
+.dark-mode .tinogasta-card {
+  background-color: #333;
+  color: #eee;
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
 }
 
 .tinogasta-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.02);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .tinogasta-card:hover {
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
+}
+
+
+.tinogasta-image-container {
+  position: relative;
 }
 
 .tinogasta-img {
   width: 100%;
-  height: auto;
+  height: 180px;
+  object-fit: cover;
+}
+
+.tinogasta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tinogasta-image-container:hover .tinogasta-overlay {
+  opacity: 1;
 }
 
 .tinogasta-content {
   padding: 20px;
 }
 
-.tinogasta-title {
+.tinogasta-description {
   margin: 0 0 10px;
-  font-size: 1.6em;
-  color: #333;
+  color: #555;
+  line-height: 1.6;
 }
 
-.tinogasta-description {
-  color: #555;
-  margin-bottom: 15px;
-  font-size: 1em;
+.dark-mode .tinogasta-description {
+  color: #aaa;
 }
 
 .map-iframe {
   width: 100%;
   height: 200px;
   border: none;
+  margin-top: 10px;
   border-radius: 8px;
-}
-
-.tinogasta-details h2 {
-  color: #007BFF;
-  margin-bottom: 30px;
-  font-size: 2em;
 }

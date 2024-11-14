@@ -6,12 +6,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #fff; /* Color de fondo para modo claro */
+    color: #333; /* Color de texto para modo claro */
 }
+
+.dark-mode .error {
+    background-color: #333; /* Color de fondo para modo oscuro */
+    color: #eee; /* Color de texto para modo oscuro */
+}
+
 .error404{
     font-family: "New Amsterdam", sans-serif;
     color: red;
-    font-size: 15px;
-    
+    font-size: 15px;    
 }
 
 .tagA{
@@ -20,10 +27,17 @@
     padding: 3px;
 }
 
+.dark-mode .tagA {
+  color: #79b8ff; /* Azul más claro para modo oscuro */
+}
+
 .tagA:hover{
     color: black;
-    transition-duration: 0.2s;
-    
+    transition-duration: 0.2s;    
+}
+
+.dark-mode .tagA:hover {
+  color: #eee; /* Blanco para modo oscuro */
 }
 
 .tagA:active{

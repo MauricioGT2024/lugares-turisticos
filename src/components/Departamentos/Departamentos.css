@@ -15,15 +15,25 @@
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.dark-mode .card {
+  background-color: #333;
+  color: #eee;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
 .card:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transform: translateY(-3px);
 }
 
+.dark-mode .card:hover {
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
 .card-img {
-  height: 180px; /* Ajustar según necesidad */
+  height: 180px;
   width: 100%;
-  object-fit: cover; /* Mantiene la proporción de la imagen */
+  object-fit: cover;
 }
 
 .card-content {
@@ -36,14 +46,26 @@
   color: #333;
 }
 
+.dark-mode .card-title {
+  color: #eee;
+}
+
 .card-description {
   color: #666;
+}
+
+.dark-mode .card-description {
+  color: #aaa;
 }
 
 .card-link {
   text-decoration: none;
   color: #007bff;
   margin-top: 10px;
+}
+
+.dark-mode .card-link {
+  color: #79b8ff;
 }
 
 .card-map {

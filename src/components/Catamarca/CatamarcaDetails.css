@@ -1,92 +1,88 @@
-.catamarca {
-  height: auto;
-  display: inline-block;
-  margin: 20px; /* Mayor margen para espaciar mejor las tarjetas */
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra más suave y pronunciada */
-  max-width: 300px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.catamarca-details {
+  padding: 20px;
 }
+
 .catamarca-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
-.catamarca-details h2 {
-  color: #0d7b2c;
-}
-.catamarca:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra más difusa */
+.catamarca-card {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 320px;
 }
 
-/* Estilos para la imagen de la tarjeta */
+.dark-mode .catamarca-card {
+  background-color: #333;
+  color: #eee;
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
+}
+
+.catamarca-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .catamarca-card:hover {
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
+}
+
+
+.catamarca-image-container {
+  position: relative;
+}
+
 .catamarca-img {
   width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease;
+  height: 180px;
+  object-fit: cover;
 }
 
-.catamarca:hover .catamarca-img {
-  transform: scale(1.05); /* Zoom en la imagen al hacer hover */
+.catamarca-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-/* Estilos para el contenido de la tarjeta */
+.catamarca-image-container:hover .catamarca-overlay {
+  opacity: 1;
+}
+
 .catamarca-content {
   padding: 20px;
-  text-align: center;
-}
-
-.catamarca-title {
-  margin: 0 0 10px; /* Espacio inferior */
-  font-size: 1.7em; /* Aumento del tamaño de fuente */
-  color: #333;
-  font-weight: 600;
 }
 
 .catamarca-description {
-  margin: 10px 0;
+  margin: 0 0 10px;
   color: #555;
-  line-height: 1.6; /* Mejora la legibilidad */
+  line-height: 1.6;
 }
 
-/* Estilos para el mapa */
-.catamarca-map {
-  margin-top: 15px;
-  border-radius: 8px;
-  overflow: hidden;
+.dark-mode .catamarca-description {
+  color: #aaa;
 }
 
-.catamarca-map-iframe {
+.map-iframe {
+  width: 100%;
   height: 200px;
-  transition: transform 0.3s ease;
-}
-
-.catamarca:hover .catamarca-map-iframe {
-  transform: scale(1.01); /* Ligero zoom en el mapa al hacer hover */
-}
-
-/* Estilo para enlaces (opcional, si los usas) */
-.catamarca-link {
-  list-style-type: none;
-  padding: 0;
-  margin: 10px 0; /* Espacio para separar el enlace */
-}
-
-.catamarca-button {
-  margin-top: 10px; /* Espaciado superior */
-  background-color: #28a745; /* Color verde */
-}
-
-.catamarca-button:hover {
-  background-color: #218838; /* Un verde más oscuro */
-}
-
-@media (max-width: 600px) {
-  .catamarca {
-    max-width: 90%; /* Ocupa más espacio en pantallas pequeñas */
-  }
+  border: none;
+  margin-top: 10px;
+  border-radius: 8px;
 }

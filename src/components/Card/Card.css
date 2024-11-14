@@ -1,0 +1,19 @@
+/* Estilos para modo claro */
+.card {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para modo oscuro */
+.dark-mode .card {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.1);
+}
