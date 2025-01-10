@@ -15,7 +15,10 @@ import { Hospedaje } from "./pages/Hospedaje";
 import '@fontsource-variable/onest'; // Importa la fuente
 import PropTypes from "prop-types";
 import './styles/Transitions.css';
+<<<<<<< HEAD
 import Loading from './components/Loading/Loading';
+=======
+>>>>>>> 38e9924 (github copilot)
 
 const AppContent = ({ theme, setTheme }) => {
   const location = useLocation(); // Obtener la ubicación actual
