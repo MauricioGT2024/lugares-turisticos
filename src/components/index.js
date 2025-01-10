@@ -4,3 +4,4 @@ export { default as AntofagastaDeLaSierraDetails } from "./Antofagasta-De-La-Sie
 export { default as CatamarcaDetails } from "./Catamarca/CatamarcaDetails"
 export { default as Departamentos } from "./Departamentos/Departamentos"
 export { default as HospedajeList } from "./Hospedaje/Hospedaje"
+export { default as Logo } from "./Logo/Logo"

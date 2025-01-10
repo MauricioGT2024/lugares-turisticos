@@ -5,6 +5,8 @@ import logo_claro from '../../assets/day.png';
 import logo_oscuro from '../../assets/night.png';
 import logo_negro from '../../assets/logo_negro.jpg';
 import logo from '/navbar.png'
+import { Logo } from '../index.js'
+
 
 const NavBar = ({ theme, setTheme }) => {
     

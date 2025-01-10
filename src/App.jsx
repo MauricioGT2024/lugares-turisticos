@@ -14,23 +14,19 @@ import { Footer } from "./components/Footer/Footer";
 import { Hospedaje } from "./pages/Hospedaje";
 import '@fontsource-variable/onest'; // Importa la fuente
 import PropTypes from "prop-types";
-
+import './styles/Transitions.css';
 
 const AppContent = ({ theme, setTheme }) => {
   const location = useLocation(); // Obtener la ubicación actual
 
-  AppContent.propTypes = {
-    theme: PropTypes.string.isRequired,
-    setTheme: PropTypes.string.isRequired
-  }; 
   return (
     <div className={`container ${theme}`}>
       <NavBar theme={theme} setTheme={setTheme} />
       <TransitionGroup>
         <CSSTransition
           key={location.key} // Usar la clave de ubicación para las transiciones
-          classNames="fade" // Nombre de la clase para las animaciones
-          timeout={300} // Duración de la animación
+          classNames="page-transition" // Nombre de la clase para las animaciones
+          timeout={400} // Duración de la animación
         >
           <Routes location={location}>
             <Route path="/" element={<Home />} />
@@ -47,6 +43,11 @@ const AppContent = ({ theme, setTheme }) => {
       <Footer />
     </div>
   );
+};
+
+AppContent.propTypes = {
+  theme: PropTypes.string.isRequired,
+  setTheme: PropTypes.func.isRequired
 };
 
 const App = () => {
