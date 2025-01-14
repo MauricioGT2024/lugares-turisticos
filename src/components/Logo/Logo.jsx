@@ -10,11 +10,7 @@ const Logo = ({ theme }) => {
         className="h-10 transition-transform duration-300 ease-in-out hover:rotate-5"
       />
       <span className="text-xl font-medium bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
-        Turismo Catamarca
-=======
         Turismo<strong>Catamarca</strong>
->>>>>>> 6986332 (13/01/25)
       </span>
     </div>
   );
