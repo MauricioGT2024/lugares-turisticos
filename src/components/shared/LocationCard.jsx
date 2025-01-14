@@ -1,41 +1,24 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 import './Card.css';
 
 const LocationCard = ({ imgSrc, title, description, mapSrc }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   return (
-    <article className={`card ${isExpanded ? 'expanded' : ''}`}>
-      <div className="card-image-container">
+    <article className="location-card">
+      <div className="card-header">
         <img src={imgSrc} alt={title} className="card-image" loading="lazy" />
-        <button 
-          className="card-toggle"
-          onClick={() => setIsExpanded(!isExpanded)}
-          aria-expanded={isExpanded}
-        >
+        <div className="card-overlay">
           <h3 className="card-title">{title}</h3>
-          <span className="toggle-icon">
-            {isExpanded ? '−' : '+'}
-          </span>
-        </button>
-      </div>
-      {isExpanded && (
-        <div className="card-content">
-          <div className="description-container">
-            <p className="card-description">{description}</p>
-          </div>
-          <div className="card-map-container">
-            <iframe
-              src={mapSrc}
-              title={`Mapa de ${title}`}
-              className="card-map"
-              allowFullScreen
-              loading="lazy"
-            />
-          </div>
+          <p className="card-description">{description}</p>
         </div>
-      )}
+      </div>
+      <div className="card-map">
+        <iframe
+          src={mapSrc}
+          title={`Mapa de ${title}`}
+          allowFullScreen
+          loading="lazy"
+        />
+      </div>
     </article>
   );
 };

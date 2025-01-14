@@ -1,11 +1,16 @@
 .antofagasta-details {
-  padding: 20px;
+  width: 100%;
+  padding: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .antofagasta-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
 }
 
 .antofagasta-card {
@@ -34,7 +39,6 @@
 .dark-mode .antofagasta-card:hover {
   box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
 }
-
 
 .antofagasta-image-container {
   position: relative;
@@ -71,7 +75,7 @@
 
 .antofagasta-description {
   margin: 0 0 10px;
-  color: #555;
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -85,4 +89,225 @@
   border: none;
   margin-top: 10px;
   border-radius: 8px;
+}
+
+.custom-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1rem;
+  flex: 1 1 400px;
+  max-width: 600px;
+  min-width: 300px;
+  height: 500px; /* Aumentamos un poco la altura */
+  animation: fadeIn 0.5s ease-out;
+  background: var(--card-bg, #fff);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+  padding: 1.5rem;
+  color: white;
+  transform: translateY(calc(100% - 60px)); /* Muestra solo el título */
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  max-height: 85%; /* Aumentamos el máximo */
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.custom-card-title {
+  margin: 0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.custom-card-text {
+  margin: 0 0 1rem 0;
+  color: #fff; /* Aseguramos que el texto sea blanco */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Mejoramos legibilidad */
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.custom-map-iframe {
+  width: 100%;
+  height: 150px; /* Mapa más pequeño */
+  border: none;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-top: auto; /* Empuja el mapa hacia abajo */
+}
+
+/* Efectos hover */
+.custom-card:hover .custom-card-body {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.custom-card:hover .custom-card-text,
+.custom-card:hover .custom-map-iframe {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tema oscuro */
+body.dark-mode .antofagasta-details {
+  --card-bg: #2a2a2a;
+  --text-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .custom-card {
+  background: #2a2a2a;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .custom-card-title {
+  color: #fff;
+}
+
+body.dark-mode .custom-card-text {
+  color: #ddd;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px var(--shadow-color);
+}
+
+/* Animación de fade */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Variables para modo claro/oscuro */
+:root {
+  --card-bg: #fff;
+  --text-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --overlay-bg: rgba(0, 0, 0, 0.9);
+  --card-hover-shadow: rgba(0, 0, 0, 0.2);
+}
+
+/* Modo oscuro */
+[data-theme="dark"] .custom-card,
+.dark-mode .custom-card {
+  --card-bg: #1a1a1a;
+  --text-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --overlay-bg: rgba(0, 0, 0, 0.95);
+  --card-hover-shadow: rgba(255, 255, 255, 0.1);
+}
+
+/* Sobreescribimos cualquier otro estilo que pueda afectar el color */
+.card-description,
+.custom-card-text,
+.antofagasta-description {
+  color: #fff !important;
+}
+
+/* Dark mode */
+.dark-mode .custom-card-text,
+.dark-mode .card-description,
+.dark-mode .antofagasta-description {
+  color: #fff !important;
+  opacity: 0.95;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .antofagasta-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .custom-card {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: none; /* Eliminado max-width en móviles */
+    margin: 0.5rem 0;
+    animation-duration: 0.3s;
+    height: 450px; /* Altura más pequeña en móviles */
+  }
+
+  .custom-card-body {
+    opacity: 1;
+    transform: translateY(calc(100% - 60px));
+  }
+
+  .custom-card-text {
+    font-size: 0.85rem;
+    max-height: 120px;
+    -webkit-line-clamp: 4; /* Menos líneas en móviles */
+  }
+
+  .custom-map-iframe {
+    height: 120px;
+  }
+}
+
+/* Estilo para scrollbar */
+.custom-card-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-card-body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.custom-card-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 1024px) {
+  .custom-card {
+    height: 550px;
+  }
+
+  .custom-card-body {
+    max-height: 90%;
+  }
+
+  .custom-card-text {
+    -webkit-line-clamp: 8; /* Más líneas en pantallas grandes */
+  }
+
+  .custom-map-iframe {
+    height: 180px;
+  }
 }

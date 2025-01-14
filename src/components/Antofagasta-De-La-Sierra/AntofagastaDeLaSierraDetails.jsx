@@ -85,41 +85,34 @@ function AntofagastaDeLaSierraDetails() {
 
 	return (
 		<div className="antofagasta-details">
-			<h2 className="page-title">Descubre Antofagasta De La Sierra</h2>
-			<TransitionGroup className="antofagasta-container">
-				{locations.map((location, index) => (
-					<CSSTransition
-						key={index}
-						timeout={500}
-						classNames="card"
-						appear={true}
-					>
-						<div className="antofagasta-card">
-							<div className="antofagasta-image-container">
-								<img
-									src={location.imgSrc}
-									alt={location.title}
-									className="antofagasta-img"
-								/>
-								<div className="antofagasta-overlay">
-									<h3 className="antofagasta-title">{location.title}</h3>
-								</div>
-							</div>
-							<div className="antofagasta-content">
-								<p className="antofagasta-description">{location.description}</p>
-								<iframe
-									className="map-iframe"
-									src={location.mapSrc}
-									title={location.title}
-									allowFullScreen
-								></iframe>
-							</div>
-						</div>
-					</CSSTransition>
-				))}
-			</TransitionGroup>
+		  <h2 className="page-title">Descubre Antofagasta de la Sierra</h2>
+		  <TransitionGroup className="antofagasta-container">
+			{locations.map((location, index) => (
+			  <CSSTransition
+				key={index}
+				timeout={500}
+				classNames="card"
+				appear={true}
+			  >
+				<div className="custom-card">
+				  <img src={location.imgSrc} alt={location.title} className="custom-card-img" />
+				  <div className="custom-card-body">
+					<h5 className="custom-card-title">{location.title}</h5>
+					<p className="custom-card-text">{location.description}</p>
+					<iframe
+					  className="custom-map-iframe"
+					  src={location.mapSrc}
+					  title={location.title}
+					  allowFullScreen
+					></iframe>
+				  </div>
+				</div>
+			  </CSSTransition>
+			))}
+		  </TransitionGroup>
 		</div>
-	);
-}
+	  );
+	};
+
 
 export default AntofagastaDeLaSierraDetails;
