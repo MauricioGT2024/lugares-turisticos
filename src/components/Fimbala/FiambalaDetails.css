@@ -1,11 +1,16 @@
 .fiambala-details {
-  padding: 20px;
+  width: 100%;
+  padding: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .fiambala-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
 }
 
 .fiambala-card {
@@ -34,7 +39,6 @@
 .dark-mode .fiambala-card:hover {
   box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
 }
-
 
 .fiambala-image-container {
   position: relative;
@@ -85,4 +89,71 @@
   border: none;
   margin-top: 10px;
   border-radius: 8px;
+}
+
+.custom-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 400px; /* Cambiado para mejor distribución */
+  max-width: 600px; /* Aumentado para permitir más espacio */
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tema claro */
+body.light-mode .fiambala-details {
+  --card-bg: #fff;
+  --text-color: #333;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .custom-card {
+  background: #fff;
+  color: #333;
+}
+
+/* Tema oscuro */
+body.dark-mode .fiambala-details {
+  --card-bg: #2a2a2a;
+  --text-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .custom-card {
+  background: #2a2a2a;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .custom-card-title {
+  color: #fff;
+}
+
+body.dark-mode .custom-card-text {
+  color: #ddd;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px var(--shadow-color);
+}
+
+@media (max-width: 768px) {
+  .fiambala-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .custom-card {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: none; /* Eliminado max-width en móviles */
+    margin: 0.5rem 0;
+  }
 }

@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import "./AntofagastaDeLaSierraDetails.css";
 
 function Card({ imgSrc, title, description, mapSrc }) {
@@ -84,32 +85,39 @@ function AntofagastaDeLaSierraDetails() {
 
 	return (
 		<div className="antofagasta-details">
-			<h2>Descubre Fiambalá</h2>
-			<div className="antofagasta-container">
+			<h2 className="page-title">Descubre Antofagasta De La Sierra</h2>
+			<TransitionGroup className="antofagasta-container">
 				{locations.map((location, index) => (
-					<div className="antofagasta-card" key={index}>
-						<div className="antofagasta-image-container">
-							<img
-								src={location.imgSrc}
-								alt={location.title}
-								className="antofagasta-img"
-							/>
-							<div className="antofagasta-overlay">
-								<h3 className="antofagasta-title">{location.title}</h3>
+					<CSSTransition
+						key={index}
+						timeout={500}
+						classNames="card"
+						appear={true}
+					>
+						<div className="antofagasta-card">
+							<div className="antofagasta-image-container">
+								<img
+									src={location.imgSrc}
+									alt={location.title}
+									className="antofagasta-img"
+								/>
+								<div className="antofagasta-overlay">
+									<h3 className="antofagasta-title">{location.title}</h3>
+								</div>
+							</div>
+							<div className="antofagasta-content">
+								<p className="antofagasta-description">{location.description}</p>
+								<iframe
+									className="map-iframe"
+									src={location.mapSrc}
+									title={location.title}
+									allowFullScreen
+								></iframe>
 							</div>
 						</div>
-						<div className="antofagasta-content">
-							<p className="antofagasta-description">{location.description}</p>
-							<iframe
-								className="map-iframe"
-								src={location.mapSrc}
-								title={location.title}
-								allowFullScreen
-							></iframe>
-						</div>
-					</div>
+					</CSSTransition>
 				))}
-			</div>
+			</TransitionGroup>
 		</div>
 	);
 }

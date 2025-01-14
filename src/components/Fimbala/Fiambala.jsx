@@ -1,3 +1,4 @@
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import "./FiambalaDetails.css";
 
 const FiambalaDetails = () => {
@@ -46,24 +47,31 @@ const FiambalaDetails = () => {
 
   return (
     <div className="fiambala-details">
-      <h2>Descubre Fiambalá</h2>
-      <div className="fiambala-container">
+      <h2 className="page-title">Descubre Fiambalá</h2>
+      <TransitionGroup className="fiambala-container">
         {locations.map((location, index) => (
-          <div className="custom-card" key={index}>
-            <img src={location.imgSrc} alt={location.title} className="custom-card-img" />
-            <div className="custom-card-body">
-              <h5 className="custom-card-title">{location.title}</h5>
-              <p className="custom-card-text">{location.description}</p>
-              <iframe
-                className="custom-map-iframe"
-                src={location.mapSrc}
-                title={location.title}
-                allowFullScreen
-              ></iframe>
+          <CSSTransition
+            key={index}
+            timeout={500}
+            classNames="card"
+            appear={true}
+          >
+            <div className="custom-card">
+              <img src={location.imgSrc} alt={location.title} className="custom-card-img" />
+              <div className="custom-card-body">
+                <h5 className="custom-card-title">{location.title}</h5>
+                <p className="custom-card-text">{location.description}</p>
+                <iframe
+                  className="custom-map-iframe"
+                  src={location.mapSrc}
+                  title={location.title}
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
-          </div>
+          </CSSTransition>
         ))}
-      </div>
+      </TransitionGroup>
     </div>
   );
 };

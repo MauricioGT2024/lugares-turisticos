@@ -13,6 +13,7 @@ import NavBar from "./components/NavBar/NavBar";
 import { Footer } from "./components/Footer/Footer";
 import { Hospedaje } from "./pages/Hospedaje";
 import { Loading } from "./components/index";
+import "./styles/responsive.css";
 
 const App = () => {
   const current_theme = localStorage.getItem('current_theme') || 'light'; // Default to 'light' if not found
@@ -39,21 +40,21 @@ const App = () => {
 
   return (
     <Router>
-      <div className={`container ${theme}`}>
+      <div className={`app-container ${theme}`}>
         <NavBar theme={theme} setTheme={setTheme} />
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Provincia/" element={<Provincia />} />
-          <Route path="/Catamarca/" element={<Catamarca />} />
-          <Route path="/Fiambala/" element={<Fiambala />} />
-          <Route path="/Tinogasta/" element={<Tinogasta />} />
-          <Route path="/Antofagasta-De-La-Sierra/" element={<AntofagastaDeLaSierra />} />
-          <Route path="/Hospedaje/" element={<Hospedaje />} />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
-
-        <Footer /> {/* Mueve el Footer aquí para que esté dentro del Router */}
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Provincia/" element={<Provincia />} />
+            <Route path="/Catamarca/" element={<Catamarca />} />
+            <Route path="/Fiambala/" element={<Fiambala />} />
+            <Route path="/Tinogasta/" element={<Tinogasta />} />
+            <Route path="/Antofagasta-De-La-Sierra/" element={<AntofagastaDeLaSierra />} />
+            <Route path="/Hospedaje/" element={<Hospedaje />} />
+            <Route path="*" element={<Error404 />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
     </Router>
   );
