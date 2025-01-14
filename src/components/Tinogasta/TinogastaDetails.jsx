@@ -1,4 +1,5 @@
-import './Tinogasta.css';
+import Card from "../Card/Card";
+import './TinogastaDetails.css';
 
 const TinogastaDetails = () => {
   const locations = [
@@ -60,23 +61,17 @@ const TinogastaDetails = () => {
   ];
 
   return (
-    <div className="tinogasta-details">
+    <div className="tinogasta-details dark-mode-compatible">
       <h2>Descubre Tinogasta</h2>
       <div className="tinogasta-container">
         {locations.map((location, index) => (
-          <div className="custom-card" key={index}>
-            <img src={location.imgSrc} alt={location.title} className="custom-card-img" />
-            <div className="custom-card-body">
-              <h5 className="custom-card-title">{location.title}</h5>
-              <p className="custom-card-text">{location.description}</p>
-              <iframe
-                className="custom-map-iframe"
-                src={location.mapSrc}
-                title={location.title}
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
+          <Card
+            key={index}
+            imgSrc={location.imgSrc}
+            title={location.title}
+            description={location.description}
+            mapSrc={location.mapSrc}
+          />
         ))}
       </div>
     </div>
