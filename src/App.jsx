@@ -16,9 +16,13 @@ import '@fontsource-variable/onest'; // Importa la fuente
 import PropTypes from "prop-types";
 import './styles/Transitions.css';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Loading from './components/Loading/Loading';
 =======
 >>>>>>> 38e9924 (github copilot)
+=======
+import Loading from './components/Loading/Loading';
+>>>>>>> 1d180f4 (13/01/25)
 
 const AppContent = ({ theme, setTheme }) => {
   const location = useLocation(); // Obtener la ubicación actual
