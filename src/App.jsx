@@ -15,6 +15,7 @@ import { Hospedaje } from "./pages/Hospedaje";
 import '@fontsource-variable/onest'; // Importa la fuente
 import PropTypes from "prop-types";
 import './styles/Transitions.css';
+import Loading from './components/Loading/Loading';
 
 const AppContent = ({ theme, setTheme }) => {
   const location = useLocation(); // Obtener la ubicación actual
@@ -52,11 +53,23 @@ AppContent.propTypes = {
 
 const App = () => {
   const [theme, setTheme] = useState(localStorage.getItem('current_theme') || 'light');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     localStorage.setItem('current_theme', theme);
     document.body.className = theme === 'light' ? 'light-mode' : 'dark-mode';
   }, [theme]);
+
+  useEffect(() => {
+    // Simular una carga de datos
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <Router>
