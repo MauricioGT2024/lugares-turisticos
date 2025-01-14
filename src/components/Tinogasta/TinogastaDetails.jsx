@@ -1,5 +1,4 @@
-
-import './Tinogasta.css'; // Asegúrate de tener los estilos correctos
+import './Tinogasta.css';
 
 const TinogastaDetails = () => {
   const locations = [
@@ -61,35 +60,27 @@ const TinogastaDetails = () => {
   ];
 
   return (
-		<div className="tinogasta-details">
-			<h2>Descubre Fiambalá</h2>
-			<div className="tinogasta-container">
-				{locations.map((location, index) => (
-					<div className="tinogasta-card" key={index}>
-						<div className="tinogasta-image-container">
-							<img
-								src={location.imgSrc}
-								alt={location.title}
-								className="tinogasta-img"
-							/>
-							<div className="tinogasta-overlay">
-								<h3 className="tinogasta-title">{location.title}</h3>
-							</div>
-						</div>
-						<div className="tinogasta-content">
-							<p className="tinogasta-description">{location.description}</p>
-							<iframe
-								className="map-iframe"
-								src={location.mapSrc}
-								title={location.title}
-								allowFullScreen
-							></iframe>
-						</div>
-					</div>
-				))}
-			</div>
-		</div>
-	);
+    <div className="tinogasta-details">
+      <h2>Descubre Tinogasta</h2>
+      <div className="tinogasta-container">
+        {locations.map((location, index) => (
+          <div className="custom-card" key={index}>
+            <img src={location.imgSrc} alt={location.title} className="custom-card-img" />
+            <div className="custom-card-body">
+              <h5 className="custom-card-title">{location.title}</h5>
+              <p className="custom-card-text">{location.description}</p>
+              <iframe
+                className="custom-map-iframe"
+                src={location.mapSrc}
+                title={location.title}
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default TinogastaDetails;
