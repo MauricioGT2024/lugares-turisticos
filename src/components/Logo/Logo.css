@@ -1,0 +1,57 @@
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.02);
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: rotate(5deg);
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 400;
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.logo-text strong {
+  font-weight: 700;
+}
+
+/* Modo oscuro */
+.dark-mode .logo-text {
+  background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animación inicial */
+@keyframes logoEntrance {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.logo-container {
+  animation: logoEntrance 0.6s ease-out;
+}

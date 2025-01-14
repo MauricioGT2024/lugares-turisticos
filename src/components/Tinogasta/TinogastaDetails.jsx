@@ -1,5 +1,5 @@
-
-import './Tinogasta.css'; // Asegúrate de tener los estilos correctos
+import Card from "../Card/Card";
+import './Tinogasta.css';
 
 const TinogastaDetails = () => {
   const locations = [
@@ -87,9 +87,8 @@ const TinogastaDetails = () => {
 					</div>
 				))}
 			</div>
-		</div>
-	);
+   </div>                        
+  );
 };
 
 export default TinogastaDetails;
-
