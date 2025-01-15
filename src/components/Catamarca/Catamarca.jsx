@@ -5,7 +5,7 @@ function CatamarcaDetails() {
   const locations = [
     {
       imgSrc:
-        "img/San Fernando Del Valle De Catamarca/Gruta de la Virgen del Valle.jpg",
+        "img/San Fernando Del Valle De Catamarca/Gruta de la Virgen del Valle.webp",
       alt: "Gruta de la Virgen del Valle",
       title: "Gruta de la Virgen del Valle",
       description:
@@ -14,7 +14,7 @@ function CatamarcaDetails() {
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224679.84862245177!2d-65.944013521875!3d-28.370256435358243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9424264fb5a448e3%3A0xae112f88ce456aa9!2sGruta%20de%20la%20Virgen%20del%20Valle!5e0!3m2!1ses-419!2sar!4v1725200621926!5m2!1ses-419!2sar",
     },
     {
-      imgSrc: "img/San Fernando Del Valle De Catamarca/Dique El Jumeal.jpg",
+      imgSrc: "img/San Fernando Del Valle De Catamarca/Dique El Jumeal.webp",
       title: "Dique El Jumeal",
       description:
         "es un punto panorámico en Catamarca, Argentina, que ofrece vistas impresionantes del paisaje circundante, incluyendo montañas y valles. Es un lugar ideal para el turismo, la fotografía y el disfrute de la naturaleza, atrayendo tanto a visitantes como a locales.",
@@ -22,7 +22,7 @@ function CatamarcaDetails() {
         "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d224679.84869732868!2d-65.9440135!3d-28.3702564!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9424287e17555d0f%3A0xf5cff60acb642953!2sDique%20El%20Jumeal!5e0!3m2!1ses-419!2sar!4v1725200893912!5m2!1ses-419!2sar",
     },
     {
-      imgSrc: "img/San Fernando Del Valle De Catamarca/Dique Las Pirquitas.jpg",
+      imgSrc: "img/San Fernando Del Valle De Catamarca/Dique Las Pirquitas.webp",
       title: "Dique Las Pirquitas",
       description:
         "es un punto turístico en Catamarca, Argentina, conocido por su espectacular vista de la formación montañosa que se asemeja a un gigante recostado. Es un lugar popular para el senderismo y la fotografía, ofreciendo un entorno natural impresionante y una experiencia única para los visitantes.",
@@ -30,7 +30,7 @@ function CatamarcaDetails() {
         "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d224679.84869732868!2d-65.9440135!3d-28.3702564!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942418a6fab81873%3A0x8f5d82be3622a341!2sDique%20Las%20Pirquitas.!5e0!3m2!1ses-419!2sar!4v1725201057665!5m2!1ses-419!2sar",
     },
     {
-      imgSrc: "img/San Fernando Del Valle De Catamarca/El Rodeo.jpg",
+      imgSrc: "img/San Fernando Del Valle De Catamarca/El Rodeo.webp",
       title: "El Rodeo",
       description:
         "El Rodeo es una importante villa turística de la provincia de Catamarca, Argentina. Está situada en el Departamento Ambato, al pie de la sierra de Ambato, a 1.250 m s. n. m. y a solo 39 km de la capital provincial.",
@@ -39,7 +39,7 @@ function CatamarcaDetails() {
     },
     {
       imgSrc:
-        "img/San Fernando Del Valle De Catamarca/Catedral Basílica de Nuestra Señora del Valle.jpg",
+        "img/San Fernando Del Valle De Catamarca/Catedral Basílica de Nuestra Señora del Valle.webp",
       title: "Catedral Basílica de Nuestra Señora del Valle",
       description:
         "La Catedral Basílica de Nuestra Señora del Valle es una iglesia conocida por su arquitectura neoclásica y barroca. Es un importante centro de culto, destacada por ser el lugar de veneración de la Virgen del Valle, patrona de la provincia.",
@@ -48,7 +48,7 @@ function CatamarcaDetails() {
     },
     {
       imgSrc:
-        "img/San Fernando Del Valle De Catamarca/La Fiesta Nacional e Internacional del Poncho.jpg",
+        "img/San Fernando Del Valle De Catamarca/La Fiesta Nacional e Internacional del Poncho.webp",
       title: "La Fiesta Nacional e Internacional del Poncho",
       description:
         "es un atractivo turístico en Catamarca, Argentina, que ofrece vistas panorámicas de los paisajes montañosos y valles circundantes. Es un lugar ideal para detenerse y disfrutar de la belleza natural de la región, convirtiéndose en un punto popular para turistas y fotógrafos.",
@@ -57,7 +57,7 @@ function CatamarcaDetails() {
     },
 
     {
-      imgSrc: "img/Valle-Chico/Capital.jpg",
+      imgSrc: "img/Valle-Chico/Capital.webp",
       title: "Valle-Chico",
       description:
         " es un desarrollo urbanístico en Catamarca, Argentina, que combina áreas residenciales, comerciales y recreativas. Este proyecto busca ofrecer una calidad de vida integral a sus habitantes, promoviendo espacios verdes y servicios modernos, lo que lo convierte en un lugar atractivo para vivir y visitar.",
@@ -65,7 +65,7 @@ function CatamarcaDetails() {
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28050.509401957726!2d-65.8401143117459!3d-28.500208897152085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942429b27148f9a9%3A0x22202ae96e088a77!2sValle%20Chico%2C%20K4700%2C%20Catamarca!5e0!3m2!1ses-419!2sar!4v1727449819166!5m2!1ses-419!2sar",
     },
     {
-      imgSrc: "img/Valle-Chico/Primera Plaza Valle Chico.jpg",
+      imgSrc: "img/Valle-Chico/Primera Plaza Valle Chico.webp",
       title: "Primera Plaza Valle Chico",
       description:
         "Primera Plaza Valle Chico es un centro comercial en Catamarca, Argentina, que ofrece una variedad de tiendas, restaurantes y servicios, convirtiéndose en un punto de encuentro y entretenimiento para la comunidad local.",
@@ -74,7 +74,7 @@ function CatamarcaDetails() {
     },
     {
       imgSrc:
-        "img/San Fernando Del Valle De Catamarca/Parque de Los Vientos.jpg",
+        "img/San Fernando Del Valle De Catamarca/Parque de Los Vientos.webp",
       title: "Parque de los Vientos",
       description:
         "El Parque de los Vientos es un parque ubicado en San Fernando del Valle de Catamarca, Argentina. Destaca por su diseño paisajístico, espacios verdes y áreas recreativas, y es conocido por su ambiente tranquilo y agradable para el esparcimiento.",
