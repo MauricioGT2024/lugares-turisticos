@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import "./AntofagastaDeLaSierraDetails.css";
+import "./AntofagastaDeLaSierra.css";
 
 function Card({ imgSrc, title, description, mapSrc }) {
 	return (

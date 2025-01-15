@@ -1,8 +1,7 @@
-import "./CatamarcaDetails.css"; 
-
-
+import "./Catamarca.css";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import PageTransition from "../PageTransition/PageTransition";
 function CatamarcaDetails() {
-
   const locations = [
     {
       imgSrc:
@@ -85,35 +84,41 @@ function CatamarcaDetails() {
   ];
 
   return (
-		<div className="catamarca-details">
-			<h2 className="page-title">Descubre Catamarca</h2>
-			<div className="catamarca-container">
-				{locations.map((location, index) => (
-					<div className="catamarca-card" key={index}>
-						<div className="catamarca-image-container">
-							<img
-								src={location.imgSrc}
-								alt={location.title}
-								className="catamarca-img"
-							/>
-							<div className="catamarca-overlay">
-								<h3 className="catamarca-title">{location.title}</h3>
-							</div>
-						</div>
-						<div className="catamarca-content">
-							<p className="catamarca-description">{location.description}</p>
-							<iframe
-								className="map-iframe"
-								src={location.mapSrc}
-								title={location.title}
-								allowFullScreen
-							></iframe>
-						</div>
-					</div>
-				))}
-			</div>
-		</div>
-	);
+    <PageTransition>
+      {" "}
+      <div className="catamarca-details">
+        <h2 className="page-title">Descubre Catamarca</h2>
+        <TransitionGroup className="catamarca-container">
+          {locations.map((location, index) => (
+            <CSSTransition
+              key={index}
+              timeout={500}
+              classNames="card"
+              appear={true}
+            >
+              <div className="custom-card">
+                <img
+                  src={location.imgSrc}
+                  alt={location.title}
+                  className="custom-card-img"
+                />
+                <div className="custom-card-body">
+                  <h5 className="custom-card-title">{location.title}</h5>
+                  <p className="custom-card-text">{location.description}</p>
+                  <iframe
+                    className="custom-map-iframe"
+                    src={location.mapSrc}
+                    title={location.title}
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </CSSTransition>
+          ))}
+        </TransitionGroup>
+      </div>
+    </PageTransition>
+  );
 }
 
 export default CatamarcaDetails;

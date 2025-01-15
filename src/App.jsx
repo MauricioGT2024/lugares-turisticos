@@ -12,31 +12,16 @@ import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import { Footer } from "./components/Footer/Footer";
 import { Hospedaje } from "./pages/Hospedaje";
-import { Loading } from "./components/index";
 import "./styles/responsive.css";
 
 const App = () => {
   const current_theme = localStorage.getItem('current_theme') || 'light'; // Default to 'light' if not found
   const [theme, setTheme] = useState(current_theme);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     localStorage.setItem('current_theme', theme); // Ensure you're saving the right key
     document.body.className = theme === 'light' ? 'light-mode' : 'dark-mode'; // Cambia la clase del body
   }, [theme]);
-
-  useEffect(() => {
-    // Simular tiempo de carga
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000); // 2 segundos de loading
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return <Loading />;
-  }
 
   return (
     <Router>
@@ -61,4 +46,3 @@ const App = () => {
 };
 
 export default App;
-

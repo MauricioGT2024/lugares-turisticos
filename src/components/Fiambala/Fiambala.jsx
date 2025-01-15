@@ -1,14 +1,16 @@
-import React from 'react';
-import Card from '../Card/Card';
-import './FiambalaDetails.css';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import "./Fiambala.css";
+import PageTransition from "../PageTransition/PageTransition";
 
 const FiambalaDetails = () => {
   const locations = [
     {
       imgSrc: "img/Fiambala/Duna Mágica de Fiambalá.jpg",
       title: "Duna Magica De Fiambala",
-      description: "La Duna Mágica de Fiambalá es una extensa duna de arena ubicada en el desierto de Fiambalá, en la provincia de Catamarca, Argentina. Es conocida por sus impresionantes formaciones de arena que crean un paisaje casi surrealista, además de su relevancia como destino turístico y lugar de eventos como el Dakar Rally.",
-      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1810873.832820964!2d-69.91602560625!3d-27.566763399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969e32e507f9d14b%3A0x1c0a5f6153489121!2sDuna%20M%C3%A1gica!5e0!3m2!1ses-419!2sar!4v1725204852483!5m2!1ses-419!2sar",
+      description:
+        "La Duna Mágica de Fiambalá es una extensa duna de arena ubicada en el desierto de Fiambalá, en la provincia de Catamarca, Argentina. Es conocida por sus impresionantes formaciones de arena que crean un paisaje casi surrealista, además de su relevancia como destino turístico y lugar de eventos como el Dakar Rally.",
+      mapSrc:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1810873.832820964!2d-69.91602560625!3d-27.566763399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969e32e507f9d14b%3A0x1c0a5f6153489121!2sDuna%20M%C3%A1gica!5e0!3m2!1ses-419!2sar!4v1725204852483!5m2!1ses-419!2sar",
     },
     {
       imgSrc: "img/Fiambala/Museo del Hombre.jpg",
@@ -45,20 +47,40 @@ const FiambalaDetails = () => {
   ];
 
   return (
-    <div className="fiambala-details">
-      <h2>Descubre Fiambalá</h2>
-      <div className="fiambala-container">
-        {locations.map((location, index) => (
-          <Card
-            key={index}
-            title={location.title}
-            description={location.description}
-            image={location.imgSrc}
-            link={location.mapSrc}
-          />
-        ))}
+    <PageTransition>
+      {" "}
+      <div className="fiambala-details">
+        <h2 className="page-title">Descubre Fiambalá</h2>
+        <TransitionGroup className="fiambala-container">
+          {locations.map((location, index) => (
+            <CSSTransition
+              key={index}
+              timeout={500}
+              classNames="card"
+              appear={true}
+            >
+              <div className="custom-card">
+                <img
+                  src={location.imgSrc}
+                  alt={location.title}
+                  className="custom-card-img"
+                />
+                <div className="custom-card-body">
+                  <h5 className="custom-card-title">{location.title}</h5>
+                  <p className="custom-card-text">{location.description}</p>
+                  <iframe
+                    className="custom-map-iframe"
+                    src={location.mapSrc}
+                    title={location.title}
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </CSSTransition>
+          ))}
+        </TransitionGroup>
       </div>
-    </div>
+    </PageTransition>
   );
 };
 

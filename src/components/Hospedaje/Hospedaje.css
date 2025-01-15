@@ -1,84 +1,56 @@
-/* Estilos generales */
+/* Estilos base */
+:root {
+  --card-transition: 0.3s ease;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
 
-.hospedajes-list {
+/* Layout containers */
+.hospedajes-list,
+.hospedaje-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  min-height: 74.3vh;
+  padding: 1rem;
+  width: 100%;
 }
 
-/* Estilo de la card */
-.card {
+/* Card optimizada */
+.card,
+.custom-card {
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   overflow: hidden;
-  width: 300px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transform: translateZ(0); /* Fuerza la aceleración por hardware */
+  will-change: transform; /* Optimiza las transformaciones */
+  transition: transform var(--card-transition);
 }
 
-.dark-mode .card {
-  background-color: #333;
-  color: #eee;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
-}
-
-/* Efecto hover en la card */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-.dark-mode .card:hover {
-  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
-}
-
-/* Estilo de la imagen de la card */
-.card-image {
+/* Optimización de imágenes */
+.card-image,
+.custom-card-img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  aspect-ratio: 1;
-  border-bottom: 2px solid #eee;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
-.dark-mode .card-image {
-  border-bottom-color: #555;
+/* Animación optimizada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Estilo del título */
-.card-title {
-  font-size: 1.5em;
-  margin: 10px;
-}
-
-/* Estilo de la descripción */
-.card-description {
-  font-size: 1em;
-  color: #555;
-  margin: 10px;
-}
-
-.dark-mode .card-description {
-  color: #aaa;
-}
-
-/* Estilo de la ubicación */
-.card-location {
-  font-size: 0.9em;
-  color: #888;
-  margin: 10px;
-}
-
-.dark-mode .card-location {
-  color: #999;
-}
-
-/* Estilo del iframe */
-.card-iframe {
-  width: 100%;
-  height: 150px;
-  border: 0;
-  margin-top: 10px;
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+  will-change: opacity, transform;
 }
