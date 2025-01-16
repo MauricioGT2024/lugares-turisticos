@@ -16,6 +16,7 @@ export default defineConfig({
     minify: 'terser',
     cssMinify: true,
     rollupOptions: {
+      external: ['leaflet'],
       output: {
         manualChunks: {
           'vendor': ['react', 'react-dom', 'react-router-dom'],
@@ -27,13 +28,23 @@ export default defineConfig({
             './src/components/Antofagasta-De-La-Sierra/AntofagastaDeLaSierra.jsx',
             './src/components/Hospedaje/Hospedaje.jsx'
           ]
+        },
+        globals: {
+          leaflet: 'L'
         }
       }
     },
     chunkSizeWarningLimit: 1000
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom']
+    include: ['react', 'react-dom', 'react-router-dom', 'leaflet']
+  },
+  css: {
+    preprocessorOptions: {
+      css: {
+        additionalData: `@import "leaflet/dist/leaflet.css";`
+      }
+    }
   }
 })
 
