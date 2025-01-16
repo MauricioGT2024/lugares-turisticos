@@ -84,36 +84,6 @@ function CatamarcaDetails() {
   ];
 
   return (
-<<<<<<< HEAD:src/components/Catamarca/CatamarcaDetails.jsx
-		<div className="catamarca-details">
-			<div className="catamarca-container">
-				{locations.map((location, index) => (
-					<div className="catamarca-card" key={index}>
-						<div className="catamarca-image-container">
-							<img
-								src={location.imgSrc}
-								alt={location.title}
-								className="catamarca-img"
-							/>
-							<div className="catamarca-overlay">
-								<h3 className="catamarca-title">{location.title}</h3>
-							</div>
-						</div>
-						<div className="catamarca-content">
-							<p className="catamarca-description">{location.description}</p>
-							<iframe
-								className="map-iframe"
-								src={location.mapSrc}
-								title={location.title}
-								allowFullScreen
-							></iframe>
-						</div>
-					</div>
-				))}
-			</div>
-		</div>
-	);
-=======
     <PageTransition>
       {" "}
       <div className="catamarca-details">
@@ -149,7 +119,6 @@ function CatamarcaDetails() {
       </div>
     </PageTransition>
   );
->>>>>>> Testeo:src/components/Catamarca/Catamarca.jsx
 }
 
 export default CatamarcaDetails;

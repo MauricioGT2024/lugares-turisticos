@@ -47,25 +47,6 @@ const FiambalaDetails = () => {
   ];
 
   return (
-<<<<<<< HEAD:src/components/Fimbala/Fiambala.jsx
-    <div className="fiambala-details">
-      <div className="fiambala-container">
-        {locations.map((location, index) => (
-          <div className="custom-card" key={index}>
-            <img src={location.imgSrc} alt={location.title} className="custom-card-img" />
-            <div className="custom-card-body">
-              <h5 className="custom-card-title">{location.title}</h5>
-              <p className="custom-card-text">{location.description}</p>
-              <iframe
-                className="custom-map-iframe"
-                src={location.mapSrc}
-                title={location.title}
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        ))}
-=======
     <PageTransition>
       {" "}
       <div className="fiambala-details">
@@ -98,7 +79,6 @@ const FiambalaDetails = () => {
             </CSSTransition>
           ))}
         </TransitionGroup>
->>>>>>> Testeo:src/components/Fiambala/Fiambala.jsx
       </div>
     </PageTransition>
   );

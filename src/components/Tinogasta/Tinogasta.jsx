@@ -63,35 +63,6 @@ const TinogastaDetails = () => {
   ];
 
   return (
-<<<<<<< HEAD:src/components/Tinogasta/TinogastaDetails.jsx
-		<div className="tinogasta-details">
-			<div className="tinogasta-container">
-				{locations.map((location, index) => (
-					<div className="tinogasta-card" key={index}>
-						<div className="tinogasta-image-container">
-							<img
-								src={location.imgSrc}
-								alt={location.title}
-								className="tinogasta-img"
-							/>
-							<div className="tinogasta-overlay">
-								<h3 className="tinogasta-title">{location.title}</h3>
-							</div>
-						</div>
-						<div className="tinogasta-content">
-							<p className="tinogasta-description">{location.description}</p>
-							<iframe
-								className="map-iframe"
-								src={location.mapSrc}
-								title={location.title}
-								allowFullScreen
-							></iframe>
-						</div>
-					</div>
-				))}
-			</div>
-   </div>                        
-=======
     <PageTransition>
       {" "}
       <div className="tinogasta-details">
@@ -126,7 +97,6 @@ const TinogastaDetails = () => {
         </TransitionGroup>
       </div>
     </PageTransition>
->>>>>>> Testeo:src/components/Tinogasta/Tinogasta.jsx
   );
 };
 
