@@ -134,7 +134,9 @@
 
 .nav-logo {
   height: 50px;
-  width: auto;
+  width: 150px;
+  contain: content;
+  display: block;
   transition: all 0.3s ease;
   object-fit: contain;
 }

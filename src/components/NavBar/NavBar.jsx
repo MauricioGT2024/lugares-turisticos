@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { memo, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import navbarLight from '/src/assets/navbar.png';
+import navbarDark from '/src/assets/navbar_negro.png';
 import './NavBar.css';
 
+const NavLinks = memo(() => (
+  <ul>
+    <li><Link to="/Provincia">Provincia</Link></li>
+    <li><Link to="/Catamarca">Catamarca</Link></li>
+    <li><Link to="/Fiambala">Fiambalá</Link></li>
+    <li><Link to="/Tinogasta">Tinogasta</Link></li>
+    <li><Link to="/Antofagasta-De-La-Sierra">Antofagasta</Link></li>
+    <li><Link to="/Hospedaje">Hospedaje</Link></li>
+  </ul>
+));
+
 const NavBar = ({ theme, setTheme }) => {
+  const logoSrc = useMemo(() => 
+    theme === 'light' ? navbarLight : navbarDark,
+    [theme]
+  );
+
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
@@ -13,20 +31,16 @@ const NavBar = ({ theme, setTheme }) => {
       <div className="navbar-content">
         <Link to="/" className="logo-link">
           <img 
-            src={theme === 'light' ? '/src/assets/navbar.png' : '/src/assets/navbar_negro.png'} 
+            src={logoSrc}
             alt="Logo" 
             className="nav-logo"
+            loading="eager"
+            width="150"
+            height="50"
           />
         </Link>
         <div className="nav-links">
-          <ul>
-            <li><Link to="/Provincia">Provincia</Link></li>
-            <li><Link to="/Catamarca">Catamarca</Link></li>
-            <li><Link to="/Fiambala">Fiambalá</Link></li>
-            <li><Link to="/Tinogasta">Tinogasta</Link></li>
-            <li><Link to="/Antofagasta-De-La-Sierra">Antofagasta</Link></li>
-            <li><Link to="/Hospedaje">Hospedaje</Link></li>
-          </ul>
+          <NavLinks />
         </div>
         <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
       </div>
@@ -34,4 +48,5 @@ const NavBar = ({ theme, setTheme }) => {
   );
 };
 
-export default NavBar;
+export default memo(NavBar);
+
