@@ -13,38 +13,28 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    minify: 'terser',
+    minify: 'esbuild',
     cssMinify: true,
     rollupOptions: {
-      external: ['leaflet'],
+      external: [],
       output: {
         manualChunks: {
           'vendor': ['react', 'react-dom', 'react-router-dom'],
           'components': [
-            './src/components/Provincia/Provincia.jsx',
+            './src/components/Departamentos/Departamentos.jsx',
             './src/components/Catamarca/Catamarca.jsx',
             './src/components/Fiambala/Fiambala.jsx',
             './src/components/Tinogasta/Tinogasta.jsx',
             './src/components/Antofagasta-De-La-Sierra/AntofagastaDeLaSierra.jsx',
             './src/components/Hospedaje/Hospedaje.jsx'
           ]
-        },
-        globals: {
-          leaflet: 'L'
         }
       }
     },
     chunkSizeWarningLimit: 1000
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'leaflet']
-  },
-  css: {
-    preprocessorOptions: {
-      css: {
-        additionalData: `@import "leaflet/dist/leaflet.css";`
-      }
-    }
+    include: ['react', 'react-dom', 'react-router-dom']
   }
 })
 
