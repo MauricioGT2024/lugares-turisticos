@@ -1,30 +1,44 @@
-import React, { memo, useMemo } from 'react';
+import React, { memo, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
-import navbarLight from '/src/assets/navbar.png';
-import navbarDark from '/src/assets/navbar_negro.png';
 import './NavBar.css';
+
+const NavLink = memo(({ to, children }) => (
+  <li>
+    <Link 
+      to={to} 
+      prefetch="intent"
+      onMouseEnter={useCallback(() => {
+        // Preload component
+        const path = to.substring(1).toLowerCase();
+        import(`../${path}/${path}.jsx`);
+      }, [to])}
+    >
+      {children}
+    </Link>
+  </li>
+));
 
 const NavLinks = memo(() => (
   <ul>
-    <li><Link to="/Provincia">Provincia</Link></li>
-    <li><Link to="/Catamarca">Catamarca</Link></li>
-    <li><Link to="/Fiambala">Fiambalá</Link></li>
-    <li><Link to="/Tinogasta">Tinogasta</Link></li>
-    <li><Link to="/Antofagasta-De-La-Sierra">Antofagasta</Link></li>
-    <li><Link to="/Hospedaje">Hospedaje</Link></li>
+    <NavLink to="/Provincia">Provincia</NavLink>
+    <NavLink to="/Catamarca">Catamarca</NavLink>
+    <NavLink to="/Fiambala">Fiambalá</NavLink>
+    <NavLink to="/Tinogasta">Tinogasta</NavLink>
+    <NavLink to="/Antofagasta-De-La-Sierra">Antofagasta</NavLink>
+    <NavLink to="/Hospedaje">Hospedaje</NavLink>
   </ul>
 ));
 
-const NavBar = ({ theme, setTheme }) => {
+const NavBar = memo(({ theme, setTheme }) => {
   const logoSrc = useMemo(() => 
-    theme === 'light' ? navbarLight : navbarDark,
+    theme === 'light' ? '/navbar.png' : '/navbar_negro.png',
     [theme]
   );
 
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
+  const toggleTheme = useCallback(() => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  }, [setTheme]);
 
   return (
     <nav className="navbar">
@@ -37,6 +51,7 @@ const NavBar = ({ theme, setTheme }) => {
             loading="eager"
             width="150"
             height="50"
+            fetchpriority="high"
           />
         </Link>
         <div className="nav-links">
@@ -46,7 +61,7 @@ const NavBar = ({ theme, setTheme }) => {
       </div>
     </nav>
   );
-};
+});
 
-export default memo(NavBar);
+export default NavBar;
 
