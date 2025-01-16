@@ -1,84 +1,541 @@
-/* Estilos generales */
+:root {
+  --card-transition: 0.3s ease;
+  --background-primary: #ffffff;
+  --background-secondary: #f8f9fa;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --card-bg: #ffffff;
+  --button-primary: #2563eb;
+  --button-hover: #1d4ed8;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --filter-bg: rgba(255, 255, 255, 0.95);
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --page-transition: 0.6s ease;
+  --background-dark: #121212;
+  --surface-dark: #1e1e1e;
+  --card-dark: #2d2d2d;
+  --text-dark: #ffffff;
+  --text-secondary-dark: rgba(255, 255, 255, 0.7);
+}
 
-.hospedajes-list {
+[data-theme="dark"] {
+  --background-primary: #121212;
+  --background-secondary: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --border-color: #2d2d2d;
+  --card-bg: #1e1e1e;
+  --button-primary: #3b82f6;
+  --button-hover: #60a5fa;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --filter-bg: rgba(18, 18, 18, 0.95);
+  --primary-color: #3b82f6;
+  --primary-hover: #60a5fa;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+}
+
+body {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.hospedaje-container {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.hospedaje-filters {
+  background: var(--filter-bg);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hospedaje-filters__select {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.hospedaje-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.hospedaje-card__title {
+}
+
+.hospedaje-card__description {
+}
+
+.hospedaje-card__map-button {
+  background: var(--button-primary);
+  color: white;
+}
+
+.hospedaje-card__map-button:hover {
+  background: var(--button-hover);
+}
+
+/* Estilos base */
+:root {
+  /* Variables tema claro */
+  --card-transition: 0.3s ease;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --background-color: #ffffff;
+  --text-color: #333;
+  --text-secondary: #666;
+  --card-background: #ffffff;
+  --card-border: #e0e0e0;
+  --button-background: #2563eb;
+  --button-hover: #1d4ed8;
+  --filter-background: rgba(255, 255, 255, 0.95);
+  --filter-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Variables tema oscuro */
+    --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --background-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --card-background: #2d2d2d;
+    --card-border: #404040;
+    --button-background: #3b82f6;
+    --button-hover: #60a5fa;
+    --filter-background: rgba(29, 29, 29, 0.95);
+    --filter-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Layout containers */
+.hospedajes-list,
+.hospedaje-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  min-height: 74.3vh;
+  padding: 1rem;
+  width: 100%;
 }
 
-/* Estilo de la card */
-.card {
+.hospedaje-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  position: relative;
+  padding-top: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.hospedaje-filters {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--filter-background);
+  box-shadow: var(--filter-shadow);
+}
+
+.hospedaje-filters__select {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.75rem 2rem 0.75rem 1rem;
+  border: 2px solid var(--card-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--card-background);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1em;
+  cursor: pointer;
+  appearance: none;
+  transition: all 0.3s ease;
+}
+
+.hospedaje-filters__select:hover,
+.hospedaje-filters__select:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.hospedaje-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.hospedaje-card {
+  background: var(--card-background);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hospedaje-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hospedaje-card__image-container {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.hospedaje-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hospedaje-card:hover .hospedaje-card__image {
+  transform: scale(1.05);
+}
+
+.hospedaje-card__location {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+
+.hospedaje-card__content {
+  padding: 1.5rem;
+}
+
+.hospedaje-card__title {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.hospedaje-card__description {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hospedaje-card__map-button {
+  background: var(--button-background);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.hospedaje-card__map-button:hover {
+  background: var(--button-hover);
+}
+
+.hospedaje-card__map {
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hospedaje-card__map iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .hospedaje-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hospedaje-card {
+    margin-bottom: 1rem;
+  }
+
+  .hospedaje-filters {
+    padding: 0.75rem;
+  }
+
+  .hospedaje-filters__select {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+/* Card optimizada */
+.card,
+.custom-card {
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   overflow: hidden;
-  width: 300px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transform: translateZ(0); /* Fuerza la aceleración por hardware */
+  will-change: transform; /* Optimiza las transformaciones */
+  transition: transform var(--card-transition);
 }
 
-.dark-mode .card {
-  background-color: #333;
-  color: #eee;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
-}
-
-/* Efecto hover en la card */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-.dark-mode .card:hover {
-  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
-}
-
-/* Estilo de la imagen de la card */
+/* Optimización de imágenes */
 .card-image {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
-  aspect-ratio: 1;
-  border-bottom: 2px solid #eee;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
-.dark-mode .card-image {
-  border-bottom-color: #555;
+/* Animación optimizada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Estilo del título */
-.card-title {
-  font-size: 1.5em;
-  margin: 10px;
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+  will-change: opacity, transform;
 }
 
-/* Estilo de la descripción */
-.card-description {
-  font-size: 1em;
-  color: #555;
-  margin: 10px;
+/* Ajustes adicionales para modo oscuro */
+@media (prefers-color-scheme: dark) {
+  .hospedaje-filters__select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23e0e0e0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  }
+
+  .hospedaje-card {
+    backdrop-filter: blur(8px);
+  }
+
+  .hospedaje-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  .hospedaje-card__location {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+  }
+
+  .hospedaje-filters__select:hover,
+  .hospedaje-filters__select:focus {
+    border-color: var(--button-background);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  }
 }
 
-.dark-mode .card-description {
-  color: #aaa;
+.hospedaje {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  animation: pageEnter var(--page-transition) forwards;
 }
 
-/* Estilo de la ubicación */
-.card-location {
-  font-size: 0.9em;
-  color: #888;
-  margin: 10px;
+.hospedaje__filter {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
-.dark-mode .card-location {
-  color: #999;
+.hospedaje__select {
+  min-width: 200px;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* Estilo del iframe */
-.card-iframe {
+.hospedaje__select:hover,
+.hospedaje__select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.hospedaje__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.hospedaje-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease;
+}
+
+.hospedaje-card:hover {
+  transform: translateY(-4px);
+}
+
+.hospedaje-card__image-container {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.hospedaje-card__image {
   width: 100%;
-  height: 150px;
-  border: 0;
-  margin-top: 10px;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hospedaje-card:hover .hospedaje-card__image {
+  transform: scale(1.05);
+}
+
+.hospedaje-card__location {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  backdrop-filter: blur(4px);
+}
+
+.hospedaje-card__content {
+  padding: 1.5rem;
+}
+
+.hospedaje-card__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.hospedaje-card__description {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hospedaje-card__map-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hospedaje-card__map-button:hover {
+  background: var(--primary-hover);
+}
+
+.hospedaje-card__map {
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.hospedaje-card__map.show {
+  height: 250px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.hospedaje-card__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .hospedaje__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hospedaje__filter {
+    padding: 0.75rem;
+  }
+  
+  .hospedaje__select {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .hospedaje__filter {
+    background: rgba(30, 30, 30, 0.9);
+  }
+
+  .hospedaje__select {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border-color: #404040;
+  }
+}
+
+.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+.dark-mode .hospedaje-card {
+  background-color: var(--card-dark);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .hospedaje__filter {
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.dark-mode .hospedaje__select {
+  background-color: var(--surface-dark);
+  color: var(--text-dark);
+  border-color: #404040;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }

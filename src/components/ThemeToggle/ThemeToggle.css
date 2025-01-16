@@ -1,0 +1,49 @@
+
+.theme-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+
+.theme-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.theme-btn:hover .theme-icon {
+  transform: rotate(180deg);
+}
+
+/* Tema claro */
+body.light-mode .theme-btn {
+  background: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .theme-btn:hover {
+  background: #e0e0e0;
+}
+
+/* Tema oscuro */
+body.dark-mode .theme-btn {
+  background: #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .theme-btn:hover {
+  background: #555;
+}
+
+@media (max-width: 768px) {
+  .theme-btn {
+    margin: 0.5rem 0;
+  }
+}

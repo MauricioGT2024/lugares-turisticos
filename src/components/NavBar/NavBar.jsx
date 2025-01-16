@@ -1,37 +1,37 @@
-import PropTypes from 'prop-types';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import './NavBar.css';
-import logo_claro from '../../assets/day.png';
-import logo_oscuro from '../../assets/night.png';
-import logo_negro from '../../assets/logo_negro.jpg';
-import logo from '../../../public/navbar.png'
 
 const NavBar = ({ theme, setTheme }) => {
-    
-    const toggle_mode = () => {
-        const newTheme = theme === 'light' ? 'dark' : 'light';
-        setTheme(newTheme);
-        document.body.className = newTheme === 'light' ? 'light-mode' : 'dark-mode'; // Cambia la clase del body
-    };
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
 
-    return (
-        <div className={`navbar navbar-animation ${theme === 'light' ? 'light-mode' : 'dark-mode'}`}>
-            <Link to="/"><img src={theme === 'light' ? logo : logo_negro} alt="Logo" className='logo' /></Link>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/Provincia">Departamentos</a></li>
-                <li><a href="/hospedaje">Hospedaje</a></li>
-            </ul>
-            <img onClick={toggle_mode} src={theme === 'light' ? logo_claro : logo_oscuro} alt="Toggle theme" className='toggle-icon' />
+  return (
+    <nav className="navbar">
+      <div className="navbar-content">
+        <Link to="/" className="logo-link">
+          <img 
+            src={theme === 'light' ? '/src/assets/navbar.png' : '/src/assets/navbar_negro.png'} 
+            alt="Logo" 
+            className="nav-logo"
+          />
+        </Link>
+        <div className="nav-links">
+          <ul>
+            <li><Link to="/Provincia">Provincia</Link></li>
+            <li><Link to="/Catamarca">Catamarca</Link></li>
+            <li><Link to="/Fiambala">Fiambalá</Link></li>
+            <li><Link to="/Tinogasta">Tinogasta</Link></li>
+            <li><Link to="/Antofagasta-De-La-Sierra">Antofagasta</Link></li>
+            <li><Link to="/Hospedaje">Hospedaje</Link></li>
+          </ul>
         </div>
-    );
-};
-
-NavBar.propTypes = {
-    theme: PropTypes.string.isRequired,
-    setTheme: PropTypes.func.isRequired,
+        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      </div>
+    </nav>
+  );
 };
 
 export default NavBar;
-
-

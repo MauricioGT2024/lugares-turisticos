@@ -1,10 +1,10 @@
-.tinogasta-details {
+.catamarca-details {
   width: 100%;
   padding: 2rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.tinogasta-container {
+.catamarca-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,7 +13,7 @@
   padding: 1rem;
 }
 
-.tinogasta-card {
+.catamarca-card {
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -25,32 +25,31 @@
   max-width: 320px;
 }
 
-.dark-mode .tinogasta-card {
+.dark-mode .catamarca-card {
   background-color: #333;
   color: #eee;
   box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
 }
 
-.tinogasta-card:hover {
+.catamarca-card:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.dark-mode .tinogasta-card:hover {
+.dark-mode .catamarca-card:hover {
   box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
 }
 
-.tinogasta-image-container {
+.catamarca-image-container {
   position: relative;
 }
 
-.tinogasta-img {
+.catamarca-img {
   width: 100%;
-  height: 180px;
   object-fit: cover;
 }
 
-.tinogasta-overlay {
+.catamarca-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -65,21 +64,21 @@
   transition: opacity 0.3s ease;
 }
 
-.tinogasta-image-container:hover .tinogasta-overlay {
+.catamarca-image-container:hover .catamarca-overlay {
   opacity: 1;
 }
 
-.tinogasta-content {
+.catamarca-content {
   padding: 20px;
 }
 
-.tinogasta-description {
+.catamarca-description {
   margin: 0 0 10px;
   color: #fff; /* Cambiado de #555 a #fff */
   line-height: 1.6;
 }
 
-.dark-mode .tinogasta-description {
+.dark-mode .catamarca-description {
   color: #aaa;
 }
 
@@ -107,7 +106,7 @@
 
 .custom-card-img {
   width: 100%;
-  height: 100%;
+
   object-fit: cover;
 }
 
@@ -175,7 +174,7 @@
 }
 
 /* Tema oscuro */
-body.dark-mode .tinogasta-details {
+body.dark-mode .catamarca-details {
   --card-bg: #2a2a2a;
   --text-color: #fff;
   --shadow-color: rgba(0, 0, 0, 0.3);
@@ -192,7 +191,7 @@ body.dark-mode .custom-card-title {
 }
 
 body.dark-mode .custom-card-text,
-.dark-mode .tinogasta-description {
+.dark-mode .catamarca-description {
   color: #fff; /* Mantenemos el texto blanco en modo oscuro */
   opacity: 0.95; /* Ligera reducción de opacidad para mejor contraste */
 }
@@ -235,7 +234,7 @@ body.dark-mode .custom-card-text,
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
-  .tinogasta-container {
+  .catamarca-container {
     flex-direction: column;
     align-items: center;
     padding: 1rem;

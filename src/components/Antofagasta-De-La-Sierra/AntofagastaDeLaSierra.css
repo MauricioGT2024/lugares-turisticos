@@ -1,10 +1,10 @@
-.tinogasta-details {
+.antofagasta-details {
   width: 100%;
   padding: 2rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.tinogasta-container {
+.antofagasta-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,7 +13,7 @@
   padding: 1rem;
 }
 
-.tinogasta-card {
+.antofagasta-card {
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -25,32 +25,32 @@
   max-width: 320px;
 }
 
-.dark-mode .tinogasta-card {
+.dark-mode .antofagasta-card {
   background-color: #333;
   color: #eee;
   box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
 }
 
-.tinogasta-card:hover {
+.antofagasta-card:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.dark-mode .tinogasta-card:hover {
+.dark-mode .antofagasta-card:hover {
   box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
 }
 
-.tinogasta-image-container {
+.antofagasta-image-container {
   position: relative;
 }
 
-.tinogasta-img {
+.antofagasta-img {
   width: 100%;
-  height: 180px;
+ 
   object-fit: cover;
 }
 
-.tinogasta-overlay {
+.antofagasta-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -65,21 +65,21 @@
   transition: opacity 0.3s ease;
 }
 
-.tinogasta-image-container:hover .tinogasta-overlay {
+.antofagasta-image-container:hover .antofagasta-overlay {
   opacity: 1;
 }
 
-.tinogasta-content {
+.antofagasta-content {
   padding: 20px;
 }
 
-.tinogasta-description {
+.antofagasta-description {
   margin: 0 0 10px;
-  color: #fff; /* Cambiado de #555 a #fff */
+  color: #fff;
   line-height: 1.6;
 }
 
-.dark-mode .tinogasta-description {
+.dark-mode .antofagasta-description {
   color: #aaa;
 }
 
@@ -137,17 +137,17 @@
 
 .custom-card-text {
   margin: 0 0 1rem 0;
-  color: #fff; /* Aseguramos que el texto siempre sea blanco */
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Mejora la legibilidad */
+  color: #fff; /* Aseguramos que el texto sea blanco */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Mejoramos legibilidad */
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  font-size: 0.9rem; /* Texto más pequeño */
-  line-height: 1.5; /* Menor espaciado entre líneas */
+  font-size: 0.9rem;
+  line-height: 1.5;
   margin-bottom: 1rem;
-  overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 6; /* Limita a 6 líneas de texto */
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .custom-map-iframe {
@@ -175,7 +175,7 @@
 }
 
 /* Tema oscuro */
-body.dark-mode .tinogasta-details {
+body.dark-mode .antofagasta-details {
   --card-bg: #2a2a2a;
   --text-color: #fff;
   --shadow-color: rgba(0, 0, 0, 0.3);
@@ -191,10 +191,8 @@ body.dark-mode .custom-card-title {
   color: #fff;
 }
 
-body.dark-mode .custom-card-text,
-.dark-mode .tinogasta-description {
-  color: #fff; /* Mantenemos el texto blanco en modo oscuro */
-  opacity: 0.95; /* Ligera reducción de opacidad para mejor contraste */
+body.dark-mode .custom-card-text {
+  color: #ddd;
 }
 
 .custom-card:hover {
@@ -233,9 +231,24 @@ body.dark-mode .custom-card-text,
   --card-hover-shadow: rgba(255, 255, 255, 0.1);
 }
 
+/* Sobreescribimos cualquier otro estilo que pueda afectar el color */
+.card-description,
+.custom-card-text,
+.antofagasta-description {
+  color: #fff !important;
+}
+
+/* Dark mode */
+.dark-mode .custom-card-text,
+.dark-mode .card-description,
+.dark-mode .antofagasta-description {
+  color: #fff !important;
+  opacity: 0.95;
+}
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
-  .tinogasta-container {
+  .antofagasta-container {
     flex-direction: column;
     align-items: center;
     padding: 1rem;

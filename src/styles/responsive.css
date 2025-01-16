@@ -1,0 +1,163 @@
+:root {
+  --max-width: 1200px;
+  --mobile-padding: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Configuración base responsive */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--mobile-padding);
+  position: relative;
+}
+
+/* Eliminar cualquier estilo de .container que esté causando conflicto */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--mobile-padding);
+}
+
+/* Breakpoints mejorados */
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .card-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+  
+  .card-grid {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .container {
+    padding: 0 0.8rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* Utilidades responsive actualizadas */
+.hide-mobile {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.hide-desktop {
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+.flex-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.card {
+  flex: 1 1 400px; /* Ajustado para coincidir con las otras cards */
+  min-width: 300px;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Animaciones para títulos */
+.page-title {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: titleFadeIn 0.8s ease forwards;
+}
+
+@keyframes titleFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
