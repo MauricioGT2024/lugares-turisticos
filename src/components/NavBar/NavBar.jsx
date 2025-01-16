@@ -1,7 +1,7 @@
 import React, { memo, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
-import './NavBar.css';
+import './NavBar.css';  // Asegúrate de que el archivo esté en la misma carpeta
 
 const NavLink = memo(({ to, children }) => (
   <li>
