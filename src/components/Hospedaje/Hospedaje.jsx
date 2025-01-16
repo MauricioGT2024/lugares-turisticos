@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { hospedajes } from '../../data/hospedajes';
 import './Hospedaje.css';
@@ -41,7 +41,12 @@ const HospedajeCard = ({ title, description, location, image, iframe }) => {
 
 const Hospedaje = () => {
   const [currentLocation, setCurrentLocation] = useState('todos');
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
   
+  useEffect(() => {
+    setIsPageLoaded(true);
+  }, []);
+
   const locations = useMemo(() => (
     ['todos', ...new Set(hospedajes.map(h => h.location))]
   ), []);
@@ -53,7 +58,7 @@ const Hospedaje = () => {
   ), [currentLocation]);
 
   return (
-    <div className="hospedaje">
+    <div className={`hospedaje ${isPageLoaded ? 'page-loaded' : ''}`}>
       <div className="hospedaje__filter">
         <select 
           value={currentLocation}

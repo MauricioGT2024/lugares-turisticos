@@ -14,6 +14,12 @@
   --primary-color: #2563eb;
   --primary-hover: #1d4ed8;
   --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --page-transition: 0.6s ease;
+  --background-dark: #121212;
+  --surface-dark: #1e1e1e;
+  --card-dark: #2d2d2d;
+  --text-dark: #ffffff;
+  --text-secondary-dark: rgba(255, 255, 255, 0.7);
 }
 
 [data-theme="dark"] {
@@ -64,11 +70,9 @@ body {
 }
 
 .hospedaje-card__title {
-  color: var(--text-primary);
 }
 
 .hospedaje-card__description {
-  color: var(--text-secondary);
 }
 
 .hospedaje-card__map-button {
@@ -226,11 +230,9 @@ body {
 .hospedaje-card__title {
   margin: 0 0 1rem;
   font-size: 1.5rem;
-  color: var(--text-color);
 }
 
 .hospedaje-card__description {
-  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -349,6 +351,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  animation: pageEnter var(--page-transition) forwards;
 }
 
 .hospedaje__filter {
@@ -434,11 +437,9 @@ body {
 .hospedaje-card__title {
   margin: 0 0 0.5rem;
   font-size: 1.25rem;
-  color: var(--text-primary);
 }
 
 .hospedaje-card__description {
-  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -502,5 +503,39 @@ body {
     background-color: var(--card-bg);
     color: var(--text-primary);
     border-color: #404040;
+  }
+}
+
+.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+.dark-mode .hospedaje-card {
+  background-color: var(--card-dark);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .hospedaje__filter {
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.dark-mode .hospedaje__select {
+  background-color: var(--surface-dark);
+  color: var(--text-dark);
+  border-color: #404040;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
   }
 }

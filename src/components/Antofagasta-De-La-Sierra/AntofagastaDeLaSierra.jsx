@@ -34,7 +34,7 @@ Card.propTypes = {
 function AntofagastaDeLaSierraDetails() {
 	const locations = [
 		{
-			imgSrc: "img/Antofagasta-de-la-Sierra/Campo de Piedra Pómez.webp",
+			imgSrc: "img/Antofagasta-de-la-Sierra/Campo_de_Piedra_Pómez.webp",
 			title: "Campo De Piedra Pómez",
 			description:
 				"El Área natural protegida Campo de Piedra Pómez es un área natural protegida que se encuentra en el departamento Antofagasta de la Sierra, en la provincia de Catamarca, Argentina",
