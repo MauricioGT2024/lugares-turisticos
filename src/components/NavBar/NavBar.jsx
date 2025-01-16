@@ -1,6 +1,8 @@
 import React, { memo, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import logoLight from '@/assets/navbar.png';
+import logoDark from '@/assets/navbar_negro.png';
 import './NavBar.css';
 
 const NavLink = memo(({ to, children }) => (
@@ -32,7 +34,7 @@ const NavLinks = memo(() => (
 
 const NavBar = memo(({ theme, setTheme }) => {
   const logoSrc = useMemo(() => 
-    theme === 'light' ? '/navbar.png' : '/navbar_negro.png',
+    theme === 'light' ? logoLight : logoDark,
     [theme]
   );
 
