@@ -5,9 +5,8 @@
 }
 
 .antofagasta-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
   width: 100%;
   padding: 1rem;
@@ -46,7 +45,6 @@
 
 .antofagasta-img {
   width: 100%;
- 
   object-fit: cover;
 }
 
@@ -75,7 +73,7 @@
 
 .antofagasta-description {
   margin: 0 0 10px;
-  color: #fff;
+  color: #fff; /* Cambiado de #555 a #fff */
   line-height: 1.6;
 }
 
@@ -107,7 +105,6 @@
 
 .custom-card-img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
@@ -137,24 +134,26 @@
 
 .custom-card-text {
   margin: 0 0 1rem 0;
-  color: #fff; /* Aseguramos que el texto sea blanco */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Mejoramos legibilidad */
+  color: #fff; /* Aseguramos que el texto siempre sea blanco */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Mejora la legibilidad */
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.9rem; /* Texto más pequeño */
+  line-height: 1.5; /* Menor espaciado entre líneas */
   margin-bottom: 1rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
   overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* Limita a 6 líneas de texto */
+  -webkit-box-orient: vertical;
 }
 
 .custom-map-iframe {
   width: 100%;
-  height: 150px; /* Mapa más pequeño */
+  height: 200px;
   border: none;
   border-radius: 8px;
+  margin-top: 0.5rem;
+  animation: slideDown 0.3s ease-out;
   opacity: 0;
   transition: opacity 0.3s ease;
   transform: translateY(20px);
@@ -191,8 +190,10 @@ body.dark-mode .custom-card-title {
   color: #fff;
 }
 
-body.dark-mode .custom-card-text {
-  color: #ddd;
+body.dark-mode .custom-card-text,
+.dark-mode .antofagasta-description {
+  color: #fff; /* Mantenemos el texto blanco en modo oscuro */
+  opacity: 0.95; /* Ligera reducción de opacidad para mejor contraste */
 }
 
 .custom-card:hover {
@@ -231,26 +232,13 @@ body.dark-mode .custom-card-text {
   --card-hover-shadow: rgba(255, 255, 255, 0.1);
 }
 
-/* Sobreescribimos cualquier otro estilo que pueda afectar el color */
-.card-description,
-.custom-card-text,
-.antofagasta-description {
-  color: #fff !important;
-}
-
-/* Dark mode */
-.dark-mode .custom-card-text,
-.dark-mode .card-description,
-.dark-mode .antofagasta-description {
-  color: #fff !important;
-  opacity: 0.95;
-}
-
 /* Estilos responsivos */
 @media (max-width: 768px) {
   .antofagasta-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
     padding: 1rem;
   }
 
@@ -260,22 +248,48 @@ body.dark-mode .custom-card-text {
     max-width: none; /* Eliminado max-width en móviles */
     margin: 0.5rem 0;
     animation-duration: 0.3s;
-    height: 450px; /* Altura más pequeña en móviles */
+    height: auto;
+    min-height: 450px;
   }
 
   .custom-card-body {
     opacity: 1;
     transform: translateY(calc(100% - 60px));
+    position: relative;
+    transform: none;
+    background: rgba(0, 0, 0, 0.85);
+    max-height: none;
+    opacity: 1;
   }
 
   .custom-card-text {
     font-size: 0.85rem;
     max-height: 120px;
     -webkit-line-clamp: 4; /* Menos líneas en móviles */
+    opacity: 1;
+    transform: none;
+    -webkit-line-clamp: none;
+    max-height: none;
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
 
   .custom-map-iframe {
-    height: 120px;
+    height: 150px;
+    opacity: 1;
+    transform: none;
+    height: 200px;
+    margin-top: 1rem;
+  }
+
+  .custom-card-img {
+    height: 250px;
+  }
+
+  .map-toggle-btn {
+    padding: 0.6rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -310,4 +324,56 @@ body.dark-mode .custom-card-text {
   .custom-map-iframe {
     height: 180px;
   }
+}
+
+/* Mejora de la legibilidad del texto */
+.custom-card-text {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+}
+
+/* Ajuste del contraste en modo oscuro */
+.dark-mode .custom-card-text {
+  text-shadow: none;
+  opacity: 1;
+}
+
+.map-toggle-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+.map-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajuste para modo oscuro */
+.dark-mode .map-toggle-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .map-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
 }

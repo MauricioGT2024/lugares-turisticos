@@ -1,9 +1,43 @@
-import Card from "../Card/Card";
-import './Tinogasta.css';
+import React, { memo,useState } from 'react';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import PageTransition from "../PageTransition/PageTransition";
+import "./Tinogasta.css";
 
-const TinogastaDetails = () => {
+const LocationCard = memo(({ location }) => {
+  const [showMap, setShowMap] = useState(false);
+
+  return (
+    <div className="custom-card">
+      <img
+        src={location.imgSrc}
+        alt={location.title}
+        className="custom-card-img"
+        loading="lazy"
+      />
+      <div className="custom-card-body">
+        <h5 className="custom-card-title">{location.title}</h5>
+        <p className="custom-card-text">{location.description}</p>
+        <button 
+          className="map-toggle-btn"
+          onClick={() => setShowMap(!showMap)}
+        >
+          {showMap ? 'Ocultar ubicación' : 'Ver ubicación'}
+        </button>
+        {showMap && (
+          <iframe
+            className="custom-map-iframe"
+            src={location.mapSrc}
+            title={location.title}
+            loading="lazy"
+            allowFullScreen
+          ></iframe>
+        )}
+      </div>
+    </div>
+  );
+});
+
+const TinogastaDetails = memo(() => {
   const locations = [
     {
       imgSrc: "img/Tinogasta/Complejo Termal La Aguadita.webp",
@@ -75,29 +109,13 @@ const TinogastaDetails = () => {
               classNames="card"
               appear={true}
             >
-              <div className="custom-card">
-                <img
-                  src={location.imgSrc}
-                  alt={location.title}
-                  className="custom-card-img"
-                />
-                <div className="custom-card-body">
-                  <h5 className="custom-card-title">{location.title}</h5>
-                  <p className="custom-card-text">{location.description}</p>
-                  <iframe
-                    className="custom-map-iframe"
-                    src={location.mapSrc}
-                    title={location.title}
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
+              <LocationCard location={location} />
             </CSSTransition>
           ))}
         </TransitionGroup>
       </div>
     </PageTransition>
   );
-};
+});
 
 export default TinogastaDetails;
