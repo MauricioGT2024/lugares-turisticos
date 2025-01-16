@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { memo, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
@@ -42,33 +43,56 @@ const NavBar = memo(({ theme, setTheme }) => {
   }, [setTheme]);
 =======
 import React, { memo, useMemo } from 'react';
+=======
+import React, { memo, useMemo, useCallback } from 'react';
+>>>>>>> 08bb8b0 (16/01/25)
 import { Link } from 'react-router-dom';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
-import navbarLight from '/src/assets/navbar.png';
-import navbarDark from '/src/assets/navbar_negro.png';
 import './NavBar.css';
+
+const NavLink = memo(({ to, children }) => (
+  <li>
+    <Link 
+      to={to} 
+      prefetch="intent"
+      onMouseEnter={useCallback(() => {
+        // Preload component
+        const path = to.substring(1).toLowerCase();
+        import(`../${path}/${path}.jsx`);
+      }, [to])}
+    >
+      {children}
+    </Link>
+  </li>
+));
 
 const NavLinks = memo(() => (
   <ul>
-    <li><Link to="/Provincia">Provincia</Link></li>
-    <li><Link to="/Catamarca">Catamarca</Link></li>
-    <li><Link to="/Fiambala">Fiambalá</Link></li>
-    <li><Link to="/Tinogasta">Tinogasta</Link></li>
-    <li><Link to="/Antofagasta-De-La-Sierra">Antofagasta</Link></li>
-    <li><Link to="/Hospedaje">Hospedaje</Link></li>
+    <NavLink to="/Provincia">Provincia</NavLink>
+    <NavLink to="/Catamarca">Catamarca</NavLink>
+    <NavLink to="/Fiambala">Fiambalá</NavLink>
+    <NavLink to="/Tinogasta">Tinogasta</NavLink>
+    <NavLink to="/Antofagasta-De-La-Sierra">Antofagasta</NavLink>
+    <NavLink to="/Hospedaje">Hospedaje</NavLink>
   </ul>
 ));
 
-const NavBar = ({ theme, setTheme }) => {
+const NavBar = memo(({ theme, setTheme }) => {
   const logoSrc = useMemo(() => 
-    theme === 'light' ? navbarLight : navbarDark,
+    theme === 'light' ? '/navbar.png' : '/navbar_negro.png',
     [theme]
   );
 
+<<<<<<< HEAD
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
 >>>>>>> fea8b02 (16/01/25)
+=======
+  const toggleTheme = useCallback(() => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  }, [setTheme]);
+>>>>>>> 08bb8b0 (16/01/25)
 
   return (
     <nav className="navbar">
@@ -82,9 +106,13 @@ const NavBar = ({ theme, setTheme }) => {
             width="150"
             height="50"
 <<<<<<< HEAD
+<<<<<<< HEAD
             fetchpriority="high"
 =======
 >>>>>>> fea8b02 (16/01/25)
+=======
+            fetchpriority="high"
+>>>>>>> 08bb8b0 (16/01/25)
           />
         </Link>
         <div className="nav-links">
@@ -97,8 +125,12 @@ const NavBar = ({ theme, setTheme }) => {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default NavBar;
 =======
 export default memo(NavBar);
 >>>>>>> fea8b02 (16/01/25)
+=======
+export default NavBar;
+>>>>>>> 08bb8b0 (16/01/25)
 
