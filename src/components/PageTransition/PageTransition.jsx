@@ -1,16 +1,16 @@
-import { CSSTransition, SwitchTransition } from 'react-transition-group';
+import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './PageTransition.css';
 
-const PageTransition = ({ children }) => {
+function PageTransition({ children }) {
+  const location = useLocation();
+
   return (
-    <SwitchTransition>
-      <CSSTransition key={window.location.pathname} timeout={300} classNames="fade">
-        <div>{children}</div>
-      </CSSTransition>
-    </SwitchTransition>
+    <div className={`page-enter ${location.key && 'page-enter-active'}`}>
+      {children}
+    </div>
   );
-};
+}
 
 PageTransition.propTypes = {
   children: PropTypes.node.isRequired,
