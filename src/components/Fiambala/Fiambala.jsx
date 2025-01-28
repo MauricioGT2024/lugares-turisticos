@@ -1,10 +1,13 @@
+// Example for Fiambala.jsx (adapt for others)
+import { useState } from 'react';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import "./Fiambala.css";
+import './Fiambala.css'; // Updated import
 import PageTransition from "../PageTransition/PageTransition";
 
+
 const FiambalaDetails = () => {
-  const locations = [
-    {
+  const [showMap, setShowMap] = useState(true); //Added State for Map
+  const locations = [ {
       imgSrc: "img/Fiambala/Duna Mágica de Fiambalá.webp",
       title: "Duna Magica De Fiambala",
       description:
@@ -48,32 +51,30 @@ const FiambalaDetails = () => {
 
   return (
     <PageTransition>
-      {" "}
       <div className="fiambala-details">
         <h2 className="page-title">Descubre Fiambalá</h2>
         <TransitionGroup className="fiambala-container">
           {locations.map((location, index) => (
-            <CSSTransition
-              key={index}
-              timeout={500}
-              classNames="card"
-              appear={true}
-            >
-              <div className="custom-card">
-                <img
-                  src={location.imgSrc}
-                  alt={location.title}
-                  className="custom-card-img"
-                />
-                <div className="custom-card-body">
-                  <h5 className="custom-card-title">{location.title}</h5>
-                  <p className="custom-card-text">{location.description}</p>
-                  <iframe
-                    className="custom-map-iframe"
-                    src={location.mapSrc}
-                    title={location.title}
-                    allowFullScreen
-                  ></iframe>
+            <CSSTransition key={index} timeout={500} classNames="card" appear>
+              <div className="fiambala-card"> {/*Renamed this class for specificity*/}
+                <img src={location.imgSrc} alt={location.title} className="fiambala-card-img" /> {/*Renamed this class for specificity*/}
+                <div className="fiambala-card-body"> {/*Renamed this class for specificity*/}
+                  <h5 className="fiambala-card-title">{location.title}</h5>
+                  <p className="fiambala-card-text">{location.description}</p>
+                  {showMap && ( 
+                    <iframe
+                      src={location.mapSrc}
+                      title={location.title}
+                      width="100%"
+                      height="250"
+                      className="fiambala-map-iframe"
+                      allowFullScreen
+                      loading="lazy"
+                    />
+                  )}
+                  <button onClick={() => setShowMap(!showMap)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    {showMap ? "Ocultar Ubicación" : "Ver Ubicación"}
+                  </button>
                 </div>
               </div>
             </CSSTransition>
@@ -85,3 +86,4 @@ const FiambalaDetails = () => {
 };
 
 export default FiambalaDetails;
+

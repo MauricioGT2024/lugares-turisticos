@@ -1,4 +1,6 @@
 /* Variables de color */
+@import "tailwindcss";
+
 :root {
   --background-light: #fafafa; /* Fondo claro */
   --background-dark: #1c1c1c;  /* Fondo oscuro */

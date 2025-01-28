@@ -1,299 +1,322 @@
 .catamarca-details {
-  width: 100%;
-  padding: 2rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+	width: 100%;
+	padding: 2rem;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .catamarca-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  width: 100%;
-  padding: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+	width: 100%;
+	padding: 1rem;
 }
 
 .catamarca-card {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 320px;
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	max-width: 320px;
 }
 
 .dark-mode .catamarca-card {
-  background-color: #333;
-  color: #eee;
-  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
+	background-color: #333;
+	color: #eee;
+	box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
 }
 
 .catamarca-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+	transform: translateY(-5px) scale(1.02);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .dark-mode .catamarca-card:hover {
-  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
+	box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
 }
 
 .catamarca-image-container {
-  position: relative;
+	position: relative;
 }
 
 .catamarca-img {
-  width: 100%;
-  object-fit: cover;
+	width: 100%;
+	object-fit: cover;
 }
 
 .catamarca-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	opacity: 0;
+	transition: opacity 0.3s ease;
 }
 
 .catamarca-image-container:hover .catamarca-overlay {
-  opacity: 1;
+	opacity: 1;
 }
 
 .catamarca-content {
-  padding: 20px;
+	padding: 20px;
 }
 
 .catamarca-description {
-  margin: 0 0 10px;
-  color: #fff; /* Cambiado de #555 a #fff */
-  line-height: 1.6;
+	margin: 0 0 10px;
+	color: #fff; /* Cambiado de #555 a #fff */
+	line-height: 1.6;
 }
 
 .dark-mode .catamarca-description {
-  color: #aaa;
+	color: #aaa;
 }
 
 .map-iframe {
-  width: 100%;
-  height: 200px;
-  border: none;
-  margin-top: 10px;
-  border-radius: 8px;
+	width: 100%;
+	height: 200px;
+	border: none;
+	margin-top: 10px;
+	border-radius: 8px;
 }
 
 .custom-card {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 1rem;
-  flex: 1 1 400px;
-  max-width: 600px;
-  min-width: 300px;
-  height: 500px; /* Aumentamos un poco la altura */
-  animation: fadeIn 0.5s ease-out;
-  background: var(--card-bg, #fff);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+	position: relative;
+	border-radius: 12px;
+	overflow: hidden;
+	margin: 1rem;
+	flex: 1 1 400px;
+	max-width: 600px;
+	min-width: 300px;
+	height: 500px; /* Aumentamos un poco la altura */
+	animation: fadeIn 0.5s ease-out;
+	background: var(--card-bg, #fff);
+	transition: transform 0.3s ease, box-shadow 0.3s ease,
+		background-color 0.3s ease;
 }
 
 .custom-card-img {
-  width: 100%;
+	width: 100%;
 
-  object-fit: cover;
+	object-fit: cover;
 }
 
 .custom-card-body {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
-  padding: 1.5rem;
-  color: white;
-  transform: translateY(calc(100% - 60px)); /* Muestra solo el título */
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  max-height: 85%; /* Aumentamos el máximo */
-  overflow: auto;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+	padding: 1.5rem;
+	color: white;
+	transform: translateY(calc(100% - 60px)); /* Muestra solo el título */
+	transition: all 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	max-height: 85%; /* Aumentamos el máximo */
+	overflow: auto;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
 }
 
 .custom-card-title {
-  margin: 0;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+	margin: 0;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
 }
 
 .custom-card-text {
-  margin: 0 0 1rem 0;
-  color: #fff; /* Aseguramos que el texto siempre sea blanco */
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Mejora la legibilidad */
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  font-size: 0.9rem; /* Texto más pequeño */
-  line-height: 1.5; /* Menor espaciado entre líneas */
-  margin-bottom: 1rem;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 6; /* Limita a 6 líneas de texto */
-  -webkit-box-orient: vertical;
+	margin: 0 0 1rem 0;
+	color: #fff; /* Aseguramos que el texto siempre sea blanco */
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Mejora la legibilidad */
+	opacity: 0;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	font-size: 0.9rem; /* Texto más pequeño */
+	line-height: 1.5; /* Menor espaciado entre líneas */
+	margin-bottom: 1rem;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 6; /* Limita a 6 líneas de texto */
+	-webkit-box-orient: vertical;
 }
 
 .custom-map-iframe {
-  width: 100%;
-  height: 150px; /* Mapa más pequeño */
-  border: none;
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  margin-top: auto; /* Empuja el mapa hacia abajo */
+	width: 100%;
+	height: 150px; /* Mapa más pequeño */
+	border: none;
+	border-radius: 8px;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	transform: translateY(20px);
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	margin-top: auto; /* Empuja el mapa hacia abajo */
 }
 
 /* Efectos hover */
 .custom-card:hover .custom-card-body {
-  transform: translateY(0);
-  opacity: 1;
+	transform: translateY(0);
+	opacity: 1;
 }
 
 .custom-card:hover .custom-card-text,
 .custom-card:hover .custom-map-iframe {
-  opacity: 1;
-  transform: translateY(0);
+	opacity: 1;
+	transform: translateY(0);
 }
 
 /* Tema oscuro */
 body.dark-mode .catamarca-details {
-  --card-bg: #2a2a2a;
-  --text-color: #fff;
-  --shadow-color: rgba(0, 0, 0, 0.3);
+	--card-bg: #2a2a2a;
+	--text-color: #fff;
+	--shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 body.dark-mode .custom-card {
-  background: #2a2a2a;
-  color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	background: #2a2a2a;
+	color: #fff;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	line-height: 1.6;
 }
 
 body.dark-mode .custom-card-title {
-  color: #fff;
+	color: #fff;
 }
 
 body.dark-mode .custom-card-text,
 .dark-mode .catamarca-description {
-  color: #fff; /* Mantenemos el texto blanco en modo oscuro */
-  opacity: 0.95; /* Ligera reducción de opacidad para mejor contraste */
+	color: #fff; /* Mantenemos el texto blanco en modo oscuro */
+	opacity: 0.95; /* Ligera reducción de opacidad para mejor contraste */
+	color: #aaa;
 }
 
 .custom-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px var(--shadow-color);
+	transform: translateY(-5px);
+	box-shadow: 0 8px 12px var(--shadow-color);
 }
 
 /* Animación de fade */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 /* Variables para modo claro/oscuro */
 :root {
-  --card-bg: #fff;
-  --text-color: #fff;
-  --shadow-color: rgba(0, 0, 0, 0.15);
-  --overlay-bg: rgba(0, 0, 0, 0.9);
-  --card-hover-shadow: rgba(0, 0, 0, 0.2);
+	--card-bg: #fff;
+	--text-color: #fff;
+	--shadow-color: rgba(0, 0, 0, 0.15);
+	--overlay-bg: rgba(0, 0, 0, 0.9);
+	--card-hover-shadow: rgba(0, 0, 0, 0.2);
 }
 
 /* Modo oscuro */
 [data-theme="dark"] .custom-card,
 .dark-mode .custom-card {
-  --card-bg: #1a1a1a;
-  --text-color: #fff;
-  --shadow-color: rgba(0, 0, 0, 0.3);
-  --overlay-bg: rgba(0, 0, 0, 0.95);
-  --card-hover-shadow: rgba(255, 255, 255, 0.1);
+	--card-bg: #1a1a1a;
+	--text-color: #fff;
+	--shadow-color: rgba(0, 0, 0, 0.3);
+	--overlay-bg: rgba(0, 0, 0, 0.95);
+	--card-hover-shadow: rgba(255, 255, 255, 0.1);
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
-  .catamarca-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  .custom-card {
-    flex: 1 1 100%;
-    width: 100%;
-    max-width: none; /* Eliminado max-width en móviles */
-    margin: 0.5rem 0;
-    animation-duration: 0.3s;
-    height: 450px; /* Altura más pequeña en móviles */
-  }
-
-  .custom-card-body {
-    opacity: 1;
-    transform: translateY(calc(100% - 60px));
-  }
-
-  .custom-card-text {
-    font-size: 0.85rem;
-    max-height: 120px;
-    -webkit-line-clamp: 4; /* Menos líneas en móviles */
-  }
-
-  .custom-map-iframe {
-    height: 120px;
-  }
+	.catamarca-container {
+		flex-direction: column;
+		align-items: center;
+		padding: 1rem;
+	}
+}
+.custom-card {
+	flex: 1 1 100%;
+}
+.map-iframe {
+	width: 100%;
+	max-width: none; /* Eliminado max-width en móviles */
+	margin: 0.5rem 0;
+	animation-duration: 0.3s;
+	height: 450px; /* Altura más pequeña en móviles */
+	height: 200px;
+	border: none;
+	margin-top: 10px;
+	border-radius: 8px;
 }
 
-/* Estilo para scrollbar */
-.custom-card-body::-webkit-scrollbar {
-  width: 6px;
+.custom-card-body {
+	opacity: 1;
+	transform: translateY(calc(100% - 60px));
+}
+.custom-card {
+	position: relative;
+	border-radius: 12px;
+	overflow: hidden;
+	margin: 1rem;
+	flex: 1 1 400px;
+	max-width: 600px;
+	min-width: 300px;
+	height: 500px;
+	animation: fadeIn 0.5s ease-out;
+	background: var(--card-bg, #fff);
+	transition: transform 0.3s ease, box-shadow 0.3s ease,
+		background-color 0.3s ease;
+}
+
+.custom-card-text {
+	font-size: 0.85rem;
+	max-height: 120px;
+	-webkit-line-clamp: 4; /* Menos líneas en móviles */
+}
+.custom-card-img {
+	width: 100%;
+	object-fit: cover;
 }
 
 .custom-card-body::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 3px;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 3px;
 }
 
 .custom-card-body::-webkit-scrollbar-track {
-  background: transparent;
+	background: transparent;
 }
 
 /* Ajuste para pantallas grandes */
 @media (min-width: 1024px) {
-  .custom-card {
-    height: 550px;
-  }
+	.custom-card {
+		height: 550px;
+	}
 
-  .custom-card-body {
-    max-height: 90%;
-  }
+	.custom-card-body {
+		max-height: 90%;
+	}
 
-  .custom-card-text {
-    -webkit-line-clamp: 8; /* Más líneas en pantallas grandes */
-  }
+	.custom-card-text {
+		-webkit-line-clamp: 8; /* Más líneas en pantallas grandes */
+	}
 
-  .custom-map-iframe {
-    height: 180px;
-  }
+	.custom-map-iframe {
+		height: 180px;
+	}
+}
+/* Ajuste para pantallas grandes */
+@media (min-width: 1024px) {
+	.custom-card {
+		height: 550px;
+	}
 }
